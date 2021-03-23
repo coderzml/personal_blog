@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>品优购-综合网购首选-正品低价、品质保障、配送及时、轻松购物！</title>
+    <meta name="description"
+        content="品优购JD.COM-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!">
+    <meta name="Keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,品优购">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+    <!-- 懒加载 -->
+    <link rel="stylesheet" type="text/css" href="css/lanjiazai.css" />
+    <!-- 懒加载 -->
+    <script src="js/lanjiazai.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <!-- 快速导航 -->
+    <div class="nav">
+        <div class="w">
+            <ul class="fl">
+                <li>品优购欢迎您！</li>
+                <li>
+                    <a href="./login.html"> 请登录 </a>
+                    <a href="./ragister.html" class="red"> 免费注册 </a>
+                </li>
+            </ul>
+            <ul class="fr icon_center">
+                <li><a href="#">我的订单</a></li>
+                <li class="line"></li>
+                <li><a href="#">我的品优购</a><i class="iconfont">&#xe600;</i></li>
+                <li class="line"></li>
+                <li><a href="#">品优购会员</a></li>
+                <li class="line"></li>
+                <li><a href="#">企业采购</a></li>
+                <li class="line"></li>
+                <li><a href="#">关注品优购</a><i class="iconfont">&#xe600;</i></li>
+                <li class="line"></li>
+                <li><a href="#">客户服务</a><i class="iconfont">&#xe600;</i></li>
+                <li class="line"></li>
+                <li><a href="#">网站导航</a><i class="iconfont">&#xe600;</i></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 头部 -->
+    <header class="w">
+        <div class="logo">
+            <h1>
+                <a href="index.html">品优购</a>
+            </h1>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="请输入内容">
+            <button>搜索</button>
+        </div>
+        <div class="hotwords">
+            <a href="#" class="red">优惠购首发</a>
+            <a href="#">亿元优惠</a>
+            <a href="#">9.9元团购</a>
+            <a href="#">美满99减30</a>
+            <a href="#">办公用品</a>
+            <a href="#">电脑</a>
+            <a href="#">通信</a>
+        </div>
+        <div class="car">
+            <i class="iconfont">&#xe601;</i> 我的购物车 <i class="iconfont">&#xe600;</i>
+            <div class="car_radius">800</div>
+        </div>
+    </header>
+    <!-- 导航内容 -->
+    <div class="nav_box">
+        <div class="w">
+            <div class="dt fl">
+                <div class="dt_top">全部商品分类</div>
+                <div class="dd_bottom">
+                    <ul>
+                        <li class="dd_item">
+                            <a href="#">家用电器</a>
+                            <i class="iconfont">&#xe602;</i>
+                        </li>
+                        <li class="dd_item">
+                            <a href="list.html">手机、</a>
+                            <a href="#">数码、</a>
+                            <a href="#">通信</a>
+                            <i class="iconfont">&#xe602;</i>
+                        </li>
+                        <li class="dd_item">
+                            <a href="#">电脑、办公</a>
+                            <i class="iconfont">&#xe602;</i>
+                        </li>
+                        <li class="dd_item">
+                            <a href="#">家居、家具、家装、厨具</a>
+                            <i class="iconfont">&#xe602;</i>
+                        </li>
+                        <li class="dd_item">
+                            <a href="#">男装、女装、童装、内衣</a>
+                            <i class="iconfont">&#xe602;</i>
+                        </li>
+                        <li class="dd_item">
+                            <a href="#">个户化妆、清洁用品、宠物</a>
+                            <i class="iconfont">&#xe602;</i>
+                        </li>
+                        <li class="dd_item">
+                            <a href="#">鞋靴、箱包、珠宝、奢侈品</a>
+                            <i class="iconfont">&#xe602;</i>
+                        </li>
+                        <li class="dd_item">
+                            <a href="#">运动户外、钟表</a>
+                            <i class="iconfont">&#xe602;</i>
+                        </li>
+                        <li class="dd_item">
+                            <a href="#">汽车、汽车用品</a>
+                            <i class="iconfont">&#xe602;</i>
+                        </li>
+                        <li class="dd_item">
+                            <a href="#">母婴、玩具乐器</a>
+                            <i class="iconfont">&#xe602;</i>
+                        </li>
+                        <li class="dd_item">
+                            <a href="#">食品、酒类、生鲜、特产</a>
+                            <i class="iconfont">&#xe602;</i>
+                        </li>
+                        <li class="dd_item">
+                            <a href="#">医药保健</a>
+                            <i class="iconfont">&#xe602;</i>
+                        </li>
+                        <li class="dd_item">
+                            <a href="#">图书、音像、电子书</a>
+                            <i class="iconfont">&#xe602;</i>
+                        </li>
+                        <li class="dd_item">
+                            <a href="#">彩票、旅行、充值、票务</a>
+                            <i class="iconfont">&#xe602;</i>
+                        </li>
+                        <li class="dd_item">
+                            <a href="#">理财、众筹、白条、保险</a>
+                            <i class="iconfont">&#xe602;</i>
+                        </li>
+
+                    </ul>
+                    <div class="item_teb">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
+                        <div>11</div>
+                        <div>12</div>
+                        <div>13</div>
+                        <div>14</div>
+                        <div>15</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="dd fl">
+                <ul>
+                    <li><a href="#">服装城</a></li>
+                    <li><a href="#">美妆馆</a></li>
+                    <li><a href="#">传智超市</a></li>
+                    <li><a href="#">全球购</a></li>
+                    <li><a href="#">闪购</a></li>
+                    <li><a href="#">团购</a></li>
+                    <li><a href="#">拍卖</a></li>
+                    <li><a href="#">有趣</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- content -->
+    <div class="w">
+        <div class="main">
+            <!-- 轮播图 -->
+            <div class="focus fl">
+                <!-- <a href="#" class="left iconfont">&#xe603;</a>
+                <a href="#" class="right iconfont">&#xe7e1;</a> -->
+                <!-- <ul>
+                    <li>
+                        <a href="#"><img data-src="upload/focus.jpg" alt=""></a>
+                    </li>
+                </ul> -->
+
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img data-src="upload/focus.jpg" alt="...">
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img data-src="upload/focus.jpg" alt="...">
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img data-src="upload/focus.jpg" alt="...">
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <!-- <ol class="radius">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </!-->
+            </div>
+            <!-- 新闻 -->
+            <div class="newsflash fr">
+                <div class="news">
+                    <div class="news_hd">
+                        品优购快报
+                        <a href="#">更多&#xe602;</a>
+                    </div>
+                    <div class="news_bd">
+                        <ul>
+                            <li><a href="#">【特惠】爆款耳机5折秒！</a></li>
+                            <li><a href="#">【特惠】母亲节，健康好礼低至5折！</a></li>
+                            <li><a href="#">【特惠】爆款耳机5折秒！</a></li>
+                            <li><a href="#">【特惠】9.9元洗100张照片！</a></li>
+                            <li><a href="#">【特惠】长虹智能空调立省1000</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="news_item">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="news_ico1"></i>
+                                <p>花费</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="news_ico2"></i>
+                                <p>花费</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="news_ico3"></i>
+                                <p>花费</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="news_ico4"></i>
+                                <p>花费</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="news_ico5"></i>
+                                <p>花费</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="news_ico6"></i>
+                                <p>花费</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="news_ico7"></i>
+                                <p>花费</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="news_ico8"></i>
+                                <p>花费</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="news_ico9"></i>
+                                <p>花费</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="news_ico10"></i>
+                                <p>花费</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="news_ico11"></i>
+                                <p>花费</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="news_ico12"></i>
+                                <p>花费</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="min_banner">
+                    <img data-src="upload/bargain.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 推荐 -->
+    <div class="tuijian w">
+        <div class="tuijian_hd fl">
+            <img data-src="upload/clock.png" alt="">
+            <p>今日推荐</p>
+        </div>
+        <div class="tuijian_bd fl">
+            <ul>
+                <li>
+                    <a href="#"><img data-src="upload/pic.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img data-src="upload/pic.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img data-src="upload/pic.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img data-src="upload/pic.jpg" alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 喜欢 -->
+    <div class="live w">
+        <div class="live_tit">
+            <p class="fl">猜你喜欢</p>
+            <p class="fr">换一批&#xe60d;</p>
+        </div>
+        <div class="live_bd">
+            <ul class="clearfix">
+                <li>
+                    <a href="#">
+                        <img data-src="upload/live_pic.png" alt="">
+                        <div class="livefont">
+                            <p>阳光美包新款单肩包女</p>
+                            <p>包时尚子母包四件套女</p>
+                            <p class="red">¥116.00</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img data-src="upload/live_pic.png" alt="">
+                        <div class="livefont">
+                            <p>阳光美包新款单肩包女</p>
+                            <p>包时尚子母包四件套女</p>
+                            <p class="red">¥116.00</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img data-src="upload/live_pic.png" alt="">
+                        <div class="livefont">
+                            <p>阳光美包新款单肩包女</p>
+                            <p>包时尚子母包四件套女</p>
+                            <p class="red">¥116.00</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img data-src="upload/live_pic.png" alt="">
+                        <div class="livefont">
+                            <p>阳光美包新款单肩包女</p>
+                            <p>包时尚子母包四件套女</p>
+                            <p class="red">¥116.00</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img data-src="upload/live_pic.png" alt="">
+                        <div class="livefont">
+                            <p>阳光美包新款单肩包女</p>
+                            <p>包时尚子母包四件套女</p>
+                            <p class="red">¥116.00</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img data-src="upload/live_pic.png" alt="">
+                        <div class="livefont last">
+                            <p>阳光美包新款单肩包女</p>
+                            <p>包时尚子母包四件套女</p>
+                            <p class="red">¥116.00</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 传智播客 -->
+    <!-- <div class="pink w">
+        <div class="pink_tit">传智播客·有趣区</div>
+        <div class="pink_contant">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div> -->
+    <!-- floor startr -->
+    <div class="floor">
+        <!-- 一楼 -->
+        <div class="floor_item_jia w">
+            <div class="box_hd">
+                <h3 class="fl">家用电器</h3>
+                <div class="hd_list fr">
+                    <ul>
+                        <li><a href="#" class="red">热门</a>|</li>
+                        <li><a href="#">大家电</a>|</li>
+                        <li><a href="#">生活电器</a>|</li>
+                        <li><a href="#">厨房电器</a>|</li>
+                        <li><a href="#">个护健康</a>|</li>
+                        <li><a href="#">应季电器</a>|</li>
+                        <li><a href="#">空气/净水</a>|</li>
+                        <li><a href="#">新奇特</a>|</li>
+                        <li><a href="#">高端电器</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box_bd">
+                <!-- 注意这里是tab栏切换 -->
+                <ul class="clearfix">
+                    <li class="w209">
+                        <ul>
+                            <li><a href="#">节能补贴</a></li>
+                            <li><a href="#">4K电视</a></li>
+                            <li><a href="#">空气净化器</a></li>
+                            <li><a href="#">IH电饭煲</a></li>
+                            <li><a href="#">滚筒洗衣机</a></li>
+                            <li><a href="#">电热水器</a></li>
+                        </ul>
+                        <img data-src="upload/floor-1-1.png" alt="">
+                    </li>
+                    <li class="w329">
+                        <div>
+                            <img data-src="upload/pic1.jpg" alt="">
+                        </div>
+                    </li>
+                    <li class="w219">
+                        <div class="floor_con_img">
+                            <img data-src="upload/floor-1-2.png" alt="">
+                        </div>
+                        <div class="floor_con_img">
+                            <img data-src="upload/floor-1-3.png" alt="">
+                        </div>
+                    </li>
+                    <li class="w220">
+                        <div class="floor_con_img teshu">
+                            <img data-src="upload/floor-1-4.png" alt="">
+                        </div>
+                    </li>
+                    <li class="w220">
+                        <div class="floor_con_img">
+                            <img data-src="upload/floor-1-5.png" alt="">
+                        </div>
+                        <div class="floor_con_img">
+                            <img data-src="upload/floor-1-6.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+                <!-- <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul> -->
+            </div>
+            <div class="floor_list">
+                <ul>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 二楼 -->
+        <div class="floor_item_tui w">
+            <div class="box_hd">
+                <h3 class="fl">精品推荐</h3>
+                <div class="hd_list fr">
+                    <ul>
+                        <li><a href="#" class="red">热门</a>|</li>
+                        <li><a href="#">大家电</a>|</li>
+                        <li><a href="#">生活电器</a>|</li>
+                        <li><a href="#">厨房电器</a>|</li>
+                        <li><a href="#">个护健康</a>|</li>
+                        <li><a href="#">应季电器</a>|</li>
+                        <li><a href="#">空气/净水</a>|</li>
+                        <li><a href="#">新奇特</a>|</li>
+                        <li><a href="#">高端电器</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box_bd">
+                <!-- 注意这里是tab栏切换 -->
+                <ul class="clearfix">
+                    <li class="w209">
+                        <ul>
+                            <li><a href="#">节能补贴</a></li>
+                            <li><a href="#">4K电视</a></li>
+                            <li><a href="#">空气净化器</a></li>
+                            <li><a href="#">IH电饭煲</a></li>
+                            <li><a href="#">滚筒洗衣机</a></li>
+                            <li><a href="#">电热水器</a></li>
+                        </ul>
+                        <img data-src="upload/floor-1-1.png" alt="">
+                    </li>
+                    <li class="w329">
+                        <div>
+                            <img data-src="upload/pic1.jpg" alt="">
+                        </div>
+                    </li>
+                    <li class="w219">
+                        <div class="floor_con_img">
+                            <img data-src="upload/floor-1-2.png" alt="">
+                        </div>
+                        <div class="floor_con_img">
+                            <img data-src="upload/floor-1-3.png" alt="">
+                        </div>
+                    </li>
+                    <li class="w220">
+                        <div class="floor_con_img teshu">
+                            <img data-src="upload/floor-1-4.png" alt="">
+                        </div>
+                    </li>
+                    <li class="w220">
+                        <div class="floor_con_img">
+                            <img data-src="upload/floor-1-5.png" alt="">
+                        </div>
+                        <div class="floor_con_img">
+                            <img data-src="upload/floor-1-6.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+                <!-- <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul> -->
+            </div>
+            <div class="floor_list">
+                <ul>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 三楼 -->
+        <div class="floor_item_shou w">
+            <div class="box_hd">
+                <h3 class="fl">手机通讯</h3>
+                <div class="hd_list fr">
+                    <ul>
+                        <li><a href="#" class="red">热门</a>|</li>
+                        <li><a href="#">大家电</a>|</li>
+                        <li><a href="#">生活电器</a>|</li>
+                        <li><a href="#">厨房电器</a>|</li>
+                        <li><a href="#">个护健康</a>|</li>
+                        <li><a href="#">应季电器</a>|</li>
+                        <li><a href="#">空气/净水</a>|</li>
+                        <li><a href="#">新奇特</a>|</li>
+                        <li><a href="#">高端电器</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box_bd">
+                <!-- 注意这里是tab栏切换 -->
+                <ul class="clearfix">
+                    <li class="w209">
+                        <ul>
+                            <li><a href="#">节能补贴</a></li>
+                            <li><a href="#">4K电视</a></li>
+                            <li><a href="#">空气净化器</a></li>
+                            <li><a href="#">IH电饭煲</a></li>
+                            <li><a href="#">滚筒洗衣机</a></li>
+                            <li><a href="#">电热水器</a></li>
+                        </ul>
+                        <img data-src="upload/floor-1-1.png" alt="">
+                    </li>
+                    <li class="w329">
+                        <div>
+                            <img data-src="upload/pic1.jpg" alt="">
+                        </div>
+                    </li>
+                    <li class="w219">
+                        <div class="floor_con_img">
+                            <img data-src="upload/floor-1-2.png" alt="">
+                        </div>
+                        <div class="floor_con_img">
+                            <img data-src="upload/floor-1-3.png" alt="">
+                        </div>
+                    </li>
+                    <li class="w220">
+                        <div class="floor_con_img teshu">
+                            <img data-src="upload/floor-1-4.png" alt="">
+                        </div>
+                    </li>
+                    <li class="w220">
+                        <div class="floor_con_img">
+                            <img data-src="upload/floor-1-5.png" alt="">
+                        </div>
+                        <div class="floor_con_img">
+                            <img data-src="upload/floor-1-6.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+                <!-- <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul> -->
+            </div>
+            <div class="floor_list">
+                <ul>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 四楼 -->
+        <div class="floor_item_jia w">
+            <div class="box_hd">
+                <h3 class="fl">电脑办公</h3>
+                <div class="hd_list fr">
+                    <ul>
+                        <li><a href="#" class="red">热门</a>|</li>
+                        <li><a href="#">大家电</a>|</li>
+                        <li><a href="#">生活电器</a>|</li>
+                        <li><a href="#">厨房电器</a>|</li>
+                        <li><a href="#">个护健康</a>|</li>
+                        <li><a href="#">应季电器</a>|</li>
+                        <li><a href="#">空气/净水</a>|</li>
+                        <li><a href="#">新奇特</a>|</li>
+                        <li><a href="#">高端电器</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box_bd">
+                <!-- 注意这里是tab栏切换 -->
+                <ul class="clearfix">
+                    <li class="w209">
+                        <ul>
+                            <li><a href="#">节能补贴</a></li>
+                            <li><a href="#">4K电视</a></li>
+                            <li><a href="#">空气净化器</a></li>
+                            <li><a href="#">IH电饭煲</a></li>
+                            <li><a href="#">滚筒洗衣机</a></li>
+                            <li><a href="#">电热水器</a></li>
+                        </ul>
+                        <img data-src="upload/floor-1-1.png" alt="">
+                    </li>
+                    <li class="w329">
+                        <div>
+                            <img data-src="upload/pic1.jpg" alt="">
+                        </div>
+                    </li>
+                    <li class="w219">
+                        <div class="floor_con_img">
+                            <img data-src="upload/floor-1-2.png" alt="">
+                        </div>
+                        <div class="floor_con_img">
+                            <img data-src="upload/floor-1-3.png" alt="">
+                        </div>
+                    </li>
+                    <li class="w220">
+                        <div class="floor_con_img teshu">
+                            <img data-src="upload/floor-1-4.png" alt="">
+                        </div>
+                    </li>
+                    <li class="w220">
+                        <div class="floor_con_img">
+                            <img data-src="upload/floor-1-5.png" alt="">
+                        </div>
+                        <div class="floor_con_img">
+                            <img data-src="upload/floor-1-6.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+                <!-- <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul> -->
+            </div>
+            <div class="floor_list">
+                <ul>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img data-src="upload/list.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- floor end -->
+
+    <!-- footer  -->
+    <div class="footer">
+        <div class="w">
+            <ul class="service clearfix">
+                <li>
+                    <a href="#" class="ft_centant">
+                        <i class="ft_centant_img1"></i>
+                        <div class="tit">
+                            <p>正品保障</p>
+                            <p>正品保障，提供发票</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ft_centant">
+                        <i class="ft_centant_img2"></i>
+                        <div class="tit">
+                            <p>急速物流</p>
+                            <p>急速物流，急速送达</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ft_centant">
+                        <i class="ft_centant_img3"></i>
+                        <div class="tit">
+                            <p>无忧售后</p>
+                            <p>7天无理由退换货</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ft_centant">
+                        <i class="ft_centant_img4"></i>
+                        <div class="tit">
+                            <p>特色服务</p>
+                            <p>私人定制家电套餐</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="ft_centant">
+                        <i class="ft_centant_img5"></i>
+                        <div class="tit">
+                            <p>帮助中心</p>
+                            <p>您的购物指南</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="ft_item">
+                <dl>
+                    <dt><a href="#">购物指南</a></dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">会员介绍</a></dd>
+                    <dd><a href="#">购生活旅行/团购</a></dd>
+                    <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">大家电</a></dd>
+                    <dd><a href="#">联系客服</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="#">购物指南</a></dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">会员介绍</a></dd>
+                    <dd><a href="#">购生活旅行/团购</a></dd>
+                    <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">大家电</a></dd>
+                    <dd><a href="#">联系客服</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="#">购物指南</a></dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">会员介绍</a></dd>
+                    <dd><a href="#">购生活旅行/团购</a></dd>
+                    <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">大家电</a></dd>
+                    <dd><a href="#">联系客服</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="#">购物指南</a></dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">会员介绍</a></dd>
+                    <dd><a href="#">购生活旅行/团购</a></dd>
+                    <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">大家电</a></dd>
+                    <dd><a href="#">联系客服</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="#">购物指南</a></dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">会员介绍</a></dd>
+                    <dd><a href="#">购生活旅行/团购</a></dd>
+                    <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">大家电</a></dd>
+                    <dd><a href="#">联系客服</a></dd>
+                </dl>
+                <dl class="app">
+                    <dt><a href="#">帮助中心</a></dt>
+                    <img data-src="upload/erweima.png" alt="">
+                    <p>品优购客户端</p>
+                </dl>
+            </div>
+            <div class="copyright">
+                <p>
+                    <a href="#">关于我们</a>|
+                    <a href="#">联系我们</a>|
+                    <a href="#">联系客服</a>|
+                    <a href="#">商家入驻</a>|
+                    <a href="#">营销中心</a>|
+                    <a href="#">手机品优购</a>|
+                    <a href="#">友情链接</a>|
+                    <a href="#">销售联盟</a>|
+                    <a href="#">品优购社区</a>|
+                    <a href="#">品优购公益</a>|
+                    <a href="#">English Site</a>|
+                    <a href="#">Contact U</a>
+                </p>
+                <p>地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn <br>
+                    京ICP备08001421号京公网安备110108007702</p>
+            </div>
+        </div>
+    </div>
+    <!-- 电梯导航 -->
+    <div class="fixedtool">
+        <ul>
+            <li class="toolred">家用电器</li>
+            <li>精品推荐</li>
+            <li>手机通讯</li>
+            <li>电脑办公</li>
+        </ul>
+    </div>
+</body>
+
+</html>

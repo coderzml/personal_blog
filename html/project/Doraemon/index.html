@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas-哆啦A梦</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 400px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <canvas width="400" height="600">您的浏览器不支持canvas</canvas>
+    </div>
+</body>
+
+</html>
+<script>
+    // 开始绘画
+    let canvas = document.querySelector('canvas');
+    if (canvas.getContext) {
+        let ctx = canvas.getContext('2d');
+
+        ctx.save();
+        // 绘制脑袋
+        ctx.beginPath();
+        // 定义颜色
+        ctx.fillStyle = '#0bb0da';
+        ctx.strokeStyle = '#000';
+        ctx.arc(200, 175, 175, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.stroke();
+        ctx.restore();
+
+        // 画脸
+        ctx.save();
+        ctx.beginPath();
+        ctx.fillStyle = '#fff';
+        // 画左边脸
+        ctx.moveTo(110, 110);
+        ctx.quadraticCurveTo(-10, 200, 120, 315);
+        // 画右边脸
+        ctx.moveTo(280, 315);
+        ctx.quadraticCurveTo(410, 210, 290, 110);
+        // 画头上线
+        ctx.lineTo(110, 110);
+        ctx.fill();
+        ctx.stroke();
+        // 露白 补充
+        ctx.fillRect(110, 112, 162, 193);
+        ctx.fillRect(120, 305, 160, 10);
+        ctx.restore();
+
+        // 画眼睛
+        ctx.beginPath();
+        ctx.fillStyle = '#fff';
+        ctx.moveTo(110, 110);
+        // 画上半眼眶
+        ctx.bezierCurveTo(110, 25, 200, 25, 200, 100);
+        ctx.bezierCurveTo(200, 175, 110, 175, 110, 100);
+        // 画上半眼眶
+        ctx.moveTo(200, 100);
+        ctx.bezierCurveTo(200, 25, 290, 25, 290, 100);
+        ctx.bezierCurveTo(290, 175, 200, 175, 200, 100);
+        ctx.stroke();
+        ctx.fill();
+        ctx.restore();
+
+        // 画眼球
+        // 右眼球
+        ctx.save();
+        ctx.beginPath();
+        ctx.fillStyle = '#000';
+        ctx.arc(230, 130, 12, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+        //左眼球
+        ctx.beginPath();
+        ctx.arc(170, 130, 12, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+        ctx.restore();
+
+        // 画鼻子
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(200, 165, 25, 0, Math.PI * 2);
+        ctx.fillStyle = '#d05823'
+        ctx.fill();
+        ctx.stroke();
+        ctx.restore();
+
+        // 画胡须
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(80, 175);
+        ctx.lineTo(150, 195);
+        ctx.moveTo(80, 200);
+        ctx.lineTo(150, 205);
+        ctx.moveTo(80, 225);
+        ctx.lineTo(150, 215);
+        // 中间胡须
+        ctx.moveTo(200, 195);
+        ctx.lineTo(200, 290);
+        // 右边胡须
+        ctx.moveTo(250, 195);
+        ctx.lineTo(320, 175);
+        ctx.moveTo(250, 205);
+        ctx.lineTo(320, 200);
+        ctx.moveTo(250, 215);
+        ctx.lineTo(320, 225);
+        ctx.stroke();
+        ctx.restore();
+
+        // 画嘴
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(80, 240);
+        ctx.quadraticCurveTo(200, 350, 320, 240);
+        ctx.stroke();
+        ctx.restore();
+
+        // 画围巾  arcTo  就是画圆角的
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(96, 316);
+        ctx.lineTo(305, 316);
+        ctx.lineTo(320, 316);
+        ctx.arcTo(330, 316, 330, 326, 10);
+        ctx.lineTo(330, 336);
+        ctx.arcTo(330, 346, 305, 346, 10);
+        ctx.lineTo(81, 346);
+        ctx.arcTo(71, 346, 71, 336, 10);
+        ctx.lineTo(71, 326);
+        ctx.arcTo(71, 316, 81, 316, 10);
+        ctx.lineTo(96, 316);
+        ctx.fillStyle = '#b13209';
+        ctx.fill();
+        ctx.stroke();
+        ctx.restore();
+
+        //画衣服  拿 lineTo 一点一点拼接出来
+        ctx.save();
+        ctx.beginPath();
+        ctx.fillStyle = '#0bb0da';
+        // 左衣服
+        ctx.moveTo(80, 346);
+        ctx.lineTo(26, 406);
+        ctx.lineTo(65, 440);
+        ctx.lineTo(85, 418);
+        ctx.lineTo(85, 528);
+        ctx.lineTo(185, 528);
+        // 右衣服
+        ctx.lineTo(315, 528);
+        ctx.lineTo(315, 418);
+        ctx.lineTo(337, 440);
+        ctx.lineTo(374, 406);
+        ctx.lineTo(320, 346);
+        ctx.fill();
+        ctx.stroke();
+        ctx.restore();
+
+        // 画手
+        ctx.save();
+        ctx.beginPath();
+        ctx.fillStyle = '#fff';
+        ctx.arc(37, 433, 30, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(363, 433, 30, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+        ctx.restore();
+
+        // 画肚子  1.8 * Math.PI, 1.2 * Math.PI  代表不是个正圆, 还有一种方法就是利用层级关系
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(200, 400, 91, 1.8 * Math.PI, 1.2 * Math.PI);
+        ctx.fillStyle = '#fff';
+        ctx.stroke();
+        ctx.fill();
+        ctx.restore();
+
+        // 画口袋 
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(200, 394, 70, 0, Math.PI);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.restore();
+
+        // 画两只脚 和两只脚之间的空隙
+        // 两只脚之间的空隙
+        ctx.save();
+        ctx.beginPath();
+        ctx.fillStyle = '#fff';
+        ctx.arc(200, 529, 20, Math.PI, 0);
+        ctx.fill();
+        ctx.stroke();
+        // 脚
+        // 左脚
+        ctx.beginPath();
+        ctx.fillStyle = '#fff';
+        ctx.moveTo(180, 528);
+        ctx.lineTo(72, 528);
+        ctx.bezierCurveTo(52, 528, 52, 558, 72, 558);
+        ctx.lineTo(180, 558);
+        ctx.moveTo(180, 558);
+        ctx.bezierCurveTo(200, 558, 200, 528, 180, 528);
+        ctx.fill();
+        ctx.stroke();
+        // 右脚
+        ctx.beginPath();
+        ctx.moveTo(220, 528);
+        ctx.lineTo(328, 528);
+        ctx.bezierCurveTo(348, 528, 348, 558, 328, 558);
+        ctx.lineTo(220, 558);
+        ctx.moveTo(220, 558);
+        ctx.bezierCurveTo(200, 558, 200, 528, 220, 528);
+        ctx.fill();
+        ctx.stroke();
+
+
+    }
+</script>

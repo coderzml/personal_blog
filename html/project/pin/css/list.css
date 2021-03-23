@@ -1,0 +1,134 @@
+.sm_kill{
+    position: absolute;
+    top: 30px;
+    left: 185px;
+    height: 32px;
+    border-left: 1px solid #ccc;
+    padding: 5px 0 0 15px;
+}
+.nav_list li{
+    float: left;
+    line-height: 42px;
+}
+.nav_list li a{
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 25px;
+    
+}
+.nav_con li{
+    float: left;
+    line-height: 42px;
+}
+.nav_con li a {
+    color: #666;
+    font-size: 14px;
+    margin-left: 45px;
+}
+.sk_box{
+    margin-top: 25px;
+}
+.sk_box ul{
+    width: 1213px;
+}
+.sk_box_item{
+    float: left;
+    position: relative;
+    width: 288px;
+    height: 459px;
+    border: 1px solid transparent;
+    margin: 0 13px 15px 0;
+}
+.sk_box_item:hover{
+    border: 1px solid #e12228;
+}
+.sk_box_item:hover a{
+    color: #fff;
+}
+.sk_box_item img{
+    width: 100%;
+}
+.sk_box_item h5{
+    font-size: 14px;
+    padding: 10px 7px;
+    color: #666;
+}
+.jiage{
+    font-size: 13px;
+    padding: 0 7px;
+    color: #e60012;
+}
+.jiage em{
+    font-size: 22px;
+    color: #e60012;
+}
+.jiage del{
+    font-weight: 600;
+    color: #666;
+}
+.bar{
+    padding: 0 7px;
+}
+.jindu{
+    display: inline-block;
+    width: 130px;
+    height: 10px;
+    border: 1px solid #e12228;
+    vertical-align: middle;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.tiao{
+    width: 85%;
+    height: 10px;
+    background-color: #ed4348;
+}
+.bar em{
+    color: #ed4348;
+}
+.goumai{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    line-height: 50px;
+    background-color: #b1191a;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+}
+/* 分页 */
+.sk_num{
+    padding: 50px 0;
+    text-align: center;
+}
+.sk_num a{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    background-color: #f5f5f5;
+}
+.sk_num .up,
+.sk_num .down{
+     width: 70px;
+}
+.sk_num .this,
+.sk_num .dian{
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+.sk_num_you input{
+    width: 40px;
+    height: 36px;
+    text-align: center;
+    transition:all .3s;
+}
+.sk_num_you button{
+    width: 36px;
+    height: 36px;
+}
+.sk_num_you input:focus{
+    border: 1px solid skyblue;
+    width: 60px;
+}

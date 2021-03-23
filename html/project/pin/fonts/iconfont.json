@@ -1,0 +1,79 @@
+{
+  "id": "1643059",
+  "name": "品优购",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3026879",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "3480943",
+      "name": "加密",
+      "font_class": "jiami",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "7934642",
+      "name": "收 藏",
+      "font_class": "shoucang",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "10545503",
+      "name": "分 享",
+      "font_class": "fenxiang",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "2960787",
+      "name": "刷新",
+      "font_class": "shuaxin",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "3361061",
+      "name": "左右箭头",
+      "font_class": "left",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "4119837",
+      "name": "左右箭头",
+      "font_class": "zuoyoujiantou",
+      "unicode": "e7e1",
+      "unicode_decimal": 59361
+    },
+    {
+      "icon_id": "12625875",
+      "name": "右箭头",
+      "font_class": "you",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "12944384",
+      "name": "购物车",
+      "font_class": "che",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "3331322",
+      "name": "三角箭头 Triangular",
+      "font_class": "sort_desc",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}

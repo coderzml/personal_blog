@@ -1,0 +1,426 @@
+{
+    "home_info": {
+        "blog_name": "/image/home/coderzml.png",
+        "blog_bg": "/image/home/header_BG.jpg",
+        "blog_font": "coderzml是一个关注前端技术的个人博客，用来记录学习和工作总结。",
+        "nav": [
+            "首页",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "JQuery",
+            "作品集",
+            "关于我"
+        ],
+        "big_glass": "/image/home/big_glass.png",
+        "content_font": {
+            "home": [
+                {
+                    "id": 0,
+                    "title": "微信内置浏览器",
+                    "img": "/image/home/article01.jpg",
+                    "font": "微信内置浏览器在返回上一页面，且上一页面包含AJAX代码时，页面就会被强制刷新的问题",
+                    "font_time": "2021/03/22 8点45分",
+                    "language_type": "JS",
+                    "target_url": "/html/home_pages/article_01.html"
+                },
+                {
+                    "id": 1,
+                    "title": "promise",
+                    "img": "/image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。",
+                    "font_time": "2021/03/07 15点48分",
+                    "language_type": "CSS",
+                    "target_url": "/html/home_pages/article_02.html"
+                },
+                {
+                    "id": 2,
+                    "title": "媒体查询",
+                    "img": "/image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021/03/07 15点48分",
+                    "language_type": "JS"
+                },
+                {
+                    "id": 3,
+                    "title": "blog",
+                    "img": "/image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021-03-08 09：04",
+                    "language_type": "VUE",
+                    "target_url": "/html/home_pages/01.html"
+                },
+                {
+                    "id": 4,
+                    "title": "blog",
+                    "img": "/image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021-03-08 09：04",
+                    "language_type": "CSS"
+                },
+                {
+                    "id": 5,
+                    "title": "blog",
+                    "img": "/image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021-03-08 09：04",
+                    "language_type": "CSS"
+                },
+                {
+                    "id": 6,
+                    "title": "blog",
+                    "img": "/image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021-03-08 09：04",
+                    "language_type": "JS"
+                },
+                {
+                    "id": 7,
+                    "title": "媒体查询",
+                    "img": "/image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021-03-08 09：04",
+                    "language_type": "VUE"
+                },
+                {
+                    "id": 8,
+                    "title": "promise",
+                    "img": "/image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021-03-08 09：04",
+                    "language_type": "VUE"
+                },
+                {
+                    "id": 9,
+                    "title": "blog",
+                    "img": "/image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存 ",
+                    "font_time": "2021-03-08 09：04",
+                    "language_type": "CSS",
+                    "target_url": "/html/home_pages/article_09.html"
+                }
+            ],
+            "HTML": [
+                {
+                    "id": 0,
+                    "title": "JS常见的变量",
+                    "img": "/image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021/03/07 15点48分",
+                    "language_type": "HTML"
+                },
+                {
+                    "id": 1,
+                    "title": "JS常见的变量",
+                    "img": "/image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021/03/07 15点48分",
+                    "language_type": "html",
+                    "target_url": "/html/html_pages/article_02.html"
+                },
+                {
+                    "id": 2,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021/03/07 15点48分",
+                    "language_type": "VUE"
+                },
+                {
+                    "id": 3,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021/03/07 15点48分",
+                    "language_type": "html"
+                },
+                {
+                    "id": 4,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021/03/07 15点48分",
+                    "language_type": "CSS"
+                },
+                {
+                    "id": 5,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021/03/07 15点48分",
+                    "language_type": "CSS"
+                },
+                {
+                    "id": 6,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021/03/07 15点48分",
+                    "language_type": "JS"
+                },
+                {
+                    "id": 7,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021/03/07 15点48分",
+                    "language_type": "VUE"
+                },
+                {
+                    "id": 8,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021/03/07 15点48分",
+                    "language_type": "VUE"
+                },
+                {
+                    "id": 9,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021/03/07 15点48分",
+                    "language_type": "CSS"
+                }
+            ],
+            "CSS": [
+                {
+                    "id": 0,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "2021/03/07 15点48分",
+                    "language_type": "html"
+                },
+                {
+                    "id": 1,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "发布于：2021/03/07 15点48分",
+                    "language_type": "html"
+                },
+                {
+                    "id": 2,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "发布于：2021/03/07 15点48分",
+                    "language_type": "html",
+                    "target_url": "/html/css_pages/article_03.html"
+                },
+                {
+                    "id": 3,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "发布于：2021/03/07 15点48分",
+                    "language_type": "html"
+                },
+                {
+                    "id": 4,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "发布于：2021/03/07 15点48分",
+                    "language_type": "html"
+                },
+                {
+                    "id": 5,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "发布于：2021/03/07 15点48分",
+                    "language_type": "html"
+                }
+            ],
+            "JavaScript": [
+                {
+                    "id": 0,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "发布于：2021/03/07 15点48分",
+                    "language_type": "html"
+                },
+                {
+                    "id": 1,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "发布于：2021/03/07 15点48分",
+                    "language_type": "html"
+                },
+                {
+                    "id": 2,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "发布于：2021/03/07 15点48分",
+                    "language_type": "html"
+                },
+                {
+                    "id": 3,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "发布于：2021/03/07 15点48分",
+                    "language_type": "html"
+                }
+            ],
+            "JQuery": [
+                {
+                    "id": 0,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "发布于：2021/03/07 15点48分",
+                    "language_type": "html"
+                },
+                {
+                    "id": 1,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "发布于：2021/03/07 15点48分",
+                    "language_type": "html"
+                },
+                {
+                    "id": 2,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "发布于：2021/03/07 15点48分",
+                    "language_type": "html"
+                },
+                {
+                    "id": 3,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "发布于：2021/03/07 15点48分",
+                    "language_type": "html"
+                },
+                {
+                    "id": 4,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "发布于：2021/03/07 15点48分",
+                    "language_type": "html"
+                },
+                {
+                    "id": 5,
+                    "title": "JS常见的变量",
+                    "img": "../image/home/font_img1.jpg",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font_time": "发布于：2021/03/07 15点48分",
+                    "language_type": "html"
+                }
+            ],
+            "works_total": [
+                {
+                    "id": 0,
+                    "title": "舔狗日记",
+                    "img": "/image/project/article01.png",
+                    "font": "舔狗日记，是最近社交平台很流行的一种交流语体。以日记为书写形式，以舔狗的姿态为情感出发点，来表达对于喜欢对象的向往、不甘、无奈之情。",
+                    "font_time": "2021/03/19 16点34分",
+                    "language_type": "自适应",
+                    "target_url": "/html/project_pages/article_01.html"
+                },
+                {
+                    "id": 1,
+                    "title": "super_mall",
+                    "img": "/image/project/article02.png",
+                    "font": "super_mall（超级商场）是用Vue开发的一个 商品网站，首页是对商品的介绍 点击商品可以进入到商品的详情页，还支持添加购物车功能",
+                    "font_time": "2021/03/20 11点26分",
+                    "language_type": "移动端",
+                    "target_url": "/html/project_pages/article_02.html"
+                },
+                {
+                    "id": 2,
+                    "title": "品优购",
+                    "img": "/image/project/article03.png",
+                    "font": "2020年初 做的第一个比较系统点的网页，包含 首页、分类页、详情页、登陆页 、注册页（虽然没有对接后台但是form表单该有的都有）",
+                    "font_time": "2021/03/20 13点28分",
+                    "language_type": "PC端",
+                    "target_url": "/html/project_pages/article_03.html"
+                },
+                {
+                    "id": 3,
+                    "title": "Todolist",
+                    "img": "/image/project/article04.png",
+                    "font": "ToDoList无须注册即可使用,数据存储在用户浏览器的html5本地数据库里,是最简单最安全的待办事项列表应用!",
+                    "font_time": "2021/03/20 13点56分",
+                    "language_type": "自适应",
+                    "target_url": "/html/project_pages/article_04.html"
+                },
+                {
+                    "id": 4,
+                    "title": "在售商品",
+                    "img": "/image/project/article05.png",
+                    "font": "可视化可修改的网页 只需替换图片 和 双击修改文字 即可生成当日的在售清单 。操作简单方便 ,DIY文字，数据保存在浏览器的 localstorage内，不易丢失。",
+                    "font_time": "2021/03/20 14点33分",
+                    "language_type": "PC端",
+                    "target_url": "/html/project_pages/article_05.html"
+                },
+                {
+                    "id": 5,
+                    "title": "旋转木马",
+                    "img": "/image/project/article06.png",
+                    "font": "利用 CSS3 的动画效果 实现的一个旋转木马的视觉效果",
+                    "font_time": "2021/03/20 16点13分",
+                    "language_type": "PC端",
+                    "target_url": "/html/project_pages/article_06.html"
+                },
+                {
+                    "id": 6,
+                    "title": "canvas",
+                    "img": "/image/project/article07.png",
+                    "font": "canvas是HTML5新增的，一个可以使用脚本(通常为JavaScript) 在其中绘制图像的HTML元素。它可以用来制作照片集或者制作简单(也不是那么简单)的动画，甚至可以进行实时视频处理和渲染。",
+                    "font_time": "2021/03/20 16点45分",
+                    "language_type": "自适应",
+                    "target_url": "/html/project_pages/article_07.html"
+                },
+                {
+                    "id": 7,
+                    "title": "今天吃什么？",
+                    "img": "/image/project/article08.png",
+                    "font": "不要问我为什么无聊写这个  问就（进来说）",
+                    "font_time": "2021/03/20 17点30分",
+                    "language_type": "PC端",
+                    "target_url": "/html/project_pages/article_08.html"
+                },
+                {
+                    "id": 8,
+                    "title": "学前端的前三个页面",
+                    "img": "/image/project/article09.png",
+                    "font": "这篇博文记录了 刚开始接触前端 写的 前三个页面。可能有很多不足之处 我觉得没必要去优化，优化了还能看出当时写代码的那种懵懂感嘛，此篇博文要的就是最初写代码稚嫩的感觉 ",
+                    "font_time": "2021/03/22 10点50分",
+                    "language_type": "PC端",
+                    "target_url": "/html/project_pages/article_09.html"
+                }
+            ],
+            "about_me": [
+                {
+                    "id": 0,
+                    "title": "自我介绍",
+                    "img": "/image/about_me/article1.jpg",
+                    "font": "我是一个活泼开朗热爱学习的人",
+                    "font_time": "2021/03/18 16点34分",
+                    "language_type": "me",
+                    "target_url": "/html/about_me_pages/article_01.html"
+                },
+                {
+                    "id": 1,
+                    "title": "关于博客",
+                    "img": "",
+                    "font": "记录学习和工作总结 有些知识点写成文章也是给自己做个笔记吧，如果能帮助到别人更好。",
+                    "font_time": "2021/03/18 16点47分",
+                    "language_type": "blog",
+                    "target_url": "/html/about_me_pages/article_02.html"
+                }
+            ]
+        }
+    }
+}

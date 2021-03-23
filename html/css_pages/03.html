@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/home_common.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <div class="home_pages1">
+        <div class="header">
+            <div class="type_area">
+                <img src="" alt="回到主页" class="coderzml">
+            </div>
+        </div>
+        <div class="blog_font">
+            <div class="type_area">
+                <div class="blog_font_fill"></div>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="type_area">
+                <div class="nav_list"></div>
+                <div class="search">
+                    <input type="text" class="search_left" placeholder="请输入搜索内容...">
+                    <div class="search_right">
+                        <img src="" alt="搜索" class="big_glass">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="type_area container">
+            <div class="content">
+                <div class="location">
+                    <strong>您现在的位置是: </strong>
+                    <span class="location_font"></span>
+                </div>
+                <div class="content_title">
+                    <span class="title"></span>
+                    <p class="time"></p>
+                </div>
+                <div class="md"></div>
+            </div>
+
+        </div>
+
+        <div class="pages">
+            <div class="type_area pages_bg">
+                <div class="pages_box">
+                    <ul class="pages_ul"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="/js/home_common.js"></script>
+<script src="/js/home.js"></script>
+<script>
+    // 点击nav的时候渲染load（首页）
+    click_nav_load();
+    // 渲染pages位置信息
+    pages_location();
+    // 请求md
+    md('/html/css_pages/md_html/03.html');
+</script>
