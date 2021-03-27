@@ -126,5 +126,12 @@
     for (let i = 0; i < divs.length; i++) {
         divs[i].style.background = '#' + Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, '0');
         divs[i].style.transform = "rotateY(" + i * 30 + "deg)  translateZ(400px)";
+        // 如果是 移动端
+        if (document.body.clientWidth < 500) {
+            divs[i].style.width = '80px';
+            divs[i].style.height = '100px';
+            divs[i].style.transform = "rotateY(" + i * 30 + "deg)  translateZ(200px)";
+        }
     }
+
 </script>

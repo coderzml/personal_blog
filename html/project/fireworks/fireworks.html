@@ -5,19 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>烟花效果</title>
     <style>
         * {
             padding: 0;
             margin: 0px;
             background-color: #000;
+            overflow-x: hidden;
         }
+
 
         div {
             width: 6px;
             height: 6px;
             position: absolute;
 
+        }
+
+        .box {
+            height: 100px;
+            overflow-y: auto;
+        }
+
+        .box::-webkit-scrollbar {
+            display: none;
         }
 
         .move {
@@ -38,11 +49,20 @@
             /* display: none; */
             transition: 0.2s;
         }
+
+        /* 如果是移动端就不显示 发射小球了 效果不好 */
+        @media screen and (max-width:500px) {
+            .fashe {
+                display: none;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="fashe"></div>
+    <div class="box">
+        <div class="fashe"></div>
+    </div>
 </body>
 
 </html>
@@ -56,7 +76,6 @@
         color = color + r + ',' + g + ',' + b + ')';
         return color;
     }
-    let flag = false;
     // 封装一个构造函数
     function Position(dom, x, y) {
         // 样式
@@ -73,19 +92,20 @@
             dom.style.width = size + 'px';
             dom.style.height = size + 'px';
         }
+        randomSize();
         dom.style.background = randomColor();
-        let randomNum = Math.floor(Math.random() * 2);
-        switch (randomNum) {
-            case 0:
-                rect();
-                break;
-            case 1:
-                randomSize();
-                break;
-            default:
-                rect();
-                break;
-        }
+        // let randomNum = Math.floor(Math.random() * 2);
+        // switch (randomNum) {
+        //     case 0:
+        //         rect();
+        //         break;
+        //     case 1:
+        //         randomSize();
+        //         break;
+        //     default:
+        //         rect();
+        //         break;
+        // }
         // // 给div渲染颜色
 
 
@@ -109,7 +129,7 @@
                 if (dom.offsetLeft + dom.offsetWidth > window.innerWidth || dom.offsetTop + dom.offsetHeight > window.innerHeight) {
                     // 清除定时器和方块
                     clearInterval(timer);
-                    dom.remove()
+                    dom.remove();
                 }
                 // 这个值控制多久更新渲染一次烟花位置 
             }, 30);
@@ -136,10 +156,16 @@
     }
     // 移动的时候 恢复样式 便于下一次运行
     document.onmousemove = function (e) {
-        fashe.style.background = randomColor();
-        fashe.style.left = e.pageX + 'px';
-        fashe.style.display = 'block';
-        fashe.style.transform = 'translateY(0)';
+
+        if (document.body.clientWidth < 500) {
+            fashe.style.display = 'none';
+        } else {
+            fashe.style.background = randomColor();
+            fashe.style.left = e.pageX + 'px';
+            fashe.style.display = 'none';
+            fashe.style.transform = 'translateY(0)';
+        }
+
     }
 
 

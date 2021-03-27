@@ -26,26 +26,26 @@
                 },
                 {
                     "id": 1,
-                    "title": "promise",
-                    "img": "/image/home/font_img1.jpg",
-                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。",
-                    "font_time": "2021/03/07 15点48分",
-                    "language_type": "CSS",
+                    "title": "git的全面学习",
+                    "img": "https://www.liaoxuefeng.com/files/attachments/918921150461184/0",
+                    "font": "比较全面的总结了git的日常使用命令，了解git的由来，掌握git的版本控制、操作远程仓库、分支管理、多人协作以及相关理论，最后学习使用gitee",
+                    "font_time": "2021/03/26 11点11分",
+                    "language_type": "git",
                     "target_url": "/html/home_pages/article_02.html"
                 },
                 {
                     "id": 2,
-                    "title": "媒体查询",
+                    "title": "未定义",
                     "img": "/image/home/font_img1.jpg",
-                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存。",
                     "font_time": "2021/03/07 15点48分",
                     "language_type": "JS"
                 },
                 {
                     "id": 3,
-                    "title": "blog",
+                    "title": "未定义",
                     "img": "/image/home/font_img1.jpg",
-                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存",
                     "font_time": "2021-03-08 09：04",
                     "language_type": "VUE",
                     "target_url": "/html/home_pages/01.html"
@@ -370,7 +370,7 @@
                     "img": "/image/project/article06.png",
                     "font": "利用 CSS3 的动画效果 实现的一个旋转木马的视觉效果",
                     "font_time": "2021/03/20 16点13分",
-                    "language_type": "PC端",
+                    "language_type": "自适应",
                     "target_url": "/html/project_pages/article_06.html"
                 },
                 {
@@ -399,6 +399,33 @@
                     "font_time": "2021/03/22 10点50分",
                     "language_type": "PC端",
                     "target_url": "/html/project_pages/article_09.html"
+                },
+                {
+                    "id": 9,
+                    "title": "JS实现烟花效果",
+                    "img": "/image/project/article10.png",
+                    "font": "利用JS 实现烟花效果，烟花样式大小和运动的方向都是随机的 ",
+                    "font_time": "2021/03/24 09点20分",
+                    "language_type": "自适应",
+                    "target_url": "/html/project_pages/article_10.html"
+                },
+                {
+                    "id": 10,
+                    "title": "全屏滚动效果",
+                    "img": "/image/project/article11.png",
+                    "font": "这个购物页面 是全屏滚动效果（fullPage插件），整个页面充满了HTML5的动画 当然这归功于 JQuery和easing插件",
+                    "font_time": "2021/03/24 10点15分",
+                    "language_type": "PC端",
+                    "target_url": "/html/project_pages/article_11.html"
+                },
+                {
+                    "id": 11,
+                    "title": "随机高清动漫壁纸",
+                    "img": "/image/project/article12.png",
+                    "font": "随机生成高清动漫壁纸，目前系统共收录 1000+ 张图片，图片均为https，采用新浪图片，高速访问",
+                    "font_time": "2021/03/24 13点34分",
+                    "language_type": "自适应",
+                    "target_url": "/html/project_pages/article_12.html"
                 }
             ],
             "about_me": [
@@ -406,7 +433,7 @@
                     "id": 0,
                     "title": "自我介绍",
                     "img": "/image/about_me/article1.jpg",
-                    "font": "我是一个活泼开朗热爱学习的人",
+                    "font": "我叫张梦龙，是coderzml博客的作者，我喜欢编程、算法、也对新技术有深厚的兴趣，个人有代码强迫症，喜欢简洁的代码风格，只要有时间，什么东西都想自己写，自己做。",
                     "font_time": "2021/03/18 16点34分",
                     "language_type": "me",
                     "target_url": "/html/about_me_pages/article_01.html"
@@ -414,8 +441,8 @@
                 {
                     "id": 1,
                     "title": "关于博客",
-                    "img": "",
-                    "font": "记录学习和工作总结 有些知识点写成文章也是给自己做个笔记吧，如果能帮助到别人更好。",
+                    "img": "/image/about_me/article2.jpg",
+                    "font": "开发博客的目的是记录学习和工作总结 有些知识点写成文章也是给自己做个笔记吧，如果能帮助到别人更好。",
                     "font_time": "2021/03/18 16点47分",
                     "language_type": "blog",
                     "target_url": "/html/about_me_pages/article_02.html"

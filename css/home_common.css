@@ -156,7 +156,16 @@ body {
 .othe {
     background-color: green;
 }
-
+/* 回到顶部 */
+.go_top {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+/* 点击的时候去除默认蓝色的框 */
+body{ -webkit-tap-highlight-color:rgba(0,0,0,0); }
 /* 移动端 */
 /* 手机宽度在500之内 */
 @media screen and (max-width:500px) {
@@ -307,6 +316,9 @@ body {
         margin: 0;
         height: 133px;
     }
+    .box_list_left img {
+        height: auto !important;
+    }
     /* 下部分 */
    .content .box_list_right {
         float: none;
@@ -391,5 +403,14 @@ body {
     #write{
         text-align: left;
         padding: 0 !important;
+    }
+    /* 回到顶部 */
+    .go_top {
+        z-index: 999999;
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        bottom: 1px;
+        left: -20px;
     }
 }

@@ -641,17 +641,47 @@ if (location.href == 'http://zmlong.usa3v.net/index.html') {
     let scroll = localStorage.getItem('scroll');
     if (scroll !== null) {
         // 开始渲染
-        // BUG  如果scroll的值太小的话 就不会触发scroll事件了
-        window.scrollTo(0, scroll); // 改变scroll的位置 注意参数 第一个是x,第二个是y
         // 触发事件 调用点击
         window.onload = function () {
-            // 原生写法 nav调用点击 和 JQ 写法 pages调用点击
+            window.scrollTo(0, scroll); // 改变scroll的位置 注意参数 第一个是x,第二个是y
+            // JQ 调用点击
+            $('.nav_ul li').eq(localStorage.getItem('nav_index')).click();
             $('.pages_ul li').eq(localStorage.getItem('pages_index')).click();
-            document.querySelector('.nav_ul').querySelectorAll('li')[localStorage.getItem('nav_index')].click();
+            // 原生调用点击
+            // document.querySelector('.nav_ul').querySelectorAll('li')[localStorage.getItem('nav_index')].click();
+            // document.querySelector('.pages_ul').querySelectorAll('li')[localStorage.getItem('pages_index')].click();
             // 到此渲染结束 ， 删除值 防止下次打开的时候渲染
             localStorage.removeItem('nav_index');
             localStorage.removeItem('pages_index');
             localStorage.removeItem('scroll');
         }
     }
+}
+
+
+// 被卷曲的头部 点击回到顶部
+window.onscroll = function (e) {
+    console.log($(document).scrollTop());
+    let scroll = $(document).scrollTop()
+    if (scroll > 4000) {
+        if (document.body.querySelector('.go_top') == null) {
+            let img = document.createElement('img');
+            img.className = 'go_top';
+            img.src = '/image/detail/top.png';
+            document.body.appendChild(img);
+        }
+        $('.go_top').click(function () {
+            $(this).stop().animate({
+                top: 0
+            });
+            $("body, html").stop().animate({
+                scrollTop: 0
+            });
+        })
+    } else {
+        if (document.body.querySelector('.go_top') !== null) {
+            document.body.removeChild(document.querySelector('.go_top'));
+        }
+    }
+
 }

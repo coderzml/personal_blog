@@ -147,8 +147,9 @@
         ctx.lineTo(96, 316);
         ctx.fillStyle = '#b13209';
         ctx.fill();
-        ctx.stroke();
         ctx.restore();
+
+
 
         //画衣服  拿 lineTo 一点一点拼接出来
         ctx.save();
@@ -191,6 +192,33 @@
         ctx.fillStyle = '#fff';
         ctx.stroke();
         ctx.fill();
+
+        // 画铃铛
+        ctx.fillStyle = '#f5d206';
+        // 铃铛
+        ctx.beginPath();
+        ctx.arc(200, 360, 20, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.stroke();
+        // 铃铛的两条线
+        ctx.moveTo(182, 350);
+        ctx.lineTo(218, 350);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(180, 355);
+        ctx.lineTo(220, 355);
+        ctx.stroke();
+        // 铃铛心
+        ctx.beginPath();
+        ctx.fillStyle = '#747450';
+        ctx.arc(200, 367, 6, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.stroke();
+        // 连接处
+        ctx.beginPath();
+        ctx.moveTo(200, 372);
+        ctx.lineTo(200, 380);
+        ctx.stroke();
         ctx.restore();
 
         // 画口袋 
