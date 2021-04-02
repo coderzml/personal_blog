@@ -156,8 +156,10 @@ function search() {
 
 // 获取数据
 function request_data() {
+    // 请求
     let xhr = new XMLHttpRequest();
     let request;
+    // 检测返回
     xhr.onreadystatechange = function () {
         // 判断是否成功 最严谨的做法
         if (xhr.readyState == 4) {
@@ -170,6 +172,7 @@ function request_data() {
     }
     // 请求头 这个改为同步请求了 报了警告 使用异步不能给全局变量赋值
     xhr.open('get', '/json/home.json', false);
+    // 发送请求
     xhr.send(null);
     // 返回数据
     return request.home_info;
@@ -206,7 +209,14 @@ function load() {
             let content = document.createElement('div');
             content.classList.add(key + '_info', 'info');
             let each_data = data_info[key];
-            for (let i = 0; i < each_data.length; i++) { //每一个
+            // console.log(each_data);
+            // console.log(each_data);
+            // console.log(each_data.length - 1);
+            // console.log(each_data.length - 4);
+
+            for (let i = each_data.length - 1; i >= 0; i--) { //每一个
+                // console.log(i);
+
                 // console.log(each_data[i]);
                 // 先判断类型再渲染
                 let ClassName = '';
@@ -231,7 +241,9 @@ function load() {
                         ClassName = 'othe'
                         break;
                 }
-                if (each_data[i].id <= num) {
+
+                if (each_data[i].id >= each_data.length - 4 && each_data[i].id <= each_data.length - 1) {
+                    // if (each_data[i].id <= num) {
                     // 渲染 每个小盒子
                     // -----------------------------------转义和实现点击nav更新_blank_info数据
                     //window.location.href   接收
@@ -330,21 +342,18 @@ function load() {
                         pages('home');
                         break;
                     case 1:
-                        pages('HTML');
+                        pages('HTML+CSS');
                         break;
                     case 2:
-                        pages('CSS');
-                        break;
-                    case 3:
                         pages('JavaScript');
                         break;
-                    case 4:
+                    case 3:
                         pages('JQuery');
                         break;
-                    case 5:
+                    case 4:
                         pages('works_total');
                         break;
-                    case 6:
+                    case 5:
                         pages('about_me');
                         break;
                     default:
@@ -354,10 +363,8 @@ function load() {
                 // 点击nav传名字到pages 方便pages更新数据 
                 if (this.innerHTML == '首页') {
                     click_pages('home');
-                } else if (this.innerHTML == 'HTML') {
-                    click_pages('HTML');
-                } else if (this.innerHTML == 'CSS') {
-                    click_pages('CSS');
+                } else if (this.innerHTML == 'HTML+CSS') {
+                    click_pages('HTML+CSS');
                 } else if (this.innerHTML == 'JavaScript') {
                     click_pages('JavaScript');
                 } else if (this.innerHTML == 'JQuery') {
@@ -449,6 +456,7 @@ function load() {
                 }
                 this.classList.add('pages_current');
                 let page = pages_info_name;
+                let data_info = data.content_font[page];
                 if (this.innerHTML == i + 1) {
                     // hake方法 -----------------------------------------------
                     // 后面如果pages小方快 多于3个 就会报错 因为 这里实现了3个,也就是12个页面
@@ -457,19 +465,27 @@ function load() {
                     let num1;
                     let num2;
                     if (this.innerHTML == 1) {
-                        num1 = 0;
-                        num2 = 3;
+                        num1 = data_info.length - 4;
+                        num2 = data_info.length - 1;
+                        // console.log(num1);
+                        // console.log(num2);
                     } else if (this.innerHTML == 2) {
-                        num1 = 4;
-                        num2 = 7;
+                        num1 = data_info.length - 8;
+                        num2 = data_info.length - 5;
+                        // console.log(num1);
+                        // console.log(num2);
+
                     } else if (this.innerHTML == 3) {
-                        num1 = 8;
-                        num2 = 11;
+                        num1 = data_info.length - 12;
+                        num2 = data_info.length - 9;
+                        // console.log(num1);
+                        // console.log(num2);
+
                     }
-                    let data_info = data.content_font[page];
+
                     // console.log(data_info);
                     let html = '';
-                    for (let i = 0; i < data_info.length; i++) {
+                    for (let i = data_info.length - 1; i >= 0; i--) {
                         // console.log(data_info[i].id);
                         if (data_info[i].id >= num1 && data_info[i].id <= num2) {
                             let ClassName = '';
@@ -642,7 +658,7 @@ if (location.href == 'http://zmlong.usa3v.net/index.html') {
     if (scroll !== null) {
         // 开始渲染
         // 触发事件 调用点击
-        window.onload = function () {
+        $(document).ready(function () {
             window.scrollTo(0, scroll); // 改变scroll的位置 注意参数 第一个是x,第二个是y
             // JQ 调用点击
             $('.nav_ul li').eq(localStorage.getItem('nav_index')).click();
@@ -654,16 +670,20 @@ if (location.href == 'http://zmlong.usa3v.net/index.html') {
             localStorage.removeItem('nav_index');
             localStorage.removeItem('pages_index');
             localStorage.removeItem('scroll');
-        }
+        })
+        // onload函数执行太慢了（等页面元素都加载完毕后才执行）就会造成 如果渲染慢 出现 短暂的闪屏情况 。而JQ的ready时间是dom元素被解析就执行
+        // window.onload = function () {
+
+        // }
     }
 }
 
 
 // 被卷曲的头部 点击回到顶部
 window.onscroll = function (e) {
-    console.log($(document).scrollTop());
+    // console.log($(document).scrollTop());
     let scroll = $(document).scrollTop()
-    if (scroll > 4000) {
+    if (scroll > 2500) {
         if (document.body.querySelector('.go_top') == null) {
             let img = document.createElement('img');
             img.className = 'go_top';
