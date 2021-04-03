@@ -1,7 +1,7 @@
 // 这里写的是article 模板
 (function () {
-    let str = `
-<div class="home_pages1">
+  let str = `
+<div class="page">
         <div class="header">
            <div class="mobile_nav">
                    <div class="top"></div>
@@ -52,5 +52,5 @@
         </div>
     </div>
 `;
-    document.body.innerHTML = str;
+  document.body.innerHTML = str;
 })();

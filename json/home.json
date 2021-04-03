@@ -1,306 +1,312 @@
 {
-    "home_info": {
-        "blog_name": "/image/home/coderzml.png",
-        "blog_bg": "/image/home/header_BG.jpg",
-        "blog_font": "coderzml是一个关注前端技术的个人博客，用来记录学习和工作总结。",
-        "nav": [
-            "首页",
-            "HTML+CSS",
-            "JavaScript",
-            "JQuery",
-            "作品集",
-            "关于我"
-        ],
-        "big_glass": "/image/home/big_glass.png",
-        "content_font": {
-            "home": [
-                {
-                    "id": 0,
-                    "title": "微信内置浏览器",
-                    "img": "/image/home/article01.jpg",
-                    "font": "微信内置浏览器在返回上一页面，且上一页面包含AJAX代码时，页面就会被强制刷新的问题",
-                    "font_time": "2021/03/22 8点45分",
-                    "language_type": "JS",
-                    "target_url": "/html/home_pages/article_01.html"
-                },
-                {
-                    "id": 1,
-                    "title": "git的全面学习",
-                    "img": "https://www.liaoxuefeng.com/files/attachments/918921150461184/0",
-                    "font": "比较全面的总结了git的日常使用命令，了解git的由来，掌握git的版本控制、操作远程仓库、分支管理、多人协作以及相关理论，最后学习使用gitee",
-                    "font_time": "2021/03/26 11点11分",
-                    "language_type": "git",
-                    "target_url": "/html/home_pages/article_02.html"
-                },
-                {
-                    "id": 2,
-                    "title": "关于http协议",
-                    "img": "https://img2.baidu.com/it/u=2410953,637376636&fm=26&fmt=auto&gp=0.jpg",
-                    "font": "HTTP协议工作于客户端-服务端架构为上。浏览器作为HTTP客户端通过URL向HTTP服务端即WEB服务器发送所有请求。Web服务器根据接收到的请求后，向客户端发送响应信息",
-                    "font_time": "2021/03/28 14点51分",
-                    "language_type": "http",
-                    "target_url": "/html/home_pages/article_03.html"
-                },
-                {
-                    "id": 3,
-                    "title": "三次握手和四次挥手",
-                    "img": "/image/home/http.png",
-                    "font": "1. 客户端向服务器发起一个同步信号SYN。2. 服务器向客户端回应一个应答信号ACK，同时携带也一个同步SYN信号。3. 客户端收到服务器端回应后 再响应一个ACK信号",
-                    "font_time": "2021/03/29 10点53分",
-                    "language_type": "http",
-                    "target_url": "/html/home_pages/article_04.html"
-                }
-            ],
-            "HTML+CSS": [
-                {
-                    "id": 0,
-                    "title": "流式布局及实战",
-                    "img": "/image/html_css/article01.png",
-                    "font": "流式布局又称 百分比布局 就是把区域都划分成百分比的形式 达到自适应的目的。流式布局最大的优点就是不用给固定的PX 而是采用百分比的形式 能实现自由伸缩的目的",
-                    "font_time": "2021/03/28 17点00分",
-                    "language_type": "CSS",
-                    "target_url": "/html/html_css_pages/article_01.html"
-                },
-                {
-                    "id": 1,
-                    "title": "flex布局及实战",
-                    "img": "http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071002.png",
-                    "font": "flex布局，它可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能",
-                    "font_time": "2021/03/29 11点32分",
-                    "language_type": "CSS",
-                    "target_url": "/html/html_css_pages/article_02.html"
-                },
-                {
-                    "id": 2,
-                    "title": "未定义",
-                    "img": "../image/home/font_img1.jpg",
-                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-                    "font_time": "发布于：2021/03/07 15点48分",
-                    "language_type": "html"
-                },
-                {
-                    "id": 3,
-                    "title": "未定义",
-                    "img": "../image/home/font_img1.jpg",
-                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-                    "font_time": "发布于：2021/03/07 15点48分",
-                    "language_type": "html"
-                }
-            ],
-            "JavaScript": [
-                {
-                    "id": 0,
-                    "title": "未定义",
-                    "img": "../image/home/font_img1.jpg",
-                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-                    "font_time": "发布于：2021/03/07 15点48分",
-                    "language_type": "html"
-                },
-                {
-                    "id": 1,
-                    "title": "未定义",
-                    "img": "../image/home/font_img1.jpg",
-                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-                    "font_time": "发布于：2021/03/07 15点48分",
-                    "language_type": "html"
-                },
-                {
-                    "id": 2,
-                    "title": "未定义",
-                    "img": "../image/home/font_img1.jpg",
-                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-                    "font_time": "发布于：2021/03/07 15点48分",
-                    "language_type": "html"
-                },
-                {
-                    "id": 3,
-                    "title": "未定义",
-                    "img": "../image/home/font_img1.jpg",
-                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-                    "font_time": "发布于：2021/03/07 15点48分",
-                    "language_type": "html"
-                }
-            ],
-            "JQuery": [
-                {
-                    "id": 0,
-                    "title": "未定义",
-                    "img": "../image/home/font_img1.jpg",
-                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-                    "font_time": "发布于：2021/03/07 15点48分",
-                    "language_type": "html"
-                },
-                {
-                    "id": 1,
-                    "title": "未定义",
-                    "img": "../image/home/font_img1.jpg",
-                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-                    "font_time": "发布于：2021/03/07 15点48分",
-                    "language_type": "html"
-                },
-                {
-                    "id": 2,
-                    "title": "未定义",
-                    "img": "../image/home/font_img1.jpg",
-                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-                    "font_time": "发布于：2021/03/07 15点48分",
-                    "language_type": "html"
-                },
-                {
-                    "id": 3,
-                    "title": "未定义",
-                    "img": "../image/home/font_img1.jpg",
-                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-                    "font_time": "发布于：2021/03/07 15点48分",
-                    "language_type": "html"
-                },
-                {
-                    "id": 4,
-                    "title": "未定义",
-                    "img": "../image/home/font_img1.jpg",
-                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-                    "font_time": "发布于：2021/03/07 15点48分",
-                    "language_type": "html"
-                },
-                {
-                    "id": 5,
-                    "title": "未定义",
-                    "img": "../image/home/font_img1.jpg",
-                    "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-                    "font_time": "发布于：2021/03/07 15点48分",
-                    "language_type": "html"
-                }
-            ],
-            "works_total": [
-                {
-                    "id": 0,
-                    "title": "舔狗日记",
-                    "img": "/image/project/article01.png",
-                    "font": "舔狗日记，是最近社交平台很流行的一种交流语体。以日记为书写形式，以舔狗的姿态为情感出发点，来表达对于喜欢对象的向往、不甘、无奈之情。",
-                    "font_time": "2021/03/19 16点34分",
-                    "language_type": "自适应",
-                    "target_url": "/html/project_pages/article_01.html"
-                },
-                {
-                    "id": 1,
-                    "title": "super_mall",
-                    "img": "/image/project/article02.png",
-                    "font": "super_mall（超级商场）是用Vue开发的一个 商品网站，首页是对商品的介绍 点击商品可以进入到商品的详情页，还支持添加购物车功能",
-                    "font_time": "2021/03/20 11点26分",
-                    "language_type": "移动端",
-                    "target_url": "/html/project_pages/article_02.html"
-                },
-                {
-                    "id": 2,
-                    "title": "品优购",
-                    "img": "/image/project/article03.png",
-                    "font": "2020年初 做的第一个比较系统点的网页，包含 首页、分类页、详情页、登陆页 、注册页（虽然没有对接后台但是form表单该有的都有）",
-                    "font_time": "2021/03/20 13点28分",
-                    "language_type": "PC端",
-                    "target_url": "/html/project_pages/article_03.html"
-                },
-                {
-                    "id": 3,
-                    "title": "Todolist",
-                    "img": "/image/project/article04.png",
-                    "font": "ToDoList无须注册即可使用,数据存储在用户浏览器的html5本地数据库里,是最简单最安全的待办事项列表应用!",
-                    "font_time": "2021/03/20 13点56分",
-                    "language_type": "自适应",
-                    "target_url": "/html/project_pages/article_04.html"
-                },
-                {
-                    "id": 4,
-                    "title": "在售商品",
-                    "img": "/image/project/article05.png",
-                    "font": "可视化可修改的网页 只需替换图片 和 双击修改文字 即可生成当日的在售清单 。操作简单方便 ,DIY文字，数据保存在浏览器的 localstorage内，不易丢失。",
-                    "font_time": "2021/03/20 14点33分",
-                    "language_type": "PC端",
-                    "target_url": "/html/project_pages/article_05.html"
-                },
-                {
-                    "id": 5,
-                    "title": "旋转木马",
-                    "img": "/image/project/article06.png",
-                    "font": "利用 CSS3 的动画效果 实现的一个旋转木马的视觉效果",
-                    "font_time": "2021/03/20 16点13分",
-                    "language_type": "自适应",
-                    "target_url": "/html/project_pages/article_06.html"
-                },
-                {
-                    "id": 6,
-                    "title": "canvas",
-                    "img": "/image/project/article07.png",
-                    "font": "canvas是HTML5新增的，一个可以使用脚本(通常为JavaScript) 在其中绘制图像的HTML元素。它可以用来制作照片集或者制作简单(也不是那么简单)的动画，甚至可以进行实时视频处理和渲染。",
-                    "font_time": "2021/03/20 16点45分",
-                    "language_type": "自适应",
-                    "target_url": "/html/project_pages/article_07.html"
-                },
-                {
-                    "id": 7,
-                    "title": "今天吃什么？",
-                    "img": "/image/project/article08.png",
-                    "font": "不要问我为什么无聊写这个  问就（进来说）",
-                    "font_time": "2021/03/20 17点30分",
-                    "language_type": "PC端",
-                    "target_url": "/html/project_pages/article_08.html"
-                },
-                {
-                    "id": 8,
-                    "title": "学前端的前三个页面",
-                    "img": "/image/project/article09.png",
-                    "font": "这篇博文记录了 刚开始接触前端 写的 前三个页面。可能有很多不足之处 我觉得没必要去优化，优化了还能看出当时写代码的那种懵懂感嘛，此篇博文要的就是最初写代码稚嫩的感觉 ",
-                    "font_time": "2021/03/22 10点50分",
-                    "language_type": "PC端",
-                    "target_url": "/html/project_pages/article_09.html"
-                },
-                {
-                    "id": 9,
-                    "title": "JS实现烟花效果",
-                    "img": "/image/project/article10.png",
-                    "font": "利用JS 实现烟花效果，烟花样式大小和运动的方向都是随机的 ",
-                    "font_time": "2021/03/24 09点20分",
-                    "language_type": "自适应",
-                    "target_url": "/html/project_pages/article_10.html"
-                },
-                {
-                    "id": 10,
-                    "title": "全屏滚动效果",
-                    "img": "/image/project/article11.png",
-                    "font": "这个购物页面 是全屏滚动效果（fullPage插件），整个页面充满了HTML5的动画 当然这归功于 JQuery和easing插件",
-                    "font_time": "2021/03/24 10点15分",
-                    "language_type": "PC端",
-                    "target_url": "/html/project_pages/article_11.html"
-                },
-                {
-                    "id": 11,
-                    "title": "随机高清动漫壁纸",
-                    "img": "/image/project/article12.png",
-                    "font": "随机生成高清动漫壁纸，目前系统共收录 1000+ 张图片，图片均为https，采用新浪图片，高速访问",
-                    "font_time": "2021/03/24 13点34分",
-                    "language_type": "自适应",
-                    "target_url": "/html/project_pages/article_12.html"
-                }
-            ],
-            "about_me": [
-                {
-                    "id": 0,
-                    "title": "关于我",
-                    "img": "/image/about_me/article1.jpg",
-                    "font": "我叫张梦龙，是coderzml博客的作者，我喜欢编程、算法、也对新技术有深厚的兴趣，个人有代码强迫症，喜欢简洁的代码风格，只要有时间，什么东西都想自己写，自己做。",
-                    "font_time": "2021/03/18 16点34分",
-                    "language_type": "me",
-                    "target_url": "/html/about_me_pages/article_01.html"
-                },
-                {
-                    "id": 1,
-                    "title": "关于博客",
-                    "img": "/image/about_me/article2.jpg",
-                    "font": "开发博客的目的是记录学习和工作总结 有些知识点写成文章也是给自己做个笔记吧，如果能帮助到别人更好。",
-                    "font_time": "2021/03/18 16点47分",
-                    "language_type": "blog",
-                    "target_url": "/html/about_me_pages/article_02.html"
-                }
-            ]
+  "home_info": {
+    "blog_name": "/image/home/coderzml.png",
+    "blog_bg": "/image/home/header_BG.jpg",
+    "blog_font": "coderzml是一个关注前端技术的个人博客，用来记录学习和工作总结。",
+    "nav": [
+      "首页",
+      "HTML+CSS",
+      "JavaScript",
+      "JQuery",
+      "作品集",
+      "关于我"
+    ],
+    "big_glass": "/image/home/big_glass.png",
+    "content_font": {
+      "home": [
+        {
+          "id": 0,
+          "title": "微信内置浏览器",
+          "img": "/image/home/article01.jpg",
+          "font": "微信内置浏览器在返回上一页面，且上一页面包含AJAX代码时，页面就会被强制刷新的问题",
+          "font_time": "2021/03/22 8点45分（顶置）",
+          "language_type": "JS",
+          "target_url": "/html/home_pages/article_01.html",
+          "isOverhead": "overhead"
+        },
+        {
+          "id": 1,
+          "title": "git的全面学习",
+          "img": "https://www.liaoxuefeng.com/files/attachments/918921150461184/0",
+          "font": "比较全面的总结了git的日常使用命令，了解git的由来，掌握git的版本控制、操作远程仓库、分支管理、多人协作以及相关理论，最后学习使用gitee",
+          "font_time": "2021/03/26 11点11分（顶置）",
+          "language_type": "git",
+          "target_url": "/html/home_pages/article_02.html",
+          "isOverhead": "overhead"
+        },
+        {
+          "id": 2,
+          "title": "关于http协议",
+          "img": "https://img2.baidu.com/it/u=2410953,637376636&fm=26&fmt=auto&gp=0.jpg",
+          "font": "HTTP协议工作于客户端-服务端架构为上。浏览器作为HTTP客户端通过URL向HTTP服务端即WEB服务器发送所有请求。Web服务器根据接收到的请求后，向客户端发送响应信息",
+          "font_time": "2021/03/28 14点51分",
+          "language_type": "http",
+          "target_url": "/html/home_pages/article_03.html"
+        },
+        {
+          "id": 3,
+          "title": "三次握手和四次挥手",
+          "img": "/image/home/http.png",
+          "font": "1. 客户端向服务器发起一个同步信号SYN。2. 服务器向客户端回应一个应答信号ACK，同时携带也一个同步SYN信号。3. 客户端收到服务器端回应后 再响应一个ACK信号",
+          "font_time": "2021/03/29 10点53分",
+          "language_type": "http",
+          "target_url": "/html/home_pages/article_04.html"
         }
+      ],
+      "HTML+CSS": [
+        {
+          "id": 0,
+          "title": "流式布局及实战",
+          "img": "/image/html_css/article01.png",
+          "font": "流式布局又称 百分比布局 就是把区域都划分成百分比的形式 达到自适应的目的。流式布局最大的优点就是不用给固定的PX 而是采用百分比的形式 能实现自由伸缩的目的",
+          "font_time": "2021/03/28 17点00分",
+          "language_type": "CSS",
+          "target_url": "/html/html_css_pages/article_01.html"
+        },
+        {
+          "id": 1,
+          "title": "flex布局及实战",
+          "img": "http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071002.png",
+          "font": "flex布局，它可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能",
+          "font_time": "2021/03/29 11点32分",
+          "language_type": "CSS",
+          "target_url": "/html/html_css_pages/article_02.html"
+        },
+        {
+          "id": 2,
+          "title": "未定义",
+          "img": "../image/home/font_img1.jpg",
+          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+          "font_time": "发布于：2021/03/07 15点48分",
+          "language_type": "html"
+        },
+        {
+          "id": 3,
+          "title": "未定义",
+          "img": "../image/home/font_img1.jpg",
+          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+          "font_time": "发布于：2021/03/07 15点48分",
+          "language_type": "html"
+        }
+      ],
+      "JavaScript": [
+        {
+          "id": 0,
+          "title": "未定义",
+          "img": "../image/home/font_img1.jpg",
+          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+          "font_time": "发布于：2021/03/07 15点48分",
+          "language_type": "html"
+        },
+        {
+          "id": 1,
+          "title": "未定义",
+          "img": "../image/home/font_img1.jpg",
+          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+          "font_time": "发布于：2021/03/07 15点48分",
+          "language_type": "html"
+        },
+        {
+          "id": 2,
+          "title": "未定义",
+          "img": "../image/home/font_img1.jpg",
+          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+          "font_time": "发布于：2021/03/07 15点48分",
+          "language_type": "html"
+        },
+        {
+          "id": 3,
+          "title": "未定义",
+          "img": "../image/home/font_img1.jpg",
+          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+          "font_time": "发布于：2021/03/07 15点48分",
+          "language_type": "html"
+        }
+      ],
+      "JQuery": [
+        {
+          "id": 0,
+          "title": "未定义",
+          "img": "../image/home/font_img1.jpg",
+          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+          "font_time": "发布于：2021/03/07 15点48分",
+          "language_type": "html"
+        },
+        {
+          "id": 1,
+          "title": "未定义",
+          "img": "../image/home/font_img1.jpg",
+          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+          "font_time": "发布于：2021/03/07 15点48分",
+          "language_type": "html"
+        },
+        {
+          "id": 2,
+          "title": "未定义",
+          "img": "../image/home/font_img1.jpg",
+          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+          "font_time": "发布于：2021/03/07 15点48分",
+          "language_type": "html"
+        },
+        {
+          "id": 3,
+          "title": "未定义",
+          "img": "../image/home/font_img1.jpg",
+          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+          "font_time": "发布于：2021/03/07 15点48分",
+          "language_type": "html"
+        },
+        {
+          "id": 4,
+          "title": "未定义",
+          "img": "../image/home/font_img1.jpg",
+          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+          "font_time": "发布于：2021/03/07 15点48分",
+          "language_type": "html"
+        },
+        {
+          "id": 5,
+          "title": "未定义",
+          "img": "../image/home/font_img1.jpg",
+          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
+          "font_time": "发布于：2021/03/07 15点48分",
+          "language_type": "html"
+        }
+      ],
+      "works_total": [
+        {
+          "id": 0,
+          "title": "舔狗日记",
+          "img": "/image/project/article01.png",
+          "font": "舔狗日记，是最近社交平台很流行的一种交流语体。以日记为书写形式，以舔狗的姿态为情感出发点，来表达对于喜欢对象的向往、不甘、无奈之情。",
+          "font_time": "2021/03/19 16点34分（顶置）",
+          "language_type": "自适应",
+          "target_url": "/html/project_pages/article_01.html",
+          "isOverhead": "overhead"
+        },
+        {
+          "id": 1,
+          "title": "super_mall",
+          "img": "/image/project/article02.png",
+          "font": "super_mall（超级商场）是用Vue开发的一个 商品网站，首页是对商品的介绍 点击商品可以进入到商品的详情页，还支持添加购物车功能",
+          "font_time": "2021/03/20 11点26分（顶置）",
+          "language_type": "移动端",
+          "target_url": "/html/project_pages/article_02.html",
+          "isOverhead": "overhead"
+        },
+        {
+          "id": 2,
+          "title": "品优购",
+          "img": "/image/project/article03.png",
+          "font": "2020年初 做的第一个比较系统点的网页，包含 首页、分类页、详情页、登陆页 、注册页（虽然没有对接后台但是form表单该有的都有）",
+          "font_time": "2021/03/20 13点28分（顶置）",
+          "language_type": "PC端",
+          "target_url": "/html/project_pages/article_03.html",
+          "isOverhead": "overhead"
+        },
+        {
+          "id": 3,
+          "title": "Todolist",
+          "img": "/image/project/article04.png",
+          "font": "ToDoList无须注册即可使用,数据存储在用户浏览器的html5本地数据库里,是最简单最安全的待办事项列表应用!",
+          "font_time": "2021/03/20 13点56分（顶置）",
+          "language_type": "自适应",
+          "target_url": "/html/project_pages/article_04.html",
+          "isOverhead": "overhead"
+        },
+        {
+          "id": 4,
+          "title": "在售商品",
+          "img": "/image/project/article05.png",
+          "font": "可视化可修改的网页 只需替换图片 和 双击修改文字 即可生成当日的在售清单 。操作简单方便 ,DIY文字，数据保存在浏览器的 localstorage内，不易丢失。",
+          "font_time": "2021/03/20 14点33分",
+          "language_type": "PC端",
+          "target_url": "/html/project_pages/article_05.html"
+        },
+        {
+          "id": 5,
+          "title": "旋转木马",
+          "img": "/image/project/article06.png",
+          "font": "利用 CSS3 的动画效果 实现的一个旋转木马的视觉效果",
+          "font_time": "2021/03/20 16点13分",
+          "language_type": "自适应",
+          "target_url": "/html/project_pages/article_06.html"
+        },
+        {
+          "id": 6,
+          "title": "canvas",
+          "img": "/image/project/article07.png",
+          "font": "canvas是HTML5新增的，一个可以使用脚本(通常为JavaScript) 在其中绘制图像的HTML元素。它可以用来制作照片集或者制作简单(也不是那么简单)的动画，甚至可以进行实时视频处理和渲染。",
+          "font_time": "2021/03/20 16点45分",
+          "language_type": "自适应",
+          "target_url": "/html/project_pages/article_07.html"
+        },
+        {
+          "id": 7,
+          "title": "今天吃什么？",
+          "img": "/image/project/article08.png",
+          "font": "不要问我为什么无聊写这个  问就（进来说）",
+          "font_time": "2021/03/20 17点30分",
+          "language_type": "PC端",
+          "target_url": "/html/project_pages/article_08.html"
+        },
+        {
+          "id": 8,
+          "title": "学前端的前三个页面",
+          "img": "/image/project/article09.png",
+          "font": "这篇博文记录了 刚开始接触前端 写的 前三个页面。可能有很多不足之处 我觉得没必要去优化，优化了还能看出当时写代码的那种懵懂感嘛，此篇博文要的就是最初写代码稚嫩的感觉 ",
+          "font_time": "2021/03/22 10点50分",
+          "language_type": "PC端",
+          "target_url": "/html/project_pages/article_09.html"
+        },
+        {
+          "id": 9,
+          "title": "JS实现烟花效果",
+          "img": "/image/project/article10.png",
+          "font": "利用JS 实现烟花效果，烟花样式大小和运动的方向都是随机的 ",
+          "font_time": "2021/03/24 09点20分",
+          "language_type": "自适应",
+          "target_url": "/html/project_pages/article_10.html"
+        },
+        {
+          "id": 10,
+          "title": "全屏滚动效果",
+          "img": "/image/project/article11.png",
+          "font": "这个购物页面 是全屏滚动效果（fullPage插件），整个页面充满了HTML5的动画 当然这归功于 JQuery和easing插件",
+          "font_time": "2021/03/24 10点15分",
+          "language_type": "PC端",
+          "target_url": "/html/project_pages/article_11.html"
+        },
+        {
+          "id": 11,
+          "title": "随机高清动漫壁纸",
+          "img": "/image/project/article12.png",
+          "font": "随机生成高清动漫壁纸，目前系统共收录 1000+ 张图片，图片均为https，采用新浪图片，高速访问",
+          "font_time": "2021/03/24 13点34分",
+          "language_type": "自适应",
+          "target_url": "/html/project_pages/article_12.html"
+        }
+      ],
+      "about_me": [
+        {
+          "id": 0,
+          "title": "关于我",
+          "img": "/image/about_me/article1.jpg",
+          "font": "我叫张梦龙，是coderzml博客的作者，我喜欢编程、算法、也对新技术有深厚的兴趣，个人有代码强迫症，喜欢简洁的代码风格，只要有时间，什么东西都想自己写，自己做。",
+          "font_time": "2021/03/18 16点34分",
+          "language_type": "me",
+          "target_url": "/html/about_me_pages/article_01.html"
+        },
+        {
+          "id": 1,
+          "title": "关于博客",
+          "img": "/image/about_me/article2.jpg",
+          "font": "开发博客的目的是记录学习和工作总结 有些知识点写成文章也是给自己做个笔记吧，如果能帮助到别人更好。",
+          "font_time": "2021/03/18 16点47分",
+          "language_type": "blog",
+          "target_url": "/html/about_me_pages/article_02.html"
+        }
+      ]
     }
+  }
 }
