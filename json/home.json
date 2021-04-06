@@ -71,6 +71,15 @@
           "font_time": "2021/03/29 11点32分",
           "language_type": "CSS",
           "target_url": "/html/html_css_pages/article_02.html"
+        },
+        {
+          "id": 2,
+          "title": "less的学习",
+          "img": "https://less.bootcss.com/public/img/less_logo.png",
+          "font": "Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。Less 可以运行在 Node 或浏览器端。",
+          "font_time": "2021/04/06 15点09分",
+          "language_type": "CSS",
+          "target_url": "/html/html_css_pages/article_03.html"
         }
       ],
       "JavaScript": [

@@ -59,6 +59,10 @@
     nav();
     // 点击coderzml的时候回到主页
     document.querySelector('.coderzml').onclick = function () {
+        // 先删除值，再回到首页
+        localStorage.removeItem('nav_index');
+        localStorage.removeItem('pages_index');
+        localStorage.removeItem('scroll');
         location.href = '/index.html';
     }
 })()

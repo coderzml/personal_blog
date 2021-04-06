@@ -53,6 +53,12 @@ if (document.body.clientWidth < 500) {
             }, 300, function () {
                 // 动画做完之后 失去焦点
                 $('.search_left').blur();
+                // 改回tips位置
+                if ($('.tips').css("marginTop") == "50px") {
+                    $('.tips').animate({
+                        marginTop: 0
+                    })
+                }
             });
         }
     });

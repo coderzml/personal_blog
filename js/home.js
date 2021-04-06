@@ -1,5 +1,3 @@
-// 搜索要用到的变量
-let search_datas;
 // 点击a跳转的时候 添加参数
 function _blank() {
   let _blank_a = document.querySelectorAll('._blank');
@@ -51,10 +49,16 @@ function search() {
     tips.classList.add('type_area');
     // 在元素钱买你插入元素
     document.body.querySelector('div').insertBefore(tips, document.querySelector('.container'))
-
     tips.innerHTML = '';
     tips.innerHTML = '"' + value + '"的搜索结果：'
-    // console.log(value);
+    // 如果在详情页插入 提示的信息会被盖住 就加一条样式
+    // if (location.href !== 'http://zmlong.usa3v.net/index.html') {
+    if (location.href !== 'http://zmlong.usa3v.net/index.html' && document.body.clientWidth < 500) {
+      document.querySelector('.tips').style.marginTop = '50px';
+    }
+    // 获取数据
+    let data = request_data();
+    let search_datas = data.content_font;
     let arr = [];
     for (const key in search_datas) {
       // console.log(datas[key]);
@@ -627,9 +631,7 @@ function load() {
       }
     }
   }
-  // 给搜索用到的变量赋值
-  search_datas = data.content_font;
-
+  // 重新绑定搜索
   search();
 }
 // load函数结束
