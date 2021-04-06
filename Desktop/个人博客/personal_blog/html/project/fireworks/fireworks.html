@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>烟花效果</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0px;
+            background-color: #000;
+            overflow-x: hidden;
+        }
+
+
+        div {
+            width: 6px;
+            height: 6px;
+            position: absolute;
+
+        }
+
+        .box {
+            height: 100px;
+            overflow-y: auto;
+        }
+
+        .box::-webkit-scrollbar {
+            display: none;
+        }
+
+        .move {
+            position: absolute;
+            bottom: 0;
+            width: 40px;
+            transition: 0.3s;
+
+        }
+
+        .fashe {
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            position: absolute;
+            bottom: 0;
+            border-radius: 10px;
+            /* display: none; */
+            transition: 0.2s;
+        }
+
+        /* 如果是移动端就不显示 发射小球了 效果不好 */
+        @media screen and (max-width:500px) {
+            .fashe {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="fashe"></div>
+    </div>
+</body>
+
+</html>
+<script>
+    //   封装一个随机颜色函数
+    function randomColor() {
+        let color = 'rgb(';
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        color = color + r + ',' + g + ',' + b + ')';
+        return color;
+    }
+    // 封装一个构造函数
+    function Position(dom, x, y) {
+        // 样式
+
+        function rect() {
+            let width = Math.floor(Math.random() * 4);
+            let height = Math.floor(Math.random() * 60);
+            dom.style.width = width + 'px';
+            dom.style.height = height + 'px';
+
+        }
+        function randomSize() {
+            let size = Math.floor(Math.random() * 10);
+            dom.style.width = size + 'px';
+            dom.style.height = size + 'px';
+        }
+        randomSize();
+        dom.style.background = randomColor();
+        // let randomNum = Math.floor(Math.random() * 2);
+        // switch (randomNum) {
+        //     case 0:
+        //         rect();
+        //         break;
+        //     case 1:
+        //         randomSize();
+        //         break;
+        //     default:
+        //         rect();
+        //         break;
+        // }
+        // // 给div渲染颜色
+
+
+        // 渲染pages位置
+        dom.style.left = x + 'px';
+        dom.style.top = y + 'px';
+        // 随机方向 随机速度
+        // 三目运算符 返回的不是1 就是 -1  然后x后面的速度 就是最终结果。后面的 这个值是控制 烟花与烟花之间的距离
+        let speedX = (Math.floor(Math.random() * 2) == 0 ? 1 : -1) * Math.floor(Math.random() * 20);
+        let speedY = (Math.floor(Math.random() * 2) == 0 ? 1 : -1) * Math.floor(Math.random() * 20);
+
+        // 运动函数
+        this.move = function () {
+            // 这个i  所控制下落的速度 如果没有i 烟花就会向四周散去
+            let i = 3;
+            let timer = setInterval(() => {
+                i++;
+                dom.style.left = dom.offsetLeft + speedX + 'px';
+                dom.style.top = dom.offsetTop + i + speedY + 'px';
+                // 超出范围就 停止运动
+                if (dom.offsetLeft + dom.offsetWidth > window.innerWidth || dom.offsetTop + dom.offsetHeight > window.innerHeight) {
+                    // 清除定时器和方块
+                    clearInterval(timer);
+                    dom.remove();
+                }
+                // 这个值控制多久更新渲染一次烟花位置 
+            }, 30);
+        }
+    }
+    // 绑定点击事件
+    let fashe = document.querySelector('.fashe');
+    document.onclick = function (e) {
+
+        // i控制生成多少个烟花
+        setTimeout(() => {
+            for (let i = 0; i < 50; i++) {
+                let div = document.createElement('div');
+                document.body.appendChild(div);
+                let p = new Position(div, e.pageX, e.pageY);
+                p.move();
+            }
+            fashe.style.display = 'none';
+        }, 300)
+        // 动画
+        fashe.style.left = e.pageX + 'px';
+        fashe.style.transform = 'translateY(' + -(window.innerHeight - e.pageY) + 'px' + ')';
+        fashe.style.background = randomColor();
+    }
+    // 移动的时候 恢复样式 便于下一次运行
+    document.onmousemove = function (e) {
+
+        if (document.body.clientWidth < 500) {
+            fashe.style.display = 'none';
+        } else {
+            fashe.style.background = randomColor();
+            fashe.style.left = e.pageX + 'px';
+            fashe.style.display = 'none';
+            fashe.style.transform = 'translateY(0)';
+        }
+
+    }
+
+
+</script>

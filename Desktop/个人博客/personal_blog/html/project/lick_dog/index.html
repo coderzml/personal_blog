@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>舔狗日记</title>
+  <!-- 引入响应式文字 -->
+  <link rel="stylesheet" href="./css/rem.css">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<!-- 不让滚动条显示 -->
+
+<body style="overflow:scroll;overflow-y:hidden;overflow-x:hidden">
+  <!-- 主体部分 -->
+  <div class="box">
+    <div class="logo">舔狗日记</div>
+    <div class="top"></div>
+    <div class="content">
+      <!-- 放当前时间 -->
+      <h2></h2>
+      <!-- 放文字 -->
+      <p class="font"></p>
+    </div>
+    <div class="bottom"></div>
+  </div>
+  <!-- 放背景 -->
+  <div class="bg"></div>
+  <!-- 放音乐(组件隐藏) -->
+  <div class="misuc_box">
+    <audio src="" controls="controls" autoplay="autoplay"></audio>
+  </div>
+  <!-- 点击强制刷新页面 -->
+  <div class="F5">下一条</div>
+  <!-- 放音乐名 -->
+  <div class="misuc_name">BGM : </div>
+
+</body>
+
+</html>
+<script src="./jQuery.js"></script>
+<script>
+  // 禁止长按弹框
+  document.body.addEventListener('touchmove', function (e) {
+    e.stopPropagation();//阻止默认事件
+    e.preventDefault();//阻止冒泡
+  });
+
+  $(function () {
+    // 请求网易云在线音乐 (写在最后的最前面因为音乐比较大)
+    $.ajax({
+      type: 'get',
+      url: "https://api.uomg.com/api/rand.music?sort=热歌榜&format=json",
+      // url: "./music.php",
+      success: function (data) {
+        $('.misuc_box audio').attr('src', data.data.url);
+        $('.misuc_name').html('BGM : ' + data.data.name)
+      },
+    });
+    //获取本地的舔狗日记数据
+    $.ajax({
+      type: 'get',
+      url: "./tiangou2.txt",
+      success: function (data) {
+        // 处理分隔
+        let fonts = data.split('@@@');
+        // 生成随机数
+        let num = Math.floor(Math.random() * fonts.length + 1);
+        $('.font').html(fonts[num])
+      },
+    });
+
+    //系统的当前时间
+    $('.content h2').html(getData());
+    //box出现h后调用动画
+    function font() {
+      var timer = setTimeout(function () {
+        $('.box').fadeIn();
+        // 调用动画
+        animate();
+      }, 1000);
+    }
+    //这个调用应该再请求数据回来后的回调函数内
+    font();
+
+
+    //动画
+    function animate() {
+      //获取内容的高
+      var contentH = $('.content').height();
+      //获取窗口的高
+      var page = $(document).height();
+      //先设置为0
+      $('.content').css("height", 0);
+      //动态设置距离顶部的高
+      $('.box').css("top", page / 2 - contentH + 60);
+      //让内容显示
+      $('.content').hide();
+      //背景图片的开关 动画做完再显示图片
+      var flag = false;
+      //打开页面之后延迟一会再做动画
+      var timer = setTimeout(function () {
+        //动画设置高
+        $('.content').animate({
+          height: contentH,
+        }, 1000);
+        //给动画一起设置地边框的上距离
+        $('.bottom').animate({
+          marginTop: 30,
+        });
+        //做动画的时候让内容显示
+        $('.content').show();
+        //内容显示完后执行图片显示
+        flag = true;
+        //图片得回调
+        if (flag == true) {
+          clearTimeout(timer);
+          // $('.img').attr("src", "http://www.dmoe.cc/random.php");
+          $('.bg').css({
+            backgroundImage: "url(http://www.dmoe.cc/random.php)"
+          });
+        }
+
+      }, 500);
+
+    }
+
+    //当前日期
+    function getData() {
+      var date = new Date;
+      var y = date.getFullYear()
+      var m = date.getMonth() + 1
+      m = m < 10 ? '0' + m : m
+      var d = date.getDate()
+      d = d < 10 ? ('0' + d) : d
+      // y 年份  m 月份  d  日期
+      return y + "年" + m + "月" + d + "日" + "SAT 晴";
+    }
+    //点击按钮刷新页面重新加载数据
+    $('.F5').click(function () {
+      // 这里应该传入一个参数true  表示深度重新加载 （从服务器重新加载）
+      location.reload();
+    });
+  });
+
+</script>

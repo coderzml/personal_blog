@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style:none;
+}
+.zuiwaicheng{
+width: 1920px;
+height: 100%;
+}
+.shang{
+width: 1920px;
+height: 55px;
+background: #fff;
+}
+.tupian1{
+width: 224px;
+height: 35px;
+margin-left: 360px;
+position: relative;
+top: 10px;
+}
+.erweima{
+color: #9999a6;
+text-align: center;
+cursor: pointer; 
+font-size: 12px;
+}
+.qudenglu{
+width: 86px;
+height: 14px;
+border-left: 1px solid #b6b2b2;
+text-align: center;
+float: right;
+margin-right: 340px;
+margin-top: 22px;
+line-height:14px;
+font-size: 12px;
+}
+.qudenglu a{
+color: #999;
+text-decoration: none;
+}
+.tupian3{
+position: absolute;
+width: 125px;
+height: 125px;
+top: 40px;
+right: 417px;
+z-index: 9999;
+display: none;
+}
+.tupian2{
+width: 10px;
+height: 15px;
+margin-left: 817px;
+margin-bottom: -2px;
+}
+.zhong{
+height: 567px;
+width: 1920px;
+margin-top: 20px;
+}
+.zhong .zhong2{
+margin-left: 480px;
+position: relative;
+bottom: 572px;
+height: 100%;
+}
+.tupian{
+width: 560px;
+height: 140px;
+display:flex;
+flex-direction: row;
+flex-wrap:wrap;
+justify-content:space-between;
+align-content:space-between;
+margin-top:60px;
+margin-bottom: 20px;
+}
+.tupian img{
+width: 135px;
+height: 67px;
+}
+/* 选项卡 */
+#jiaohu{
+width: 566px;
+height: 340px;
+color: snow;
+border: 1px solid transparent;
+box-sizing: border-box;
+}
+#jiaohu input{
+outline: none;
+border: none;
+cursor: pointer;     /*鼠标样式*/
+background: none;
+color: #fff;
+font-size: 17px;
+width: 94px;
+height: 40px;
+float: left;
+border-bottom: 1px solid #00b38a;   
+}
+.lei{
+border: 1px solid #00ba86 !important;
+border-radius: 3px;
+border-bottom: none !important;
+}
+.font1,.font2,.font3,.font4,.font5{
+width: 556px;
+height: 50px;
+border-bottom: 1px dashed #8a8a8f; 
+}
+.font1 li,.font2 li,.font3 li,.font4 li,.font5 li{
+position: absolute;
+line-height: 50px;
+}
+.moban{
+display: none;
+}
+/* 注册信息 */
+.shouji{
+width: 360px;
+height: 380px;
+text-align: center;
+position: relative;
+bottom: 500px;
+left: 600px;
+background: #fff;
+border-radius: 4px;
+box-shadow: 0px 0px 10px 3px #11575d;
+}
+.zhuce{
+line-height: 18px;
+width: 85px;
+height: 18px;
+border-left:3px solid #00ba86;
+padding-left: 10px;
+color: #333;
+margin-left: 44px;
+position: relative;
+top: 33px;
+}
+.yi_p{
+width: 270px;
+height: 55px; 
+border-bottom: 1px solid #e6e6e6;
+margin-top: 50px;
+margin-left: 44px;
+}
+.yi_p span{
+margin-top: 18px;
+}
+.yi_p input{
+width: 180px;
+height: 24px;
+margin-top: 18px;
+color: #757575;
+border: none;
+margin-left: 40px;
+}
+.er_p{
+width: 270px;
+height: 55px; 
+border: none;
+border-bottom: 1px solid #e6e6e6;
+margin-left: 44px;
+}
+.er_p input{
+width: 180px;
+height: 24px;
+color: #757575;
+border: none;
+margin-top: 18px;
+margin-left: -80px;
+position: relative;
+}
+.er_p span{
+color: #00b38a;
+cursor: pointer;
+position: absolute;
+font-size: 14px;
+}
+.ljzc{
+width: 270px;
+height: 46px;
+background: #00b38a;
+border-radius: 3px;
+margin: 0 auto;
+margin-top: 26px;  
+text-align: center;
+font-size: 14px;
+}
+.ljzc span{
+line-height: 46px;
+}
+.yhxy{
+color: #999999;
+margin-top: 20px;
+font-size: 14px;
+}
+.zhanghao{
+margin-top: 30px;
+color: #00b38a;
+font-size: 14px;
+}
+.logo{
+width: 1000px;
+height: 150px;
+border-bottom: 1px solid #999;
+margin: 0 auto;
+}
+.logo img{
+position: relative;
+top: 40px;
+right:12px;
+}
+.xia_font1{
+font-size: 17px;
+top: 26px;
+position: relative;
+}
+.xia_font2{
+color: #999999;
+font-size: 14px;
+position: relative;
+}
+.font_er{
+margin-top: 30px;
+margin-left: 30px;
+}
+.jiewei{
+margin-top: 24px;
+margin-left: 24%; 
+}
+.jiewei img{
+margin-left: 420px;
+}
+.jiewei p{
+color: #999999;
+font-size: 12px;
+margin-left: 104px;
+}
+.yzm{
+width: 80px;
+height: 21px;
+position: fixed;
+margin-top: 18px;
+}
+.tihuan{
+width: 195px;
+height: 14px;
+position: absolute;
+top: 110px;
+left: 100px;
+font-size: 12px;
+}
+.tihuan2{
+width: 195px;
+height: 14px;
+position: absolute;
+top: 164px;
+left: 12px;
+font-size: 12px;
+}
+#xllb{
+position: absolute;
+top: 90px;
+left: 46px;
+border: none;
+}

@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选餐页面—coderzml</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 200%;
+            height: 950px;
+            transition: 0.4s;
+            overflow-y: overlay;
+            overflow-x: hidden;
+            background-color: #94dd80;
+        }
+
+        ul {
+            margin: 0;
+            display: flex;
+        }
+
+        .list_title {
+            position: relative;
+            z-index: 999;
+            flex: 1;
+            list-style: none;
+            height: 185px;
+            border: 1px solid #666;
+            background-color: #fff;
+        }
+
+        .list_title:hover {
+            /* border: 3px solid green; */
+        }
+
+
+
+        .title {
+            height: 150px;
+            font-size: 24px;
+            text-align: center;
+            line-height: 100px;
+
+        }
+
+        .list {
+            display: none;
+            width: 100%;
+        }
+
+        .list li {
+            height: 60px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 60px;
+            border: 1px solid #000;
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        .list li:hover {
+            color: #fff;
+            /* background-color: #999; */
+        }
+
+        .hall {
+            position: relative;
+        }
+
+        .mian_class {
+            height: 35px;
+            line-height: 35px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        /* 大厅 */
+        .dating {
+            position: absolute;
+            font-size: 150px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .left_up {
+            width: 100px;
+            height: 120px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 200px;
+            font-size: 18px;
+            margin-top: 20px;
+            /* background: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2607814934,2882516115&fm=26&gp=0.jpg); */
+            background: url(./img/cha1.jpg);
+        }
+
+        .left_up:hover:after,
+        .left_bottom:hover:after,
+        .right_bottom_cha:hover:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 120px;
+            background-color: rgba(204, 204, 204, 0.3);
+        }
+
+        .left_up_out {
+            width: 100px;
+            height: 80px;
+            color: #fff;
+            background-color: lightgreen;
+            text-align: center;
+            line-height: 80px;
+            font-size: 28px;
+            margin-top: 20px;
+        }
+
+        .foolr {
+            width: 100px;
+            height: 230px;
+            /* background-color: #fff; */
+            /* background: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4069357649,750724805&fm=26&gp=0.jpg); */
+            background: url(./img/floor1.jpg);
+            text-align: center;
+            line-height: 230px;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .min_room {
+            width: 100px;
+            height: 100px;
+            /* background-color: #fff; */
+            /* background: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=939087909,4289975942&fm=26&gp=0.jpg); */
+            background: url(./img/room.jpg);
+            text-align: center;
+            line-height: 100px;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .left_bottom {
+            width: 100px;
+            height: 120px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 200px;
+            font-size: 18px;
+            margin-top: 20px;
+            /* background: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=21427378,1565577862&fm=26&gp=0.jpg); */
+            background: url(./img/cha2.jpg);
+        }
+
+        .center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 1000px;
+            height: 100px;
+            background-color: #fff;
+            text-align: center;
+            font-size: 58px;
+            line-height: 100px;
+        }
+
+        /* 右边 */
+        .right_up {
+
+            position: absolute;
+            top: 0px;
+            right: 0;
+            width: 100px;
+            height: 120px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 120px;
+            font-size: 24px;
+        }
+
+        .right_up_out {
+            position: absolute;
+            right: 0;
+            top: 120px;
+            width: 100px;
+            height: 150px;
+            color: #fff;
+            background-color: lightgreen;
+            text-align: center;
+            line-height: 150px;
+            font-size: 28px;
+            margin-top: 10px;
+        }
+
+        .right_bottom_cha {
+            position: absolute;
+            top: 290px;
+            right: 0;
+            width: 100px;
+            height: 120px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 200px;
+            font-size: 18px;
+            /* background: url(https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1996965509,1166679935&fm=26&gp=0.jpg); */
+            background: url(./img/cha3.jpg);
+        }
+
+
+        .up_floor {
+            position: absolute;
+            top: 420px;
+            right: 0;
+            width: 100px;
+            height: 80px;
+            /* background: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4069357649,750724805&fm=26&gp=0.jpg); */
+            /* background: url(./up.jpg); */
+            /* background: url(http://zmlong.usa3v.net/food_img/up.jpg); */
+            background: url(./img/up.jpg);
+            /* transform: rotateY(180deg); */
+            cursor: pointer;
+        }
+
+        .bull {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+            width: 200px;
+            height: 130px;
+            /* background-color: #FFF; */
+            /* background: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2522665744,2813409144&fm=26&gp=0.jpg); */
+            background: url(./img/bull.jpg);
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+        }
+
+        .right_bottom {
+            position: absolute;
+            right: 170px;
+            bottom: 10px;
+            width: 100px;
+            height: 130px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 200px;
+            font-size: 18px;
+            /* background: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3803667916,1602786271&fm=26&gp=0.jpg); */
+            background: url(./img/cha4.jpg);
+        }
+
+        .right_bottom:hover:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 130px;
+            background-color: rgba(204, 204, 204, 0.3);
+        }
+
+
+
+        .img1 {
+            /* background: url(https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3362414891,3761860438&fm=26&gp=0.jpg); */
+            background: url(./img/food1.jpg);
+        }
+
+        .img1_1 {
+            /* background: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=362622844,3647190374&fm=26&gp=0.jpg); */
+            background: url(./img/food1-1.jpg);
+        }
+
+        .img2 {
+            /* background: url(https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2557512795,827442721&fm=26&gp=0.jpg); */
+            background: url(./img/food2.jpg);
+        }
+
+        .img2_2 {
+            /* background: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3495771324,2623569543&fm=26&gp=0.jpg); */
+            background: url(./img/food2-2.jpg);
+        }
+
+        .img3 {
+            /* background: url(https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1495588099,3726552524&fm=26&gp=0.jpg); */
+            background: url(./img/food3.jpg);
+        }
+
+        .img3_3 {
+            /* background: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2985177894,1343637143&fm=26&gp=0.jpg); */
+            background: url(./img/food3-3.jpg);
+        }
+
+        .img4 {
+            /* background: url(https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2546887351,3207333919&fm=26&gp=0.jpg); */
+            background: url(./img/food4.jpg);
+        }
+
+        .img4_4 {
+            /* background: url(https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1008194273,4227832587&fm=26&gp=0.jpg); */
+            background: url(./img/food4-4.jpg);
+        }
+
+        .img5 {
+            /* background: url(https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1523829902,1257775512&fm=26&gp=0.jpg); */
+            background: url(./img/food5.jpg);
+        }
+
+        .img5_5 {
+            /* background: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3990191862,3930281362&fm=26&gp=0.jpg); */
+            background: url(./img/food5-5.jpg);
+        }
+
+        .img6 {
+            /* background: url(https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2783441330,1285182610&fm=26&gp=0.jpg); */
+            background: url(./img/food6.jpg);
+        }
+
+        .img6_6 {
+            /* background: url(https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1683235911,2993261567&fm=26&gp=0.jpg); */
+            background: url(./img/food6-6.jpg);
+        }
+
+        .img7 {
+            /* background: url(https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1308722595,3846479770&fm=26&gp=0.jpg); */
+            background: url(./img/food7.jpg);
+        }
+
+        .img7_7 {
+            /* background: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=192026164,2360641997&fm=26&gp=0.jpg); */
+            background: url(./img/food7-7.jpg);
+        }
+
+        .img8 {
+            /* background: url(https://i2.chuimg.com/05d2204b3b694958a0da5383f3e6d2f5_1080w_810h.jpg?imageView2/1/w/215/h/136/interlace/1/q/90); */
+            background: url(./img/food8.jpg);
+        }
+
+        .img8_8 {
+            /* background: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4222549696,155504472&fm=26&gp=0.jpg); */
+            background: url(./img/food8-8.jpg);
+        }
+
+        .img9 {
+            /* background: url(https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1934552790,1483377687&fm=26&gp=0.jpg); */
+            background: url(./img/food9.jpg);
+        }
+
+        .img9_9 {
+            /* background: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3266889222,4125982335&fm=26&gp=0.jpg); */
+            background: url(./img/food9-9.jpg);
+        }
+
+        .img10 {
+            /* background: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1943546287,1608489176&fm=26&gp=0.jpg); */
+            background: url(./img/food10.jpg);
+        }
+
+        .img10_10 {
+            /* background: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3851470652,957292090&fm=26&gp=0.jpg); */
+            background: url(./img/food10-10.jpg);
+        }
+
+        .img11 {
+            /* background: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2336468088,2780393637&fm=26&gp=0.jpg); */
+            background: url(./img/food11.jpg);
+        }
+
+        .img11_11 {
+            /* background: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1140440703,722249841&fm=26&gp=0.jpg); */
+            background: url(./img/food11-11.jpg);
+        }
+
+        .img12 {
+            /* background: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4164471068,3676310903&fm=26&gp=0.jpg); */
+            background: url(./img/food12.jpg);
+        }
+
+        .img12_12 {
+            /* background: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1479488693,2301085707&fm=26&gp=0.jpg); */
+            background: url(./img/food12-12.jpg);
+        }
+
+        .img13 {
+            /* background: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3726482212,4007472140&fm=26&gp=0.jpg); */
+            background: url(./img/food13.jpg);
+        }
+
+        .img13_13 {
+            /* background: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3453690343,1481264334&fm=26&gp=0.jpg); */
+            background: url(./img/food13-13.jpg);
+        }
+
+        .img14 {
+            /* background: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1090818960,2612010252&fm=26&gp=0.jpg); */
+            background: url(./img/food14.jpg);
+        }
+
+        .img14_14 {
+            /* background: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1929925641,3077255197&fm=26&gp=0.jpg); */
+            background: url(./img/food14-14.jpg);
+        }
+
+        .img15 {
+            /* background: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1496841638,2083153281&fm=26&gp=0.jpg); */
+            background: url(./img/food15.jpg);
+        }
+
+        .img16 {
+            /* background: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3051797142,1238404166&fm=26&gp=0.jpg); */
+            background: url(./img/food16.jpg);
+        }
+
+        .img17 {
+            /* background: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1410395300,2760664942&fm=26&gp=0.jpg); */
+            background: url(./img/food17.jpg);
+        }
+
+        .img18 {
+            /* background: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3588088386,2755872829&fm=26&gp=0.jpg); */
+            background: url(./img/food18.jpg);
+        }
+
+        .right {
+            position: absolute;
+            right: 51%;
+            top: 60%;
+            width: 150px;
+            height: 100px;
+            /* background: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=707698091,2046177082&fm=26&gp=0.jpg); */
+            /* background: url(./right.png); */
+            /* background: url(http://zmlong.usa3v.net/food_img/right.png); */
+            background: url(./img/right.png);
+            cursor: pointer;
+        }
+
+        .left {
+            position: absolute;
+            left: 51%;
+            top: 60%;
+            width: 150px;
+            height: 100px;
+            /* background: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=707698091,2046177082&fm=26&gp=0.jpg); */
+            background: url(./img/right.png);
+            transform: rotate(180deg);
+            cursor: pointer;
+        }
+
+        div:not([class^='img']) {
+            background-size: 100% 100%;
+        }
+
+        .color_random {
+            position: absolute;
+            top: 1%;
+            left: 47%;
+            width: 100px;
+            height: 80px;
+            background-color: #000;
+            font-size: 24px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .tabel {
+            position: absolute;
+            top: 20%;
+            left: 11%;
+            width: 1000px;
+            height: 500px;
+            /* background: url(http://zmlong.usa3v.net/food_img/tabel1.png); */
+            background: url(./img/tabel1.png);
+            transition: 0.5s;
+        }
+
+        /* .tabel2 {
+            position: absolute;
+            top: 20%;
+            right: 11%;
+            width: 1000px;
+            height: 500px;
+            background: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3956734407,2586635691&fm=26&gp=0.jpg);
+        } */
+        .roter {
+            /* background: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3054145469,1851678484&fm=26&gp=0.jpg); */
+            background: url(./img/route-hg.jpg);
+            font-size: 20px;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        .roter:hover {
+            transform: rotate(360deg);
+        }
+
+        .mlt {
+            /* background: url(https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2764782990,2826329546&fm=26&gp=0.jpg); */
+            /* background: url(http://zmlong.usa3v.net/food_img/mlt.jpg); */
+            background: url(./img/mlt.jpg);
+            /* background: url(./mlt.jpg); */
+            background-color: red;
+            color: #fff;
+            line-height: 120px;
+        }
+
+        .ceil {
+
+            /* background: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4069357649,750724805&fm=26&gp=0.jpg); */
+            background: url(./img/floor1.jpg);
+            transform: rotateY(180deg);
+            /* background-color: greenyellow; */
+            color: #fff;
+            line-height: 100px;
+        }
+
+        .tabel_floor2 {
+            /* background: url(./tabel3.png); */
+            /* background: url(http://zmlong.usa3v.net/food_img/tabel2.png); */
+            background: url(./img/tabel2.png);
+        }
+
+        .tabel_floor2_2 {
+            /* background: url(./tabel3.png); */
+            /* background: url(http://zmlong.usa3v.net/food_img/tabel2.png); */
+            background: url(./img/tabel2.png);
+        }
+
+        .gdz {
+            /* background: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1462202914,3739732177&fm=26&gp=0.jpg); */
+            background: url(./img/gdz.jpg);
+        }
+
+        .mdfd {
+            /* background: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=557654156,793649761&fm=26&gp=0.jpg); */
+            background: url(./img/mdmd.jpg);
+            background-position: 20px 0;
+        }
+
+        .down_floor {
+            /* background: url('./down.jpg'); */
+            /* background: url(http://zmlong.usa3v.net/food_img/down.jpg); */
+            background: url(./img/down.jpg);
+            transform: rotateY(0deg);
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box" style="display: block">
+        <div class="window">
+            <ul>
+                <li class="list_title">
+                    <p class="mian_class">老碗面</p>
+                    <div class="title img1"></div>
+                    <ol class="list">
+                        <li>鸡丁老碗面&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>香菇老碗面&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>炸酱老碗面&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>老碗汤面</li>
+                        <li>鸡肉米线&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>过桥米线&nbsp;&nbsp;&nbsp;5元</li>
+                        <li>蔬菜米线&nbsp;&nbsp;&nbsp;5元</li>
+                        <li>牛腩面&nbsp;&nbsp;&nbsp;9元</li>
+                        <li>西红柿鸡蛋面&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>鸡腿&nbsp;&nbsp;4元/鸡蛋&nbsp;&nbsp;1.5元</li>
+                        <li>香肠，豆皮&nbsp;&nbsp;&nbsp;1元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">油饼母鸡汤</p>
+                    <div class="title img2"></div>
+                    <ol class="list">
+                        <li>鸡汤&nbsp;&nbsp;&nbsp;3元</li>
+                        <li>鸡汤 + 鸡蛋&nbsp;&nbsp;&nbsp;4元</li>
+                        <li>鸡汤 + 鸡丝&nbsp;&nbsp;&nbsp;5元</li>
+                        <li>鸡汤+鸡蛋+鸡丝 6元</li>
+                        <li>油饼&nbsp;&nbsp;&nbsp;7元 / 斤</li>
+                        <li>此窗口仅早晚供应</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">米饭套餐</p>
+                    <div class="title img3"></div>
+                    <ol class="list">
+                        <li>三素&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>一荤两素&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>两荤一素&nbsp;&nbsp;&nbsp;9元</li>
+                        <li>大米饭免费</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">精品手撕面</p>
+                    <div class="title img4"></div>
+                    <ol class="list">
+                        <li>手撕面&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>烩面&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>土豆粉&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>牛筋面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>爽口酸辣粉&nbsp;&nbsp;&nbsp;8元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">胡辣汤/饺子</p>
+                    <div class="title img5"></div>
+                    <ol class="list">
+                        <li>麻辣鸡面&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>鸡蛋灌饼&nbsp;&nbsp;&nbsp;3元</li>
+                        <li>口口香煎饺&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>香/酸辣水饺&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>胡辣汤&nbsp;&nbsp;&nbsp;3元</li>
+                        <li>酱香蒸饺&nbsp;&nbsp;&nbsp;5元</li>
+                        <li>脆皮烤肠&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>脆皮卤香蛋&nbsp;&nbsp;&nbsp;1元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">麦香馅饼</p>
+                    <div class="title img6"></div>
+                    <ol class="list">
+                        <li>卷卷烧饼 ↓ 5元</li>
+                        <li>番茄风味</li>
+                        <li>甜辣风味</li>
+                        <li>香辣风味</li>
+                        <li>沙拉风味</li>
+                        <li>黑椒风味</li>
+                        <li>芝士风味</li>
+                        <li>素馅饼 ↓ </li>
+                        <li>金针菇馅饼&nbsp;&nbsp;&nbsp;3元</li>
+                        <li>香辣豆皮&nbsp;&nbsp;&nbsp;2.5元</li>
+                        <li>鱼香茄子&nbsp;&nbsp;&nbsp;2.5元</li>
+                        <li>香辣土豆&nbsp;&nbsp;&nbsp;2.5元</li>
+                        <li>鸡汁海带&nbsp;&nbsp;&nbsp;2.5元</li>
+                        <li>野菜香菇&nbsp;&nbsp;&nbsp;2.5元</li>
+                        <li>南瓜玉米粥</li>
+                        <li>肉馅饼 ↓ </li>
+                        <li>照烧鸡腿&nbsp;&nbsp;&nbsp;3元</li>
+                        <li>叉烧里脊&nbsp;&nbsp;&nbsp;2.5元</li>
+                        <li>麻辣鸡肉&nbsp;&nbsp;&nbsp;2.5元</li>
+                        <li>椒香鸡腿&nbsp;&nbsp;&nbsp;2.5元</li>
+                        <li>黑椒牛肉&nbsp;&nbsp;&nbsp;2.5元</li>
+                        <li>鱼香肉丝&nbsp;&nbsp;&nbsp;2.5元</li>
+                        <li>鸡蛋醪糟粥</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">美味扣碗</p>
+                    <div class="title img7"></div>
+                    <ol class="list">
+                        <li>土家酱香饼</li>
+                        <li>葱油饼</li>
+                        <li>鸡蛋饼</li>
+                        <li>6元 / 斤</li>
+                        <li>鸡块扣碗套餐&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>酥肉扣碗套餐&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>一荤两素&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>三素&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>大米免费</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">手抓饼</p>
+                    <div class="title img8"></div>
+                    <ol class="list">
+                        <li>鸡蛋&nbsp;&nbsp;&nbsp;1元</li>
+                        <li>香肠&nbsp;&nbsp;&nbsp;1元</li>
+                        <li>手抓饼&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>月亮馍&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>合页馍&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>香闷饼&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>土豆菜&nbsp;&nbsp;&nbsp;1元</li>
+                        <li>绘豆腐筋&nbsp;&nbsp;&nbsp;1元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">满口香包子</p>
+                    <div class="title img9"></div>
+                    <ol class="list">
+                        <li>槐花酱肉包&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>韭菜鸡蛋包&nbsp;&nbsp;&nbsp;1元</li>
+                        <li>青豆木耳包&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>蜜糖红薯包&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>玫瑰豆沙包&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>雪菜豆角包&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>香菇白菜包&nbsp;&nbsp;&nbsp;1元</li>
+                        <li>麻辣豆腐包&nbsp;&nbsp;&nbsp;1元</li>
+                        <li>五香花卷&nbsp;&nbsp;&nbsp;1元</li>
+                        <li>小笼蒸包&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>精品锅贴&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>广东烧卖&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>精品奶黄包&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>金丝鸡肉卷&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>广式香肠卷&nbsp;&nbsp;&nbsp;1.5元</li>
+                        <li>米酒汤圆&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>冰糖雪梨&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>水煮蛋&nbsp;&nbsp;&nbsp;1元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">五谷豆浆</p>
+                    <div class="title img10"></div>
+                    <ol class="list">
+                        <li>酸梅汁&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>橙汁&nbsp;&nbsp;&nbsp;1元</li>
+                        <li>苹果汁&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>柠檬汁&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>豆浆&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>牛奶&nbsp;&nbsp;&nbsp;2元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">壹品香粥铺</p>
+                    <div class="title img11"></div>
+                    <ol class="list">
+                        <li>黑米粥&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>绿豆粥&nbsp;&nbsp;&nbsp;1元</li>
+                        <li>小米粥&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>燕麦粥&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>紫菜蛋花粥&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>八宝粥&nbsp;&nbsp;&nbsp;2元</li>
+                        <li>咸菜粥&nbsp;&nbsp;&nbsp;1元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">吉合烧饼</p>
+                    <div class="title img12"></div>
+                    <ol class="list">
+                        <li>油条&nbsp;&nbsp;&nbsp;1元</li>
+                        <li>烧饼夹菜&nbsp;&nbsp;&nbsp;3-5元</li>
+                        <li>照烧鸡腿&nbsp;&nbsp;&nbsp;4元</li>
+                        <li>麻辣鸡肉&nbsp;&nbsp;&nbsp;4元</li>
+                        <li>鲜虾鸡腿&nbsp;&nbsp;&nbsp;5元</li>
+                        <li>藤椒鸡肉&nbsp;&nbsp;&nbsp;4元</li>
+                        <li>香辣鱿鱼&nbsp;&nbsp;&nbsp;5元</li>
+                        <li>汁香培根&nbsp;&nbsp;&nbsp;4元</li>
+                        <li>酱汁肉&nbsp;&nbsp;&nbsp;4.5元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">炒面系列</p>
+                    <div class="title img13"></div>
+                    <ol class="list">
+                        <li>炒河粉&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>炒米粉&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>肉沫炒饭&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>炒面&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>胡辣汤&nbsp;&nbsp;&nbsp;3元</li>
+                        <li>油条&nbsp;&nbsp;&nbsp;1元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">特色面食</p>
+                    <div class="title img14"></div>
+                    <ol class="list">
+                        <li>自选面食&nbsp;&nbsp;&nbsp;8-10元</li>
+                        <li>酸辣鸡蛋汤&nbsp;&nbsp;&nbsp;3元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">馋嘴饼</p>
+                    <div class="title img15"></div>
+                    <ol class="list">
+                        <li>馋嘴饼&nbsp;&nbsp;&nbsp;3元</li>
+                        <li>杂粮煎饼&nbsp;&nbsp;&nbsp;5元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">烤肉饭</p>
+                    <div class="title img16"></div>
+                    <ol class="list">
+                        <li>黑椒烤肉饭&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>咖喱烤肉饭&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>香辣烤肉饭&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>沙拉烤肉饭&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>蜜汁烤肉饭&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>番茄烤肉饭&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>原味烤肉饭&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>烤肉夹馍&nbsp;&nbsp;&nbsp;5元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">穆马热干面</p>
+                    <div class="title img17"></div>
+                    <ol class="list">
+                        <li>方便面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>土豆粉&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>酸辣粉&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>凉皮&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>米皮&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>牛筋面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>麻辣凉面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>水饺&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>阳春面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>热干面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>米线&nbsp;&nbsp;&nbsp;6元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">麻辣烫</p>
+                    <div class="title img18"></div>
+                    <ol class="list">
+                        <li>香辣麻辣烫&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>三鲜麻辣烫&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>朝鲜冷面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>混沌&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>优质烩面&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>浇汁绘捞面&nbsp;&nbsp;&nbsp;7元</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <div class="hall">
+            <div class="dating"></div>
+            <!-- 左边 -->
+            <div class="left_up"></div>
+            <div class="left_up_out">出口</div>
+            <div class="foolr"></div>
+            <div class="min_room"></div>
+            <div class="left_bottom"></div>
+            <!-- 中间 -->
+            <div class="center">自选</div>
+            <!-- 右边 -->
+            <div class="right_up">早餐</div>
+            <div class="right_up_out">入口</div>
+            <div class="right_bottom_cha"></div>
+            <div class="up_floor"></div>
+            <div class="bull"></div>
+            <div class="right_bottom"></div>
+            <div class="right"></div>
+            <div class="left"></div>
+            <div class="color_random">
+                <p>color<br>random</p>
+            </div>
+            <div class="tabel"></div>
+            <div class="tabel2"></div>
+        </div>
+    </div>
+    <div class="box2" style="display: none">
+        <div class="window">
+            <ul>
+                <li class="list_title">
+                    <p class="mian_class">清真饸饹面</p>
+                    <div class="title img1_1"></div>
+                    <ol class="list">
+                        <li>羊肉汤&nbsp;&nbsp;&nbsp;15-20元</li>
+                        <li>羊杂汤&nbsp;&nbsp;&nbsp;10-15元</li>
+                        <li>饸饹面&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>黄焖鸡米饭&nbsp;&nbsp;&nbsp;12元</li>
+                        <li>丸子汤&nbsp;&nbsp;&nbsp;5元</li>
+                        <li>羊肉泡馍&nbsp;&nbsp;&nbsp;5元</li>
+                        <li>水饺&nbsp;&nbsp;&nbsp;12元</li>
+                        <li>拉面&nbsp;&nbsp;&nbsp;10元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">木桶饭</p>
+                    <div class="title img2_2"></div>
+                    <ol class="list">
+                        <li>木桶饭</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">开封风味</p>
+                    <div class="title img3_3"></div>
+                    <ol class="list">
+                        <li>油泼面&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>手动刀削面&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>拉面&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>大肉冬瓜面&nbsp;&nbsp;&nbsp;8元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">千里飘香面</p>
+                    <div class="title img4_4"></div>
+                    <ol class="list">
+                        <li>麻辣面&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>酸辣面&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>烩面&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>麻辣烫&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>土豆粉&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>酸辣粉&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>米皮&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>凉皮&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>凉面&nbsp;&nbsp;&nbsp;6元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">美滋滋花甲粉</p>
+                    <div class="title img5_5"></div>
+                    <ol class="list">
+                        <li>花甲+金针菇+米线&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>花甲+金针菇+面&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>花甲+金针菇+粉/面&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>花甲+金针菇&nbsp;&nbsp;&nbsp;10元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">风味小吃面</p>
+                    <div class="title img6_6"></div>
+                    <ol class="list">
+                        <li>酸辣土豆粉&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>米线&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>丸子泡面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>凉皮&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>凉面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>牛筋面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>卤肉烩面&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>阳春面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>热干面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>麻辣烫&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>绘捞面&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>饸饹面&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>鸡丁烩面&nbsp;&nbsp;&nbsp;7元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">云南过桥米线</p>
+                    <div class="title img7_7"></div>
+                    <ol class="list">
+                        <li>亲亲肠&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>虾丸&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>肥牛&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>鱼片&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>甜不辣&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>鱼豆腐&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>牛肉丸&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>蟹排&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>鲜虾&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>菌菇&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>午餐肉&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>鱼丸&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>原味、微辣、麻辣</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">煲仔饭</p>
+                    <div class="title img8_8"></div>
+                    <ol class="list">
+                        <li>煲仔饭&nbsp;&nbsp;&nbsp;1元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">淮南牛肉汤</p>
+                    <div class="title img9_9"></div>
+                    <ol class="list">
+                        <li>牛肉汤&nbsp;&nbsp;&nbsp;9元</li>
+                        <li>牛杂汤&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>牛肚汤&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>牛肉面&nbsp;&nbsp;&nbsp;9元</li>
+                        <li>酸辣粉&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>酸辣土豆粉&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>饼</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">米饭套餐</p>
+                    <div class="title img10_10"></div>
+                    <ol class="list">
+                        <li>柠檬鸡排&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>黄焖鸡&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>麻辣豆腐&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>红烧茄子&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>西红柿炒鸡蛋&nbsp;&nbsp;&nbsp;8元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">盖浇饭</p>
+                    <div class="title img11_11"></div>
+                    <ol class="list">
+                        <li>扣碗&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>鱼香肉丝&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>土豆烧鸡&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>烧花菜&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>烧茄子&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>果汁饮料</li>
+                        <li>乳酸菌饮品</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">谭记热干面</p>
+                    <div class="title img12_12"></div>
+                    <ol class="list">
+                        <li>卤面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>鸡丁米线&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>鸡丁汤烩面&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>鸡丁捞烩面&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>粥、馒头、菜&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>阳春面&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>酸汤面&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>酸汤水饺&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>三色炒米&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>肉丝炒面&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>大盘鸡面&nbsp;&nbsp;&nbsp;7元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">螺蛳粉</p>
+                    <div class="title img13_13"></div>
+                    <ol class="list">
+                        <li>螺蛳粉&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>加料:豆腐 酸笋 花生&nbsp;&nbsp;2元</li>
+                        <li>加料:肥牛 田螺&nbsp;&nbsp;&nbsp;4元</li>
+                    </ol>
+                </li>
+                <li class="list_title">
+                    <p class="mian_class">营养套餐</p>
+                    <div class="title img14_14"></div>
+                    <ol class="list">
+                        <li>三素&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>一荤两素&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>二荤一素&nbsp;&nbsp;&nbsp;9元</li>
+                        <li>二荤二素&nbsp;&nbsp;&nbsp;10元</li>
+                    </ol>
+                </li>
+
+
+                <li class="list_title">
+                    <!-- <p class="mian_class">馋嘴饼</p>
+                    <div class="title img15"></div>
+                    <ol class="list">
+                        <li>馋嘴饼&nbsp;&nbsp;&nbsp;3元</li>
+                        <li>杂粮煎饼&nbsp;&nbsp;&nbsp;5元</li>
+                    </ol> -->
+                </li>
+                <li class="list_title">
+                    <!-- <p class="mian_class">烤肉饭</p>
+                    <div class="title img16"></div>
+                    <ol class="list">
+                        <li>黑椒烤肉饭&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>咖喱烤肉饭&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>香辣烤肉饭&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>沙拉烤肉饭&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>蜜汁烤肉饭&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>番茄烤肉饭&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>原味烤肉饭&nbsp;&nbsp;&nbsp;10元</li>
+                        <li>烤肉夹馍&nbsp;&nbsp;&nbsp;5元</li>
+                    </ol> -->
+                </li>
+                <li class="list_title">
+                    <!-- <p class="mian_class">穆马热干面</p>
+                    <div class="title img17"></div>
+                    <ol class="list">
+                        <li>方便面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>土豆粉&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>酸辣粉&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>凉皮&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>米皮&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>牛筋面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>麻辣凉面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>水饺&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>阳春面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>热干面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>米线&nbsp;&nbsp;&nbsp;6元</li>
+                    </ol> -->
+                </li>
+                <li class="list_title">
+                    <!-- <p class="mian_class">麻辣烫</p>
+                    <div class="title img18"></div>
+                    <ol class="list">
+                        <li>香辣麻辣烫&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>三鲜麻辣烫&nbsp;&nbsp;&nbsp;8元</li>
+                        <li>朝鲜冷面&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>混沌&nbsp;&nbsp;&nbsp;6元</li>
+                        <li>优质烩面&nbsp;&nbsp;&nbsp;7元</li>
+                        <li>浇汁绘捞面&nbsp;&nbsp;&nbsp;7元</li>
+                    </ol> -->
+                </li>
+            </ul>
+        </div>
+        <div class="hall">
+            <div class="dating"></div>
+            <!-- 左边 -->
+            <div class="left_up"></div>
+            <div class="left_up_out" style="opacity: 0">出口</div>
+            <div class="foolr roter"></div>
+            <div class="min_room ceil"></div>
+            <div class="left_bottom mlt"></div>
+            <!-- 中间 -->
+            <div class="center" style="display: none">自选</div>
+            <!-- 右边 -->
+            <div class="right_up gdz"></div>
+            <div class="right_up_out" style="display: none"></div>
+            <div class="right_bottom_cha" style="display: none"></div>
+            <div class="up_floor down_floor"></div>
+            <div class="bull mdfd"></div>
+            <div class="right_bottom"></div>
+            <div class="right"></div>
+            <div class="left"></div>
+            <div class="color_random">
+                <p>color<br>random</p>
+            </div>
+            <div class="tabel tabel_floor2"></div>
+            <div class="tabel2 tabel_floor2_2"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+
+    // 划过显示菜单
+    let list_title = document.querySelectorAll('.list_title');
+    let lists = document.querySelectorAll('.list');
+    for (let i = 0; i < list_title.length; i++) {
+        list_title[i].index = i;
+        list_title[i].addEventListener('mouseover', function () {
+            // console.log(this.index);
+            lists[this.index].style.display = 'block';
+            // console.log(lists[this.index]);
+        })
+        list_title[i].addEventListener('mouseout', function () {
+            // console.log(this.index);
+            lists[this.index].style.display = 'none';
+            // console.log(lists[this.index]);
+        })
+    }
+    // 左右按钮
+    let go_right = document.querySelector('.right');
+    let go_left = document.querySelector('.left');
+
+    let tabel = document.querySelector('.tabel');
+    go_right.addEventListener('click', function () {
+        document.body.style.transform = 'translateX(-50%)';
+        tabel.style.transform = 'translateX(200%)';
+    })
+    go_left.addEventListener('click', function () {
+        document.body.style.transform = 'translateX(0)';
+        tabel.style.transform = 'translateX(0)';
+    })
+    // 随机颜色
+    let ol = document.querySelectorAll('.list');
+    let color;
+    for (let i = 0; i < ol.length; i++) {
+        color = ol[i].querySelectorAll('li');
+        for (let j = 0; j < color.length; j++) {
+            color[j].addEventListener('mouseover', function () {
+                this.style.background = '#' + Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, '0');
+            })
+            color[j].addEventListener('mouseout', function () {
+                this.style.background = '#ffff';
+            })
+        }
+    }
+    // 点击替换随机背景
+    document.querySelector('.color_random').addEventListener('click', function () {
+        document.body.style.background = '#' + Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, '0');
+    })
+    // 点击上下楼
+    let box = document.querySelector('.box');
+    let box2 = document.querySelector('.box2');
+    let up_floor = document.querySelector('.up_floor');
+    let tabe2 = document.querySelector('.tabel_floor2');
+    up_floor.addEventListener('click', function () {
+        box.style.display = 'none';
+        box2.style.display = 'block';
+        document.body.style.transform = 'translateX(0)';
+        tabe2.style.transform = 'translateX(0)';
+        // 闭包函数
+        floor2();
+    })
+    // 闭包
+    function floor2() {
+        // 点击替换随机背景
+        document.querySelectorAll('.color_random')[1].addEventListener('click', function () {
+            document.body.style.background = '#' + Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, '0');
+        })
+        // 左右按钮
+        let go_right = document.querySelectorAll('.right')[1];
+        let go_left = document.querySelectorAll('.left')[1];
+        let tabel = document.querySelector('.tabel_floor2');
+        go_right.addEventListener('click', function () {
+            document.body.style.transform = 'translateX(-50%)';
+            tabel.style.transform = 'translateX(200%)';
+        })
+        go_left.addEventListener('click', function () {
+            document.body.style.transform = 'translateX(0)';
+            tabel.style.transform = 'translateX(0)';
+        })
+        // 点击上下楼
+        let box = document.querySelector('.box');
+        let box2 = document.querySelector('.box2');
+        let down_floor = document.querySelector('.down_floor');
+        let tabel1 = document.querySelector('.tabel');
+        down_floor.addEventListener('click', function () {
+            box.style.display = 'block';
+            box2.style.display = 'none';
+            document.body.style.transform = 'translateX(0)';
+            tabel1.style.transform = 'translateX(0)';
+            floor2();
+        })
+
+    }
+</script>

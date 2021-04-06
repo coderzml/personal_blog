@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>动漫壁纸</title>
+  <style>
+    * {
+      /*初始化样式*/
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      /*用于 获取 屏幕的可视宽高*/
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      /*让 body 初始 width 和 height 就 等于 页面可视区域的 宽高*/
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      /*用于 测试的 样式*/
+      background-color: #444;
+      color: #FFF;
+      letter-spacing: 4px;
+      font-size: 28px;
+      /*文字居中*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media screen and (orientation:portrait) {
+
+      /*竖屏样式*/
+      body {
+        transform-origin: 0 0;
+        transform: rotateZ(90deg) translateY(-100%);
+      }
+    }
+
+    .show {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(100, 100, 100, .5);
+    }
+
+    .show .font {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 70px;
+      color: antiquewhite;
+    }
+
+    .imgBox {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+    }
+
+    button {
+      position: fixed;
+      right: 20px;
+      width: 50px;
+      height: 30px;
+      opacity: 0.8;
+      z-index: 3;
+    }
+
+    span {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      font-size: 14px;
+      color: #fff;
+      z-index: 3;
+    }
+
+    p {
+      position: absolute;
+      color: #fff;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="imgBox">
+    <!-- <p>加载中...</p> -->
+    <p>声明：图片源于网络！</p>
+    <img src="http://www.dmoe.cc/random.php" alt="">
+  </div>
+  <button>更新</button>
+  <!-- <span>长按保存到本地</span> -->
+</body>
+
+</html>
+<script src="./jQuery.js"></script>
+<script>
+  // 禁止放大
+  document.body.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+  }, { passive: false });
+  (function () {
+    // 屏幕翻转
+    function resize() {
+      var body = document.getElementsByTagName('body')[0];
+      var html = document.getElementsByTagName('html')[0];
+      var width = html.clientWidth;
+      var height = html.clientHeight;
+      var max = width > height ? width : height;
+      var min = width > height ? height : width;
+      body.style.width = max + "px";
+      body.style.height = min + "px";
+    }
+    resize();
+    window.addEventListener("resize", resize);
+  })();
+  $(function () {
+    $('button').click(function () {
+      location.reload();
+    })
+  })
+
+  // 检测移动端
+  if (document.body.clientWidth > 500) {
+    document.title = '动漫壁纸（横屏观看）';
+  }
+
+  // // 检测长按
+  // $("img").on({
+  //   touchstart: function (e) {
+  //     // 长按事件触发  
+  //     timeOutEvent = setTimeout(function () {
+  //       timeOutEvent = 0;
+  //       // alert('你长按了');
+  //       // console.log($('img').attr('src'));
+
+  //     }, 400);
+  //     //长按400毫秒   
+  //     // e.preventDefault();    
+  //   },
+  //   touchmove: function () {
+  //     // 长按的时候如果手指动了 移出逻辑
+  //     clearTimeout(timeOutEvent);
+  //     timeOutEvent = 0;
+  //   },
+  //   touchend: function () {
+  //     clearTimeout(timeOutEvent);
+  //     if (timeOutEvent != 0) {
+  //       // 点击事件  
+  //       // location.href = '/a/live-rooms.html';  
+  //       // alert('你点击了');
+  //     }
+  //     return false;
+  //   }
+  // })
+</script>

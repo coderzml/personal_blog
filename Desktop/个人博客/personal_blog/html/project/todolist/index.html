@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList—最简单的待办事项列表</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header class="clearfix">
+        <section>
+            <form action="" class="clearfix">
+                <label for="title">ToDoList</label>
+                <input type="text" id="title" placeholder="添加ToDo">
+            </form>
+        </section>
+    </header>
+    <section class="jinxing">
+        <h2>正在进行
+            <span class="todocount">0</span>
+        </h2>
+        <ol class="todolist">
+
+        </ol>
+        <h2>
+            已经完成
+            <span class="donecount">0</span>
+        </h2>
+        <ul class="donelist">
+        </ul>
+    </section>
+    <footer>
+        Copyright © 2014 todolist.cn
+        <a href="javascript:;">clear</a>
+    </footer>
+</body>
+
+</html>
+<script src="js/jQuery.js"></script>
+<script src="js/index.js"></script>

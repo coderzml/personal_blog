@@ -1,0 +1,4 @@
+文字：http://tg.520-love.top/api.php		
+图片：http://www.dmoe.cc/random.php
+音乐：https://api.uomg.com/api/rand.music
+全部get请求

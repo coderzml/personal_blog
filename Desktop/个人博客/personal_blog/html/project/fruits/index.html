@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 800px;
+      /* height: 500px; */
+      /* border: 1px solid #000; */
+      background-color: #f5f5f5;
+    }
+
+    .header {
+      /* background-color: green; */
+      margin-bottom: 10px;
+    }
+
+    .header h2,
+    .header h3 {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      color: #228B22;
+    }
+
+    .border ul {
+      /* display: flex;
+
+      justify-content: space-around;
+      flex-direction: row;
+      flex-wrap: wrap; */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    ul li {
+      list-style: none;
+      display: inline-block;
+      width: 24.5%;
+      height: 220px;
+      border-radius: 10px;
+      background-color: #ccc;
+      /* float: left; */
+      margin-bottom: 5px;
+      overflow: hidden;
+    }
+
+    ul li img {
+      width: 100%;
+      height: 170px;
+    }
+
+    ul,
+    p {
+      padding: 0;
+      margin: 0;
+    }
+
+    .border p {
+      text-align: center;
+    }
+
+    .gongneng {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <img src="./1.jpg" alt=""> -->
+  <div class="box" id="imgDiv">
+    <div class="header">
+      <div class="title1">
+        <h2 class="title_font1">[笑笑的水果杂货铺]</h2>
+      </div>
+      <div class="title2">
+        <h3 class="title_font2">12月5日-在售清单</h3>
+      </div>
+    </div>
+    <div class="border">
+      <!-- <ul class="append">
+        <li>
+          <img src="./img/1.jpg" alt="">
+          <p>span1</p>
+          <p>span2</p>
+        </li>
+        <li>
+          <img src="./img/1.jpg" alt="">
+          <p>span1</p>
+          <p>span2</p>
+        </li>
+        <li>
+          <img src="./img/1.jpg" alt="">
+          <p>span1</p>
+          <p>span2</p>
+        </li>
+        <li>
+          <img src="./img/1.jpg" alt="">
+          <p>span1</p>
+          <p>span2</p>
+        </li>
+        <li>
+          <img src="./img/1.jpg" alt="">
+          <p>span1</p>
+          <p>span2</p>
+        </li>
+        <li>
+          <img src="./img/1.jpg" alt="">
+          <p>span1</p>
+          <p>span2</p>
+        </li>
+      </ul> -->
+      <ul class="append"></ul>
+    </div>
+  </div>
+  <div class="gongneng">
+    <input type="text" class="num" placeholder="输入生成商品数量">
+    <button class="clickNum">生成</button>
+    <button class="clearData">清除全部数据</button>
+    <!-- <button id="btn">保存为图片</button> -->
+  </div>
+</body>
+<!-- <script>
+  document.querySelector('input').addEventListener('blur', function () {
+    console.log(this.value);
+    let str = this.value;
+    // str = str.split();
+    let newColor = str.split('-');
+    console.log(newColor[1]);
+    this.parentNode.firstElementChild.style.color = newColor[1];
+  })
+</script> -->
+<script src="./js/jquery-1.8.2.js"></script>
+<script src="./js/bluebird.js"></script>
+<script src="./js/html2canvas.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    // canvas生成图片
+    $("#btn").on("click", function () {
+      var getPixelRatio = function (context) { // 获取设备的PixelRatio
+        var backingStore = context.backingStorePixelRatio ||
+          context.webkitBackingStorePixelRatio ||
+          context.mozBackingStorePixelRatio ||
+          context.msBackingStorePixelRatio ||
+          context.oBackingStorePixelRatio ||
+          context.backingStorePixelRatio || 0.5;
+        return (window.devicePixelRatio || 0.5) / backingStore;
+      };
+      //生成的图片名称
+      var imgName = "cs.jpg";
+      var shareContent = document.getElementById("imgDiv");
+      var width = shareContent.offsetWidth;
+      var height = shareContent.offsetHeight;
+      var canvas = document.createElement("canvas");
+      var context = canvas.getContext('2d');
+      var scale = getPixelRatio(context); //将canvas的容器扩大PixelRatio倍，再将画布缩放，将图像放大PixelRatio倍。
+      canvas.width = width * scale;
+      canvas.height = height * scale;
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+      context.scale(scale, scale);
+
+      var opts = {
+        scale: scale,
+        canvas: canvas,
+        width: width,
+        height: height,
+        dpi: window.devicePixelRatio
+      };
+      html2canvas(shareContent, opts).then(function (canvas) {
+        context.imageSmoothingEnabled = false;
+        context.webkitImageSmoothingEnabled = false;
+        context.msImageSmoothingEnabled = false;
+        context.imageSmoothingEnabled = false;
+        var dataUrl = canvas.toDataURL('image/jpeg', 1.0);
+        dataURIToBlob(imgName, dataUrl, callback);
+      });
+    });
+  })
+
+
+  // edited from https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob#Polyfill
+  var dataURIToBlob = function (imgName, dataURI, callback) {
+    var binStr = atob(dataURI.split(',')[1]),
+      len = binStr.length,
+      arr = new Uint8Array(len);
+
+    for (var i = 0; i < len; i++) {
+      arr[i] = binStr.charCodeAt(i);
+    }
+
+    callback(imgName, new Blob([arr]));
+  }
+
+  var callback = function (imgName, blob) {
+    var triggerDownload = $("<a>").attr("href", URL.createObjectURL(blob)).attr("download", imgName).appendTo("body").on("click", function () {
+      if (navigator.msSaveBlob) {
+        return navigator.msSaveBlob(blob, imgName);
+      }
+    });
+    triggerDownload[0].click();
+    triggerDownload.remove();
+  };
+</script>
+<script>
+  let loadList;
+  // 手动渲染li
+  let btn = document.querySelector('.clickNum');
+  btn.addEventListener('click', function () {
+    // if ($('.num').val() <= 4) {
+    //   alert('商品不能少于4个')
+    // } else {
+    document.querySelector('.append').innerHTML = '';
+    let num = Number(document.querySelector('.num').value);
+    for (let i = 1; i <= num; i++) {
+      let str = "<li class='list'><img src = ./img/" + i + ".jpg alt = ''><p class='font1'>font1</p><p class='font2'>font2</p></li>";
+      document.querySelector('.append').innerHTML += str;
+    }
+    var local = getData();
+    // local.push({ goosd_title1: val });
+    local[2] = { num: num };
+    addData(local);
+    if (typeof loadList === "function") {
+      loadList();
+    }
+    // }
+  })
+
+
+  $(function () {
+    // title双击修改
+    $('.header').on('dblclick', '.title_font1', function () {
+      //获取当前p的font
+      var str = $(this).text();
+      //声明一个this == p 后面input能用
+      // var thet = $(this);
+      $(this).html('<input type="text" class="addinput1">');
+      $(this).children('input').val(str).select();
+      $(this).children('input').blur(function () {
+        if ($(this).val() != '') {
+          //获取input的val 方便存
+          var val = $(this).val();
+          //    1.2保存到本地存储;
+          var local = getData();
+          // local.push({ goosd_title1: val });
+          local[0] = { goosd_title1: val };
+          addData(local);
+          $(this).parent().parent().html('<h2 class="title_font1">' + val + '</h2>');
+        }
+      })
+      $(this).children('input').on('keydown', function (e) {
+        if ($(this).val().trim() !== '') {
+          if (e.keyCode === 13) {
+            var val = $(this).val();
+            //    1.2保存到本地存储;
+            var local = getData();
+            // local.push({ goosd_title1: val });
+            local[0] = { goosd_title1: val };
+            addData(local);
+            $(this).parent().parent().html('<h2 class="title_font1">' + val + '</h2>');
+          }
+        }
+      });
+    })
+    $('.header').on('dblclick', '.title_font2', function () {
+      //获取当前p的font
+      var str = $(this).text();
+      //声明一个this == p 后面input能用
+      // var thet = $(this);
+      $(this).html('<input type="text" class="addinput2">');
+      $(this).children('input').val(str).select();
+      $(this).children('input').blur(function () {
+        if ($(this).val() != '') {
+          //获取input的val 方便存
+          var val = $(this).val();
+          //    1.2保存到本地存储;
+          var local = getData();
+          // local.push({ goosd_title1: val });
+          local[1] = { goosd_title2: val };
+          addData(local);
+          $(this).parent().parent().html('<h3 class="title_font2">' + val + '</h3>');
+        }
+      })
+      $(this).children('input').on('keydown', function (e) {
+        if ($(this).val().trim() !== '') {
+          if (e.keyCode === 13) {
+            var val = $(this).val();
+            //    1.2保存到本地存储;
+            var local = getData();
+            // local.push({ goosd_title1: val });
+            local[1] = { goosd_title2: val };
+            addData(local);
+            $(this).parent().parent().html('<h3 class="title_font2">' + val + '</h3>');
+          }
+        }
+      });
+    })
+    // span双击修改
+    $('.append').on('dblclick', '.font1', function () {
+      let index = $(this).parents('.list').index() + 3;
+      var str = $(this).text();
+      //声明一个this == p 后面input能用
+      // var thet = $(this);
+      $(this).html('<input type="text" class="addinput1">');
+      $(this).children('input').val(str).select();
+      $(this).children('input').blur(function () {
+        if ($(this).val().trim() != '') {
+          //获取input的val 方便存
+          var val = $(this).val();
+          //    1.2保存到本地存储;
+          if (str != val) {
+            var local = getData();
+            // // local.push({ goosd_title1: val });
+            local[index] = { goosd_name1: val };
+            addData(local);
+          }
+          $(this).parent().html('<p>' + val + '</p>');
+        }
+      })
+    })
+
+    $('.append').on('dblclick', '.font2', function () {
+      console.log(333);
+      let index = $(this).parents('.list').index() + 3;
+      var str = $(this).text();
+      //声明一个this == p 后面input能用
+      // var thet = $(this);
+      $(this).html('<input type="text" class="addinput1">');
+      $(this).children('input').val(str).select();
+      $(this).children('input').blur(function () {
+        if ($(this).val().trim() != '') {
+          //获取input的val 方便存
+          var val = $(this).val();
+          if (str != val) {
+            //    1.2保存到本地存储;
+            var local = getData();
+            // // local.push({ goosd_title1: val });
+            local[index].tow = { goosd_name2: val };
+            addData(local);
+          }
+          $(this).parent().html('<p>' + val + '</p>');
+        }
+      })
+    })
+  })
+  // 获取数据
+  function getData() {
+    var data = localStorage.getItem('goods');
+    if (data !== null) {
+      data = JSON.parse(data);
+      return data;
+    } else {
+      return [];
+    }
+  }
+  //添加数据
+  function addData(data) {
+    localStorage.setItem('goods', JSON.stringify(data));
+  }
+  // 渲染
+  function load() {
+    let data = getData();
+    $('.num').val(data[2].num);
+    // 页面打开自动点击按钮
+    if (data[2].num != 0) {
+      btn.click();
+
+    }
+    loadList = function () {
+      if (data[0] != null && data[1] != null) {
+        $('.title_font1').text(data[0].goosd_title1);
+        $('.title_font2').text(data[1].goosd_title2);
+      }
+      for (let y = 3; y <= data.length; y++) {
+        // console.log(data[y].goosd_name1);
+        if (data[y] != null) {
+          let font1 = document.querySelectorAll('.font1');
+          // $('.font1').text(data[y].goosd_name1)
+          font1[y - 3].innerText = data[y].goosd_name1;
+        }
+        if (data[y] != null) {
+          let font2 = document.querySelectorAll('.font2');
+          // $('.font1').text(data[y].goosd_name1)
+          font2[y - 3].innerText = data[y].tow.goosd_name2;
+        }
+      }
+    }
+    loadList();
+
+  }
+  $('.num').on('keydown', function (e) {
+    if ($(this).val().trim() !== '') {
+      if (e.keyCode === 13) {
+        btn.click();
+      }
+    }
+  });
+  load();
+  var remove = document.querySelector('.clearData');
+  remove.addEventListener('click', function () {
+    localStorage.removeItem('goods');
+    location.reload();
+  });
+
+</script>
+
+
+
+</html>

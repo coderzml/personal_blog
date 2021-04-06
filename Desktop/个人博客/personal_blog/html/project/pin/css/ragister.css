@@ -1,0 +1,125 @@
+.w{
+    width: 1200px;
+    margin: 0 auto;
+}
+header {
+    border-bottom: 2px solid #b1191a;
+}
+header img{
+    padding: 15px 0 10px 0;
+}
+.registerarea{
+    height: 520px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+.registerarea h3{
+    height: 40px;
+    background-color: #ececec;
+    font-weight: 400;
+    padding: 0 10px;
+    font-size: 18px;
+    line-height: 40px;
+}
+.registerarea h3 em{
+    float: right;
+    font-size: 14px;
+}
+.registerarea a{
+    color: red;
+}
+.container{
+    width: 600px;
+    height: 400px;
+    margin: 50px auto 0;
+}
+.form_item{
+    margin-bottom: 20px;
+}
+.form_item label{
+    display: inline-block;
+    width: 100px;
+    line-height: 34px;
+    text-align: right;
+}
+.form_item input{
+    width: 238px;
+    height: 34px;
+    border: 1px solid #999999;
+}
+.font_false
+,.font_true{
+    display: inline-block;
+    color: red;
+}
+.false
+,.true{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/error.png) no-repeat;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.true{
+    background: url(../images/success.png) no-repeat;
+}
+.font_true{
+    color: green;
+}
+.anquan{
+    margin-left: 185px;
+    margin-top: 10px;
+}
+.anquan em{
+    /* display: none; */
+}
+.anquan em{
+    padding: 0 10px;
+    color: #ffffff;
+}
+.anquan em:nth-child(1){
+    background-color: red;
+}
+.anquan em:nth-child(2){
+    background-color: orange;
+}
+.anquan em:nth-child(3){
+    background-color: green;
+}
+.agree{
+    margin-left: 120px;
+}
+.agree input{
+    vertical-align: middle;
+    margin-top: -2px;
+}
+.agree a{
+    color: #1ba1e6;
+}
+.over input{
+    width: 200px;
+    height: 34px;
+    background-color: #c81623;
+    text-align: center;
+    margin: 20px 0 0 125px;
+    line-height: 34px;
+    color: #fff;
+    border:none;
+}
+.footer{
+    /* height: 130px; */
+    text-align: center;
+}
+.links{
+    margin-top: 20px;
+    height: 30px;
+}
+.copyright{
+    height: 70px;
+    line-height: 22px;
+}
+.reg{
+    /* display: inline-block; */
+    display: none;
+}

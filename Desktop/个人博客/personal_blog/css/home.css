@@ -1,0 +1,132 @@
+/* content */
+body {
+    font-family: 'Microsoft YaHei,Blackbody' !important;
+    background-color: #e6e6e6 !important;
+    font-size: 1em !important;
+}
+.content {
+    height: 688px;
+    padding-top: 20px;
+    background-color: #fff;
+}
+.box_list {
+    height: 170px;
+    margin: 0 30px;
+    border-bottom: 2px solid #e6e6e6;
+}
+.box_list_left {
+    overflow: hidden;
+    float: left;
+    width: 168px;
+    height: 138px;
+    margin-top: 16px;
+}
+.box_list_left img {
+    width: 100%;
+    height: 100%;
+}
+.box_list_right {
+    float: right;
+    width: 700px;
+    height: 138px;
+    margin-top: 16px;
+}
+.title_box {
+    height: 40px;
+}
+.box_list_right .title {
+    cursor: pointer;
+    float: left;
+    font-size: 28px;
+    color: #21759b;
+    font-weight: normal;
+}
+.box_list_right .language_type {
+    float: right;
+    margin-top: 6px;
+    width: 70px;
+    height: 28px;
+    color: #fff;
+    /* background-color: #e77134; */
+    font-size: 14px;
+    text-align: center;
+    line-height: 28px;
+}
+.box_list_right .font_box {
+    height: 74px;
+}
+.box_list_right .font {
+    margin-top: 5px;
+    font-size: 15px;
+    color: #333;
+}
+.box_list_right .time {
+    float: left;
+    font-size: 14px;
+    color: #999;
+}
+.box_list_right .readAll {
+    cursor: pointer;
+    float: right;
+    font-size: 14px;
+    color: #666;
+}
+.box_list_right .html_type {
+    background-color: #e77134;
+}
+.box_list_right .css_type {
+    background-color: #2ba8e8;
+}
+.box_list_right .js_type {
+    background-color: #e9d348;
+}
+.box_list_right .vue_type {
+    background-color: #41b883;
+}
+/* 导肮页码 */
+/* .pages {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin-left: -490px;
+} */
+.pages_bg{
+    padding: 20px 0;
+    background-color: #fff;
+}
+.pages_box {
+    /* 这个宽度JS应该动态设置 */
+    width: 300px;
+    margin: 0 auto;
+}
+.pages_box ul {
+    position: relative;
+    height: 34px;
+    padding-left: 34px;
+}
+.pages_box li {
+    cursor: pointer;
+    float: left;
+    width: 34px;
+    height: 34px;
+    color: #666;
+    font-size: 18px;
+    text-align: center;
+    line-height: 34px;
+    margin-left: 10px;
+    background-color: #e6e6e6;
+}
+.pages_box .pages_current {
+    background-color: #666;
+    color: #fff;
+}
+.last {
+    position: absolute;
+    left: -10px;
+}
+/* 内容展示 */
+iframe {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
