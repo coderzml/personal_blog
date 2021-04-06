@@ -27,10 +27,10 @@
         {
           "id": 1,
           "title": "git的全面学习",
-          "img": "https://www.liaoxuefeng.com/files/attachments/918921150461184/0",
+          "img": "/image/home/git.jpg",
           "font": "比较全面的总结了git的日常使用命令，了解git的由来，掌握git的版本控制、操作远程仓库、分支管理、多人协作以及相关理论，最后学习使用gitee",
           "font_time": "2021/03/26 11点11分（顶置）",
-          "language_type": "git",
+          "language_type": "GIT",
           "target_url": "/html/home_pages/article_02.html",
           "isOverhead": "overhead"
         },
@@ -40,7 +40,7 @@
           "img": "https://img2.baidu.com/it/u=2410953,637376636&fm=26&fmt=auto&gp=0.jpg",
           "font": "HTTP协议工作于客户端-服务端架构为上。浏览器作为HTTP客户端通过URL向HTTP服务端即WEB服务器发送所有请求。Web服务器根据接收到的请求后，向客户端发送响应信息",
           "font_time": "2021/03/28 14点51分",
-          "language_type": "http",
+          "language_type": "HTTP",
           "target_url": "/html/home_pages/article_03.html"
         },
         {
@@ -49,7 +49,7 @@
           "img": "/image/home/http.png",
           "font": "1. 客户端向服务器发起一个同步信号SYN。2. 服务器向客户端回应一个应答信号ACK，同时携带也一个同步SYN信号。3. 客户端收到服务器端回应后 再响应一个ACK信号",
           "font_time": "2021/03/29 10点53分",
-          "language_type": "http",
+          "language_type": "HTTP",
           "target_url": "/html/home_pages/article_04.html"
         }
       ],
@@ -278,7 +278,7 @@
           "img": "/image/about_me/article1.jpg",
           "font": "我叫张梦龙，是coderzml博客的作者，我喜欢编程、算法、也对新技术有深厚的兴趣，个人有代码强迫症，喜欢简洁的代码风格，只要有时间，什么东西都想自己写，自己做。",
           "font_time": "2021/03/18 16点34分",
-          "language_type": "me",
+          "language_type": "ME",
           "target_url": "/html/about_me_pages/article_01.html"
         },
         {
@@ -287,7 +287,7 @@
           "img": "/image/about_me/article2.jpg",
           "font": "开发博客的目的是记录学习和工作总结 有些知识点写成文章也是给自己做个笔记吧，如果能帮助到别人更好。",
           "font_time": "2021/03/18 16点47分",
-          "language_type": "blog",
+          "language_type": "BLOG",
           "target_url": "/html/about_me_pages/article_02.html"
         }
       ]
