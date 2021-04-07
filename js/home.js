@@ -221,7 +221,7 @@ function load() {
     // 新数据 （为什么有克隆的数据了还要新数据 因为修改数据是在克隆的数据上修改的  然后push到的新数据  达到数据的替换。）
     let new_data = {
       "home": [],
-      "HTML+CSS": [],
+      "HTML_CSS": [],
       "JQuery": [],
       "JavaScript": [],
       "works_total": [],
@@ -344,6 +344,10 @@ function load() {
   // 全局 pages_current背景渲染
   // 点击nav交互
   function nav_click() {
+    // 检测是否在PC端 如果是就让 进详情页被修改的高恢复
+    if (document.body.clientWidth >= 980) {
+      document.querySelector('.content').style.height = '688px';
+    }
     // 删除上一个搜索盒子
     if (document.querySelector('.tips ') != null) {
       document.body.querySelector('div').removeChild(document.querySelector('.tips '));
@@ -400,7 +404,7 @@ function load() {
             pages('home');
             break;
           case 1:
-            pages('HTML+CSS');
+            pages('HTML_CSS');
             break;
           case 2:
             pages('JavaScript');
@@ -422,7 +426,7 @@ function load() {
         if (this.innerHTML == '首页') {
           click_pages('home');
         } else if (this.innerHTML == 'HTML+CSS') {
-          click_pages('HTML+CSS');
+          click_pages('HTML_CSS');
         } else if (this.innerHTML == 'JavaScript') {
           click_pages('JavaScript');
         } else if (this.innerHTML == 'JQuery') {
@@ -514,6 +518,8 @@ function load() {
         }
         this.classList.add('pages_current');
         let page = pages_info_name;
+        // console.log(page);
+
         let data_info = data.content_font[page];
         if (this.innerHTML == i + 1) {
           // hake方法 -----------------------------------------------
@@ -591,6 +597,8 @@ function load() {
           }
           // console.log(html);
           let className = page + '_info';
+          // console.log(className);
+
           document.querySelector('.' + className).innerHTML = html;
 
           // // 实现顶置效果
