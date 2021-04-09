@@ -1,4 +1,4 @@
-#### 响应式+bootstrap+栅格系统及实战
+响应式+bootstrap+栅格系统及实战
 
 #### 响应式
 
@@ -105,3 +105,43 @@
 </body>
 ~~~
 
+#### Bootstrap前端开发框架
+
+- bootstrap是基于html、css、JavaScript 开发的框架，它简洁灵活、使得web开发更加灵活
+- 中文官网：https://www.bootcss.com/
+
+##### 使用
+
+- 下载相应的文件后 引入
+- 在boot的官网中 找你喜欢的样式，然后复制到你自己的html中即可
+- 使用的方法这里就不赘述了，官网讲的比我清楚
+
+##### 响应式的布局容器
+
+1. container类
+
+~~~html
+ <div class="container">
+        <button type="button" class="btn btn-success">（成功）Success</button>
+        <button type="button" class="btn btn-danger">（危险）Danger</button>
+    </div>
+~~~
+
+- 有了container类，就不用再写媒体查询了，因为boot内部都已经写好了 分别是
+- 大屏（>=1200px） 宽度定为 1170px
+- 中屏（>=992px） 宽度定为970px
+- 小屏（>=768px） 宽度定为750px
+- 超小屏（100%）
+- 一个页面中不是只能有一个container类，可以根据需求搭配使用
+
+2. container-fliud
+
+- 流式布局容器 百分比宽度
+- 占据全部视口的容器
+- 适合于单独做移动端开发
+
+##### 栅格系统
+
+- 又叫网格系统，它指将页面布局划分为等宽的列，然后通过列数的定义来模块化页面布局
+- boot提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或者视口尺寸的增加，系统会自动分为12等份。
+- 不管是在小屏幕下还是在大屏幕下 都是把页面划分为12等份，当屏幕缩小的时候每一份也会跟着缩小，就实现了响应式的效果 ，份数不变（默认）
