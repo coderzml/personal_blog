@@ -1,4 +1,4 @@
-![](../../../image/project/article07.png)
+![](../../../image/js/canvas.png)
 
 #### 演示地址：http://zmlong.usa3v.net/html/project/Doraemon/index.html
 

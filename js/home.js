@@ -222,8 +222,8 @@ function load() {
     let new_data = {
       "home": [],
       "HTML_CSS": [],
-      "JQuery": [],
       "JavaScript": [],
+      "JQuery": [],
       "works_total": [],
       "about_me": []
     };
