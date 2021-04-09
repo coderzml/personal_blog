@@ -92,7 +92,7 @@
         },
         {
           "id": 4,
-          "title": "flexible+rem",
+          "title": "flexible+rem布局",
           "img": "/image/html_css/flexible.png",
           "font": "flexible 是淘宝团队出的一个简洁高效的移动端适配库，它把页面划为10等份，用JS动态计算设备大小，不间断设置html的文字大小，实现适配的效果",
           "font_time": "2021/04/07 16点40分",
@@ -109,51 +109,21 @@
           "font_time": "2021/03/20 16点45分",
           "language_type": "JS",
           "target_url": "/html/js_pages/canvas.html"
+        },
+        {
+          "id": 1,
+          "title": "理解深浅拷贝以及方法",
+          "img": "/image/js/copy.jpg",
+          "font": "浅拷贝是按位拷贝对象，它会创建一个新对象，这个对象有着原始对象属性值的一份精确拷贝。如果属性是基本类型，拷贝的就是基本类型的值；如果属性是内存地址（引用类型），拷贝的就是内存地址。",
+          "font_time": "2021/04/09 16点42分（顶置）",
+          "language_type": "JS",
+          "target_url": "/html/js_pages/copy.html",
+          "isOverhead": "overhead"
         }
       ],
       "JQuery": [
         {
           "id": 0,
-          "title": "未定义",
-          "img": "../image/home/font_img1.jpg",
-          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-          "font_time": "发布于：2021/03/07 15点48分",
-          "language_type": "html"
-        },
-        {
-          "id": 1,
-          "title": "未定义",
-          "img": "../image/home/font_img1.jpg",
-          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-          "font_time": "发布于：2021/03/07 15点48分",
-          "language_type": "html"
-        },
-        {
-          "id": 2,
-          "title": "未定义",
-          "img": "../image/home/font_img1.jpg",
-          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-          "font_time": "发布于：2021/03/07 15点48分",
-          "language_type": "html"
-        },
-        {
-          "id": 3,
-          "title": "未定义",
-          "img": "../image/home/font_img1.jpg",
-          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-          "font_time": "发布于：2021/03/07 15点48分",
-          "language_type": "html"
-        },
-        {
-          "id": 4,
-          "title": "未定义",
-          "img": "../image/home/font_img1.jpg",
-          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-          "font_time": "发布于：2021/03/07 15点48分",
-          "language_type": "html"
-        },
-        {
-          "id": 5,
           "title": "未定义",
           "img": "../image/home/font_img1.jpg",
           "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",

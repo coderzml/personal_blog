@@ -30,7 +30,12 @@
         header.style.backgroundImage = 'url(' + data.blog_bg + ')';
         // src属性不属于css样式
         coderzml.src = data.blog_name;
-        blog_font_fill.innerHTML = data.blog_font;
+        // 显示多少篇文章
+        let total = 0;
+        for (let k in data.content_font) {
+            total += data.content_font[k].length;
+        }
+        blog_font_fill.innerHTML = data.blog_font + '(站内文章共：' + total + '篇)';
     }
     header();
     // 渲染nav

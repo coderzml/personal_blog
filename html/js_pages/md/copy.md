@@ -146,6 +146,14 @@ let arr = [1, 3, {
     console.log(arr);
 ~~~
 
+##### 展开运算符实现浅拷贝
+
+~~~JavaScript
+ var arr1=[1,2,5,6,4];
+ var arr2=[...arr1];
+ arr1 == arr2      // false;
+~~~
+
 ##### **关于Array的slice和concat方法的补充说明**：
 
 Array的slice和concat方法不修改原数组，只会返回一个浅复制了原数组中的元素的一个新数组。
@@ -156,6 +164,8 @@ Array的slice和concat方法不修改原数组，只会返回一个浅复制了�
 - 对于字符串、数字及布尔值来说（不是 String、Number 或者 Boolean 对象），slice 会拷贝这些值到新的数组里。在别的数组里修改这些字符串或数字或是布尔值，将不会影响另一个数组。
 
 #### 深拷贝
+
+- 深拷贝是拷贝的堆内存中的数据，因此指向的不是一个内存空间，修改不会影响原始的数据。
 
 ##### JSON.parse(JSON.stringify())
 
@@ -175,6 +185,135 @@ Array的slice和concat方法不修改原数组，只会返回一个浅复制了�
 
 ==这种方法虽然可以实现数组或对象深拷贝,但不能处理函数==
 
+~~~JavaScript
+   let arr = [0, 1, {
+        name: "张三"
+    }, function () {
+        console.log(123546879);
+    }];
+    let arr2 = JSON.parse(JSON.stringify(arr))
+    arr2[2].name = '李四';
+    console.log(arr);
+    console.log(arr2);
+~~~
+
+<img src="../../../image/js/copy_JSON2.png" style="zoom:150%;" />
 
 
-https://blog.csdn.net/weixin_41082623/article/details/88084831
+
+- 这里显示null
+- 使用JSON.parse这种方法深拷贝需要注意一下几点
+
+1. 如果obj里面存在时间对象，JSON.parse(JSON.stringify(obj))之后，时间对象变成了字符串。
+2. 如果obj里有RegExp、Error对象，则序列化的结果将只得到空对象。
+3. 如果obj里有函数，undefined，则序列化的结果会把函数， undefined丢失。
+4. 如果obj里有NaN、Infinity和-Infinity，则序列化的结果会变成null。
+5. JSON.stringify()只能序列化对象的**可枚举的自有属性**。如果obj中的对象是有构造函数生成的， 则使用JSON.parse(JSON.stringify(obj))深拷贝后，会丢弃对象的constructor。
+6. 如果对象中存在循环引用的情况也无法正确实现深拷贝。
+
+##### 手写递归方法
+
+递归方法实现深度克隆原理：**遍历对象、数组直到里边都是基本数据类型，然后再去复制，就是深度拷贝**
+
+- 雏形
+
+~~~JavaScript
+    let obj = {
+        name: 'zml',
+        info: [0, 1, function () {
+            console.log(123);
+        }],
+    }
+    function clone(obj) {
+        let newobj = {};
+        for (let k in obj) {
+            newobj[k] = obj[k];  //这里可以理解为数据的映射
+        }
+        return newobj;
+    }
+    let new_obj = clone(obj);
+    new_obj.name = '李四';
+    console.log(obj);
+    console.log(new_obj);
+~~~
+
+- 以上代码还没有开始递归，这个操作只能算是映射，**实现的是基础数据类型的深拷贝，引用类型的浅拷贝**。
+- 递归
+
+~~~javascript
+  let obj = {
+        name: 'zml',
+        info: [0, 1, function () {
+            console.log(123);
+        }],
+    }
+    function clone(obj) {
+        // 如果传入的不是对象就直接返回出去
+        if (!typeof obj === 'object' && obj !== null) return obj;
+        // 生成字面量的兼容写法，因为 数组也是对象，那么生成字面量就至关重要了,如果是数组就返回数字的字面量，如果不是就返回对象的字面量
+        let target = Array.isArray(obj) ? [] : {};
+        for (let k in obj) {
+            if (obj.hasOwnProperty(k)) {
+                // 如果是对象则证明不是基本数据类型，就用递归把对象里的数据再执行一边。通过递归对象 里的东西就变为了基本数据类型，就可以进入到下面了if了。
+                if (typeof obj[k] === 'object') {
+                    target[k] = clone(obj[k]); //这里传的值 一定不是基本数据类型
+                } else {  //如果是基本数据类型就直接映射
+                    target[k] = obj[k];
+                }
+            }
+        }
+        return target;
+    }
+    let new_obj = clone(obj);
+    new_obj.name = '李四'; //基本数据类型深拷贝成功
+    console.log(obj);
+    console.log(new_obj);
+    new_obj.info[0] = 1111;//引用类型深拷贝成功
+    console.log(obj);
+    console.log(new_obj);
+~~~
+
+- hasOwnProperty() 方法用来检测一个属性是否是对象的自有属性，而不是从原型链继承的。如果该属性是自有属性，那么返回 true，否则返回 false。换句话说，hasOwnProperty() 方法不会检测对象的原型链，只会检测当前对象本身，只有当前对象本身存在该属性时才返回 true。
+
+- 例如，在下面自定义类型中，this.name 就表示对象的自有属性，而原型对象中的 name 属性就是继承属性。
+
+- ~~~javascript
+  function F() {  //自定义数据类型
+      this.name = "自有属性";
+  }
+  F.prototype.name = "继承属性";
+  ~~~
+
+##### 封装深拷贝最严谨的写法
+
+~~~javascript
+    function clone(obj) {
+        if (obj === null) return null
+        if (typeof obj !== 'object') return obj;
+        if (obj.constructor === Date) return new Date(obj);
+        var newObj = new obj.constructor();  //保持继承链
+        for (var key in obj) {
+            if (obj.hasOwnProperty(key)) {   //不遍历其原型链上的属性
+                var val = obj[key];
+                newObj[key] = typeof val === 'object' ? arguments.callee(val) : val; // 使用arguments.callee解除与函数名的耦合
+            }
+        }
+        return newObj;
+    };
+
+    let new_arr = clone(arr);
+    console.log(new_arr);
+    new_arr[2].name = '李四'; // 修改克隆后的数据
+    new_arr[3] = function () {// 修改克隆后的函数
+        console.log(897654321);
+    };
+    new_arr[3](); // 克隆后的发生改变
+    console.log(arr);
+    arr[3](); // 原元素的未改变
+~~~
+
+
+
+![](../../../image/js/shen_copy.png)
+
+参考文献：https://blog.csdn.net/weixin_41082623/article/details/88084831
