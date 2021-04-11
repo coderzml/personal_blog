@@ -98,6 +98,15 @@
           "font_time": "2021/04/07 16点40分",
           "language_type": "CSS",
           "target_url": "/html/html_css_pages/flexible.html"
+        },
+        {
+          "id": 5,
+          "title": "响应式+bootstrap栅格系统及实战",
+          "img": "/image/html_css/bootstrap.jpg",
+          "font": "bootstrap是基于html、css、JavaScript 开发的框架，它简洁灵活、使得web开发更加灵活。boots还提供了一套响应式、移动设备优先的流式栅格系统，使用极其方便。",
+          "font_time": "2021/04/11 20点17分",
+          "language_type": "CSS",
+          "target_url": "/html/html_css_pages/boots.html"
         }
       ],
       "JavaScript": [

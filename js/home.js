@@ -603,22 +603,6 @@ function load() {
           // console.log(className);
 
           document.querySelector('.' + className).innerHTML = html;
-
-          // // 实现顶置效果
-          // // console.log('.' + key + '_info');
-          // // 大盒子
-          // let infos = $('.' + page + '_info');
-          // console.log(infos);
-          // // 小盒子
-          // let overhead = $('.' + page + '_info .overhead');
-          // // console.log(overhead);
-          // // 如果小盒子有值就渲染
-          // if (overhead !== null) {
-          //   for (let i = 0; i < overhead.length; i++) {
-          //     infos[0].insertBefore(overhead[i], infos[0].childNodes[0]);
-          //   }
-          // }
-
         }
         // 点击pages的时候a标签被替换了 所以得重新调用
         _blank();
@@ -669,7 +653,6 @@ function click_nav_load() {
 function pages_location() {
   // search 重新绑定
   search();
-
   let url = decodeURI(location.search);// 传递的参数
   url = url.split('?'); // 分割字符串转数组
   url.shift(); // 删除第一个数组没用的东西
