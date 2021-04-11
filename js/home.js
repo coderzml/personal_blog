@@ -52,7 +52,7 @@ function search() {
     tips.innerHTML = '"' + value + '"的搜索结果：'
     // 如果在详情页插入 提示的信息会被盖住 就加一条样式
     // if (location.href !== 'http://zmlong.usa3v.net/index.html') {
-    if (location.href !== 'http://zmlong.usa3v.net/' && document.body.clientWidth < 500) {
+    if (location.search !== '' && document.body.clientWidth < 500) {
       // if (location.href !== 'http://127.0.0.1:5501/index.html' && document.body.clientWidth < 500) {
       document.querySelector('.tips').style.marginTop = '50px';
     }
@@ -729,9 +729,11 @@ function template(url) {
 
 // 微信内置浏览器在返回上一页面，且上一页面包含AJAX代码时，页面就会被强制刷新，极度影响用户体验。而我们想要的效果是：返回上一页面时，页面还停留在原来的状态，AJAX获取到的数据还在，滚动条也在原来的位置
 // 每当微信返回刷新的时候就会执行 || 刚打开的时候 所以要渲染完删除
-if (location.href == 'http://zmlong.usa3v.net/') {
+// if (location.href == 'http://zmlong.usa3v.net/') {
+if (location.search == '') {
   // console.log(localStorage.getItem('scroll'));
   // 如果有值
+
   let scroll = localStorage.getItem('scroll');
   if (scroll !== null) {
     // 开始渲染
