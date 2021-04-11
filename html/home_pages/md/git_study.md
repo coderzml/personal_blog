@@ -769,7 +769,26 @@ Git鼓励大量使用分支：
       └─────────────┘
   ~~~
 
-#### 自定义git
+##### git pages
+
+- 众所周知的原因，国内 GitHub 的加载速度不太理想，而大多数开发者会使用 Github 的 Github Page 功能搭建博客，因此博客的访问速度也会受到影响。为了解决访问速度的问题，我们将博客转移到了 gitee 中（ OSChina 旗下 git 平台）
+
+1. 如何创建一个首页访问地址不带二级目录的 pages，如ipvb.gitee.io？
+
+   答：如果你想你的 pages 首页访问地址不带二级目录，如ipvb.gitee.io，**你需要建立一个与自己个性地址同名的仓库**，如 https://gitee.com/ipvb 这个用户，想要创建一个自己的站点，但不想以子目录的方式访问，想以`ipvb.gitee.io`直接访问，那么他就可以创建一个名字为`ipvb`的仓库 https://gitee.com/ipvb/ipvb 部署完成后，就可以以 [https://ipvb.gitee.io](https://ipvb.gitee.io/) 进行访问了。
+
+2. 当要部署的项目与自己的个性地址不一致时，部署完成后存在一些资源访问404？
+
+   答：当需要部署的仓库和自己的个性地址不一致时，如：https://gitee.com/ipvb/blog ，生成的pages url 为 https://ipvb.gitee.io/blog ，而访问的资源404，如 https://ipvb.gitee.io/style.css 。这是因为相应配置文件的相对路径存在问题导致的，生成的资源 url 应该为 https://ipvb.gitee.io/blog/style.css 才对。
+
+- 部署流程官网  https://gitee.com/help/articles/4136
+
+github和gitee pages的区别
+
+- Github 一个pages，自动部署，但是慢。
+- Gitee 多个 pages，很快，但是不能自动部署，得加钱。
+
+#### 自定义git命令（简化）
 
 - 前面首次安装git的时候配置了
 
