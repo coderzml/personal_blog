@@ -12,6 +12,9 @@
 - PC端用 html+css+Javascript+JQuery 开发
 - 移动端用 media query 做的响应式布局
 - 可能有人问 为什么不用 hexo，jekyll，hugo，Ghost这些轻量级的框架呢？ 可能是我比较享受单独设计PSD文件，单独开发每一个功能的这种成就感。 而且 我开发的这个 个人博客，同样有很强的富用性，改文章只需要修改对应的Markdown文件即可，改数据只需要改对应的json文件即可。不用框架的弊端就是  有很多没有实现的功能 比如 评论区功能，只了解一点后端知识的我，此刻就显得就很鸡肋。但是总体来说 我的目的就是记录学习用，这些功能已经足够。后面可能会用vue重构。
+- Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/
+- Hugo 使用文档：https://gohugo.io/documentation/
+- Hexo 使用文档：https://hexo.io/docs/
 
 #### 博客优化时间线
 

@@ -19,7 +19,6 @@ function _blank() {
       this.href = str + '?index=' + encodeURI(current.index) + '?name=' + encodeURI(current.innerText) + '?title=' + encodeURI(title.innerText) + '?time=' + encodeURI(time.innerText) + '';
       // console.log(this.href);
       // console.log(e.pageY);
-
       localStorage.setItem('scroll', e.pageY); // 坐标位置
       localStorage.setItem('nav_index', current.index); // 哪个导航栏
       let pages_ul_li = document.querySelector('.pages_ul').querySelector('.pages_current');
@@ -39,7 +38,7 @@ function search() {
       return false;
     }
 
-    // 删除上一个搜索盒子
+    // 删除上一个搜索盒子 
     if (document.querySelector('.tips ') != null) {
       document.body.querySelector('div').removeChild(document.querySelector('.tips '));
     }
@@ -53,7 +52,8 @@ function search() {
     tips.innerHTML = '"' + value + '"的搜索结果：'
     // 如果在详情页插入 提示的信息会被盖住 就加一条样式
     // if (location.href !== 'http://zmlong.usa3v.net/index.html') {
-    if (location.href !== 'http://zmlong.usa3v.net/index.html' && document.body.clientWidth < 500) {
+    if (location.href !== 'http://zmlong.usa3v.net/' && document.body.clientWidth < 500) {
+      // if (location.href !== 'http://127.0.0.1:5501/index.html' && document.body.clientWidth < 500) {
       document.querySelector('.tips').style.marginTop = '50px';
     }
     // 获取数据
@@ -181,6 +181,7 @@ function request_data() {
   // 返回数据
   return request.home_info;
 }
+
 
 
 // 写到load函数外面的功能函数 都是load内部调用的，写到外面的原因是 后面还有函数要用到，这里就采用了分离写法。
@@ -365,6 +366,8 @@ function load() {
     for (let i = 0; i < nav_li.length; i++) {
       nav_li[i].index = i;
       nav_li[i].onclick = function () {
+        // 渲染title
+        document.title = $(this).html();
         // 判断有没有这个标签如果有就移出 防止渲染content的时候 连location一块渲染了
         let location = document.querySelector('.location');
         let md = document.querySelector('.md');
@@ -379,7 +382,7 @@ function load() {
 
         // 网页不刷新 修改url
         // location.pathname = '/index.html';
-        history.pushState('', '', '/index.html');
+        history.pushState('', '', '/');
         // 更新_blank_info的数据
         _blank_info.index = this.index;
         _blank_info.name = this.innerText;
@@ -726,7 +729,7 @@ function template(url) {
 
 // 微信内置浏览器在返回上一页面，且上一页面包含AJAX代码时，页面就会被强制刷新，极度影响用户体验。而我们想要的效果是：返回上一页面时，页面还停留在原来的状态，AJAX获取到的数据还在，滚动条也在原来的位置
 // 每当微信返回刷新的时候就会执行 || 刚打开的时候 所以要渲染完删除
-if (location.href == 'http://zmlong.usa3v.net/index.html') {
+if (location.href == 'http://zmlong.usa3v.net/') {
   // console.log(localStorage.getItem('scroll'));
   // 如果有值
   let scroll = localStorage.getItem('scroll');

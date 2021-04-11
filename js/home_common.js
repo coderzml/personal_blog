@@ -68,6 +68,6 @@
         localStorage.removeItem('nav_index');
         localStorage.removeItem('pages_index');
         localStorage.removeItem('scroll');
-        location.href = '/index.html';
+        location.href = '/';
     }
 })()
