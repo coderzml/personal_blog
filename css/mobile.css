@@ -174,9 +174,10 @@
         float: none;
    }
    .box_list .box_list_right .font_box {
-        height: 90px;
+        min-height: 90px;
         overflow: hidden;
         padding: 0 10px;
+        height: auto;
    }
    .box_list_right .font_box .font{
         color: #666;
@@ -189,7 +190,7 @@
         font-size: 12px;
     }
     .time_read {
-        padding: 0 15px;
+        padding: 5px 15px;
     }
    .time_read ._blank {
         position: absolute;

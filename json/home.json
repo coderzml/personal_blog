@@ -128,6 +128,34 @@
           "language_type": "JS",
           "target_url": "/html/js_pages/copy.html",
           "isOverhead": "overhead"
+        },
+        {
+          "id": 2,
+          "title": "ajax",
+          "img": "/image/js/ajax.jpg",
+          "font": "使用Ajax技术网页应用能够快速地将增量更新呈现在用户界面上，而不需要重载（刷新）整个页面，这使得程序能够更快地回应用户的操作。",
+          "font_time": "2021/04/12 15点19分",
+          "language_type": "JS",
+          "target_url": "/html/js_pages/ajax.html"
+        },
+        {
+          "id": 3,
+          "title": "promise",
+          "img": "/image/js/promise.jpg",
+          "font": "JS内置对象promise，用来更方便的解决异步请求，避免回调地狱。promise可以将异步操作队列化，按照期望的顺序执行，返回符合预期的结果",
+          "font_time": "2021/04/12 16点30分",
+          "language_type": "JS",
+          "target_url": "/html/js_pages/promise.html"
+        },
+        {
+          "id": 4,
+          "title": "JavaScript高级程序设计",
+          "img": "/image/js/book.jpg",
+          "font": "本书是JavaScript经典图书的新版。第4版涵盖ECMAScript 2019，全面、深入地介绍了JavaScript开发者必须掌握的前端开发技术，涉及JavaScript的基础特性和高级特性。书中详尽讨论了JavaScript的各个方面，从JavaScript的起源开始，逐步讲解到新出现的技术，其中重点介绍ECMAScript和DOM标准。",
+          "font_time": "2021/04/12 16点30分",
+          "language_type": "JS",
+          "target_url": "/html/js_pages/book.html",
+          "isOverhead": "overhead"
         }
       ],
       "JQuery": [
