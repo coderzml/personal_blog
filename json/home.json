@@ -156,6 +156,16 @@
           "language_type": "JS",
           "target_url": "/html/js_pages/book.html",
           "isOverhead": "overhead"
+        },
+        {
+          "id": 5,
+          "title": "babel编译ES6^",
+          "img": "/image/js/babel.jpg",
+          "font": "javascript在不断的发展，各种新的标准和提案层出不穷，但是由于浏览器的多样性，导致可能几年之内都无法广泛普及，babel可以让你提前使用这些语言特性，他是一种用途很多的javascript编译器，他把最新版的javascript编译成当下可以执行的版本。",
+          "font_time": "2021/04/14 16点08分",
+          "language_type": "JS",
+          "target_url": "/html/js_pages/babel.html",
+          "isOverhead": "overhead"
         }
       ],
       "JQuery": [

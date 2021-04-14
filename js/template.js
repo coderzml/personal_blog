@@ -1,6 +1,6 @@
 // 这里写的是article 模板
 (function () {
-  let str = `
+    let str = `
 <div class="page">
         <div class="header">
            <div class="mobile_nav">
@@ -22,7 +22,7 @@
             <div class="type_area">
                 <div class="nav_list"></div>
                 <div class="search">
-                    <input type="text" class="search_left" placeholder="请输入搜索内容...">
+                    <input type="text" class="search_left" placeholder="搜索文章">
                     <div class="search_right"></div>
                 </div>
             </div>
@@ -52,5 +52,5 @@
         </div>
     </div>
 `;
-  document.body.innerHTML = str;
+    document.body.innerHTML = str;
 })();
