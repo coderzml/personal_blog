@@ -1,6 +1,6 @@
-## JS语法ES6、ES7、ES8、ES9、ES10、ES11、ES12新特性
+[TOC]
 
-> 本文集合了 ES6 至 ES11 常用到的特性，包括还在规划的 ES12，只列举大概使用，详细介绍的话内容量将十分巨大~.~。PS：使用新特性需要使用最新版的 bable 就行转义（babel学习地址：在站内搜索”babel“）
+> 本文集合了 ES6 比较常用的语法。PS：使用新特性需要使用最新版的 bable 转义（babel学习地址：在站内搜索”babel“）
 
 #### ES6（2015）
 
@@ -112,6 +112,7 @@ let a = 1, b= 2;
 1. 箭头函数没有argments属性所以接受参数 形参前面加...
 2. 使用扩展运算符可以把数组进行拼接也可以把伪数组（不具备数组的一些方法）转为正真的数组 （转为真正的数组就可以使用数组中的方法）
 3. **Array.form()** 可以将一个伪数组转为数组 第一个参数是要装的伪数组 第二个参数是一个回调函数 形参有item  数组内容有多少个 函数执行多少次;
+4. **剩余参数同理也能用到数组**
 
 ##### 8.对象属性简写
 
@@ -252,9 +253,19 @@ const b = 20;
    for (const value of obj) { 
        console.log(value);
    }
+   
+   
+   var arr = [
+       { name:'nick', age:18 },
+       { name:'freddy', age:24 },
+       { name:'mike', age:26 },
+       { name:'james', age:34 }
+   ];
+   for(var item of arr){	
+       console.log(item.name,item.age);
    ~~~
 
-   遍历对象需要转换
+   遍历伪数组对象需要转换
 
    ~~~javascript
    const obj = { length: 3, 0: 'foo', 1: 'bar', 2: 'baz' };
@@ -265,91 +276,8 @@ const b = 20;
    }
    ~~~
 
-   
+   与for in的区别
 
-#### ES7（2016）
+   - for in 会遍历自定义属性，for of不会
 
-#####  1. Array.prototype.includes()
-
-~~~js
-[1, 2, 3].includes(2);     // true
-[1, 2, 3].includes(4);     // false
-[1, 2, 3].includes(3, 3);  // false
-[1, 2, 3].includes(3, -1); // true
-[1, 2, NaN].includes(NaN); // true
-~~~
-
-- Array.prototype.includes()的作用，是查找一个值在不在数组里，若在，则返回true，反之返回false。
-- Array.prototype.includes()方法接收两个参数：要搜索的值和搜索的开始索引。当第二个参数被传入时，该方法会从索引处开始往后搜索（默认索引值为0）。若搜索值在数组中存在则返回true，否则返回false。
-- 有了这个属性就不用再用循环去判断每一个了
-
-##### 2.指数运算符
-
-~~~js
-// (2 ** 3) === (2 * 2 * 2)
-let a = 2 ** 3
-// (2 ** 4) === (2 * 2 * 2 * 2)
-let b = 2 ** 4
-console.log(a)//8
-console.log(b)//16
-~~~
-
-- 指数运算又叫幂运算，在aⁿ(a≠0)中a为底数，n为指数，指数位于底数的右上，指数运算表示指数个底数相乘。
-
-#### ES8（2017）
-
-##### 1.**async/await**
-
-~~~js
-    async function show() {
-        try {   //成功的时候
-            let data1 = await $.ajax({ url: './data/1.txt', dataType: "json" });
-            let data2 = await $.ajax({ url: './data/2.json', dataType: "json" });
-            console.log(data1, data2);
-            //中间可以插入判断
-            if (data2.name == 123) {
-                let data3 = await $.ajax({ url: './data/3.txt', dataType: "json" });
-                console.log(data1, data2, data3);
-            }
-        } catch{    //失败的时候
-            console.log('出错');
-        }
-    }
-    show();
-~~~
-
-- 异步终极解决方案
-
-##### 2.Object.keys()
-
-~~~js
-  let obj = { name: 'zml', sex: 'man' }
-    console.log(Object.keys(obj));
-~~~
-
-- **返回的是属性名（只能返回自身可被枚举的属性）**
-
-##### 3.Object.values
-
-~~~js
-    let obj = { name: 'zml', sex: 'man' }
-    console.log(Object.values(obj));
-~~~
-
-- **返回的是属性值（只能返回自身可被枚举的属性）**
-- 和Object.keys对应
-
-##### 4.Object.entries
-
-~~~js
-    var obj3 = { foo: 'bar', baz: 42 };
-    console.log(Object.entries(obj3));
-~~~
-
-- Object.entries方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键值对数组
-- 注意嵌套
-
-
-
-
-
+ES6^更全面的学习地址：https://www.bookstack.cn/read/es6-3rd/sidebar.md

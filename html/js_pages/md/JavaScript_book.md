@@ -1,6 +1,4 @@
-<img src="../../../image/js/book.jpg" style="zoom:150%;" />
-
-
+![](../../../image/js/book.jpg)
 
 [TOC]
 
@@ -6668,4 +6666,115 @@ let person = null; // 对象
 
 ### 附录A
 
-- 
+#### 剩余参数和参数分布
+
+- ~~~JavaScript
+   // 剩余参数
+      function num(a, b, ...c) {
+          console.log(a + b);
+          for (let i = 0; i < c.length; i++) {
+              console.log(c[i]);
+          }
+      }
+      num(1, 2, 3, 4, 5, 6);
+      // 分布参数
+      let arr = [1, 2, 3, 4, 5, 6, 7];
+      function num2(...a) {
+          console.log(arguments);
+          console.log(a);
+      }
+      num2(...arr)
+  ~~~
+
+#### 解构赋值
+
+- ~~~JavaScript
+  // 数组
+      let arr = [1, 2, 3];
+      [a, b, c] = arr;
+      console.log(a);
+      // 对象
+      let message = {
+          name: "zml",
+          age: "20",
+          sex: "man",
+          like: "study"
+      }
+      let { name: messageName, age: messageAge } = message;
+      console.log(messageName);
+      console.log(messageAge);
+  ~~~
+
+#### 迭代器
+
+- ~~~JavaScript
+   // 对象迭代
+      let obj = {
+          name: "zml",
+          age: "18",
+          sex: "man"
+      }
+      let iterator = new Iterator(obj);
+      console.log(iterator);
+    
+      try {
+          while (true) {
+              let value = iterator.next();
+              console.log(value + '</br>');
+          }
+      } catch (ex) {
+          console.log(ex);
+      }
+  ~~~
+
+#### 映射和集合
+
+- ~~~javascript
+   // 映射对象
+      let map = new Map();
+      // 设置值
+      map.set('name', 'zml');
+      map.set('age', '20');
+      // 获取值
+      console.log(map.get('name'));
+      // 检测值是否存在
+      console.log(map.has('name'));
+      // 删除值
+      console.log(map.delete('name'));
+    
+      // 集合 对象  只有值没有键
+      let set = new Set();
+      // 添加属性
+      set.add('wqq')
+      // 检测属性
+      console.log(set.has('wqq'));
+  ~~~
+
+### 附录B
+
+#### 严格模式
+
+- 使用严格模式可以提前知道页面中程序不合理的地方
+
+- 严格模式不仅可以在JS的全局作用域中开启　还可以在函数的作用域中开启，这样就只检测这个作用域中的模式
+
+  - ~~~javascript
+    function test () {
+     'use strict';
+        //代码
+    }
+    ~~~
+
+- 使用严格模式前要先了解严格模式的规则
+
+  - 变量要使用关键字声明
+  - 有些保留字不能当作变量名 比如 yield
+  - 对象中 属性名不能重复
+  - 函数中  参数名不能重复
+  - arguments 属性也有影响
+  - 不可以在if语句中声明函数
+  - 抑制this
+  - 其他规则百度了解
+
+2021-03-07 13点53分 我宣布， 这本书学完了。
+

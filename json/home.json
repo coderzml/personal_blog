@@ -126,8 +126,7 @@
           "font": "浅拷贝是按位拷贝对象，它会创建一个新对象，这个对象有着原始对象属性值的一份精确拷贝。如果属性是基本类型，拷贝的就是基本类型的值；如果属性是内存地址（引用类型），拷贝的就是内存地址。",
           "font_time": "2021/04/09 16点42分（顶置）",
           "language_type": "JS",
-          "target_url": "/html/js_pages/copy.html",
-          "isOverhead": "overhead"
+          "target_url": "/html/js_pages/copy.html"
         },
         {
           "id": 2,
@@ -152,7 +151,7 @@
           "title": "JavaScript高级程序设计",
           "img": "/image/js/book.jpg",
           "font": "本书是JavaScript经典图书的新版。第4版涵盖ECMAScript 2019，全面、深入地介绍了JavaScript开发者必须掌握的前端开发技术，涉及JavaScript的基础特性和高级特性。书中详尽讨论了JavaScript的各个方面，从JavaScript的起源开始，逐步讲解到新出现的技术，其中重点介绍ECMAScript和DOM标准。",
-          "font_time": "2021/04/12 16点30分",
+          "font_time": "2021/04/12 16点30分（顶置）",
           "language_type": "JS",
           "target_url": "/html/js_pages/book.html",
           "isOverhead": "overhead"
@@ -164,8 +163,16 @@
           "font": "javascript在不断的发展，各种新的标准和提案层出不穷，但是由于浏览器的多样性，导致可能几年之内都无法广泛普及，babel可以让你提前使用这些语言特性，他是一种用途很多的javascript编译器，他把最新版的javascript编译成当下可以执行的版本。",
           "font_time": "2021/04/14 16点08分",
           "language_type": "JS",
-          "target_url": "/html/js_pages/babel.html",
-          "isOverhead": "overhead"
+          "target_url": "/html/js_pages/babel.html"
+        },
+        {
+          "id": 6,
+          "title": "ES6比较常用的语法",
+          "img": "/image/js/ES6.png",
+          "font": "ES6 主要是为了解决 ES5 的先天不足，比如 JavaScript 里并没有类的概念，但是目前浏览器的 JavaScript 是 ES5 版本，大多数高版本的浏览器也支持 ES6，不过只实现了 ES6 的部分特性和功能。",
+          "font_time": "2021/04/15 18点14分",
+          "language_type": "JS",
+          "target_url": "/html/js_pages/ES6.html"
         }
       ],
       "JQuery": [
@@ -230,15 +237,6 @@
         },
         {
           "id": 5,
-          "title": "旋转木马",
-          "img": "/image/project/article06.png",
-          "font": "利用 CSS3 的动画效果 实现的一个旋转木马的视觉效果",
-          "font_time": "2021/03/20 16点13分",
-          "language_type": "自适应",
-          "target_url": "/html/project_pages/rotate.html"
-        },
-        {
-          "id": 6,
           "title": "今天吃什么？",
           "img": "/image/project/article08.png",
           "font": "不要问我为什么无聊写这个  问就（进来说）",
@@ -247,7 +245,7 @@
           "target_url": "/html/project_pages/eat_what.html"
         },
         {
-          "id": 7,
+          "id": 6,
           "title": "学前端的前三个页面",
           "img": "/image/project/article09.png",
           "font": "这篇博文记录了 刚开始接触前端 写的 前三个页面。可能有很多不足之处 我觉得没必要去优化，优化了还能看出当时写代码的那种懵懂感嘛，此篇博文要的就是最初写代码稚嫩的感觉 ",
@@ -256,7 +254,7 @@
           "target_url": "/html/project_pages/web_first_three.html"
         },
         {
-          "id": 8,
+          "id": 7,
           "title": "JS实现烟花效果",
           "img": "/image/project/article10.png",
           "font": "利用JS 实现烟花效果，烟花样式大小和运动的方向都是随机的 ",
@@ -265,7 +263,7 @@
           "target_url": "/html/project_pages/fireworks.html"
         },
         {
-          "id": 9,
+          "id": 8,
           "title": "全屏滚动效果",
           "img": "/image/project/article11.png",
           "font": "这个购物页面 是全屏滚动效果（fullPage插件），整个页面充满了HTML5的动画 当然这归功于 JQuery和easing插件",
@@ -274,7 +272,7 @@
           "target_url": "/html/project_pages/screen_scroll.html"
         },
         {
-          "id": 10,
+          "id": 9,
           "title": "随机高清动漫壁纸",
           "img": "/image/project/article12.png",
           "font": "随机生成高清动漫壁纸，目前系统共收录 1000+ 张图片，图片均为https，采用新浪图片，高速访问",
