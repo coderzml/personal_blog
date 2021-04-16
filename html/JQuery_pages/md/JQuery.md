@@ -1,4 +1,8 @@
-	jQuery是一个js库 ，极大地简化了 JavaScript 编程。但是里面的语法不同 不可以混合使用 如果要调用自己没有的方法 可以转换
+
+
+~~~js
+jQuery是一个js库 ，极大地简化了 JavaScript 编程。但是里面的语法不同 不可以混合使用 如果要调用自己没有的方法 可以转换
+~~~
 
 ### JQuery教程
 
@@ -68,15 +72,29 @@ $(document).ready(function(){
 
 | $('ul li:last')             | 每个 <ul> 的最后一个 <li> 元素 |
 | --------------------------- | ------------------------------ |
-| $('ul li:eq(2)')            | ul下面的第几个li               |
+| $('ul li').eq(2)            | ul下面的第几个li               |
 | $('ol li:odd')              | 选择奇数                       |
 | $('ol li:even'）            | 选择偶数                       |
 | $('div').parent()           | 选中DIV的亲父元素              |
 | $('div').children('p')      | DIV的亲孩子，P元素             |
 | $('div').find('p')          | DIV下面的子孙后代的P元素       |
 | $('ul li').siblings('li')   | 选中自己的亲兄弟（除了自己）   |
-| $('ul .item').nextAll('li') | 自己以下的li元素               |
-| $('ul .item').prevAll('li') | 自己以上的li元素               |
+| $('ul .item').nextAll('li') | 自己以下的所有li元素           |
+| $('ul .item').prevAll('li') | 自己以上的所有li元素           |
+
+| $("h2").next();                           | 下一个同胞元素                                           |
+| ----------------------------------------- | -------------------------------------------------------- |
+| $("h2").prev()                            | 上一个同胞元素                                           |
+| $("h2").nextUntil("h6");                  | 返回介于 <h2> 与 <h6> 元素之间的所有同胞元素（向下查找） |
+| $("h2"). prevUntil()                      | 返回介于 <h2> 与 <h6> 元素之间的所有同胞元素（向上查找） |
+| $('.p').parents()                         | 选择p的父亲们（返回一个数组）                            |
+| $('.qq').parentsUntil('body')             | 获取自己到指定标签的所有父（祖先）元素                   |
+| $("p").filter(".intro");                  | 返回带有类名 "intro" 的所有 <p> 元素：                   |
+| $("p").not(".intro");                     | 返回不带有类名 "intro" 的所有 <p> 元素：                 |
+| **$("p").parent().is("div")**//返回布尔值 | is() 方法用于查看选择的元素是否匹配选择器。              |
+|                                           |                                                          |
+
+更多选择器详细地址：https://www.w3school.com.cn/jquery/jquery_ref_selectors.asp
 
 #### 名称冲突
 
@@ -86,7 +104,32 @@ jQuery 使用 $ 符号作为 jQuery 的简介方式。
 
 jQuery 使用名为 noConflict() 的方法来解决该问题。
 
-*var jq=jQuery.noConflict()*，帮助您使用自己的名称（比如 jq）来代替 $ 符号。
+例如
+
+使用自己的名称（比如 jq）来代替 $ 符号。
+
+~~~js
+let jq = $.noConflict();
+console.log(jq('.p'));
+~~~
+
+也可以（注意第一个j是小写）
+
+~~~js
+ $.noConflict();
+ console.log(jQuery('.p'));
+~~~
+
+这种方式是把变量传给了read，在代码块内可以使用$,出去后还得使用jQuery
+
+~~~js
+    $.noConflict();
+    jQuery(document).ready(function ($) {
+        $('button').click(function () {
+            console.log($(this));
+        })
+    })
+~~~
 
 ### JQuery效果
 
@@ -249,7 +292,7 @@ $("#stop").click(function(){
 
 - 如果参数是stop（true） 代表 停止所有动画，停止所有动画队列
 
-- 如果参数是 stop（true，true）代表 停止所有动画，但是要执行完（嗖的一下）
+- 如果参数是 stop（true，true）代表 停止所有动画，但是要执行完**当前动画**（嗖的一下）
 
 - 例子：https://www.w3school.com.cn/tiy/t.asp?f=jquery_stop_params
 
@@ -263,6 +306,44 @@ $("#stop").click(function(){
 
 - 在动画前面加stop可以停止动画之前的队列，这样点的再快，也只是会执行一次。
 
+**执行完当前的动画，清除队列的动画**
+
+~~~js
+$("#start").click(function(){
+		$("div").animate({height:300},1500);
+		$("div").animate({width:300},1500);
+		$("div").animate({height:100},1500);
+		$("div").animate({width:100},1500);
+	});
+	$("#stop").click(function(){
+		$("div").clearQueue();
+	});
+~~~
+
+#### 设置延迟
+
+- 2秒后再执行
+
+~~~js
+$("button").click(function(){
+    $("#div1").delay(2000).fadeIn();
+});
+~~~
+
+#### 完成所有动画
+
+- 和stop（true，true）不同的是，这个是瞬间执行完毕所有动画。而stop（true，true）是瞬间执行完当前动画
+
+~~~js
+$("#start").click(function(){
+		$("div").animate({height:300},3000);
+		$("div").animate({width:300},3000);
+	});
+	$("#complete").click(function(){
+		$("div").finish();
+	});
+~~~
+
 #### 链式调用
 
 - JQuery是支持链式调用的
@@ -275,7 +356,7 @@ $("#stop").click(function(){
 
 ### JQueryDOM操作
 
-#### 获取设置内容
+#### 获取设置内容/属性
 
 **获取文字**
 
@@ -303,13 +384,19 @@ $("#btn1").click(function(){
 - 回调函数有两个参数，参数1是获取元素的下标，参数2是老的文字，
 - return一个新设置的文字即可设置新文字
 
-**获取属性**
+**获取属性（重点）**
 
-- attr() 方法用于获取属性值。
+**对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。**
+
+**对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。**
+
+参考文献：https://blog.csdn.net/weixin_42430217/article/details/81116772
+
+- prop() 方法用于获取元素固有属性值。
 
 ~~~js
   $('button').click(function () {
-        console.log($('input').attr('type'));
+        console.log($('input').prop('type'));
     })
 ~~~
 
@@ -318,18 +405,18 @@ $("#btn1").click(function(){
 
 ~~~js
 $("button").click(function(){
-  $("#w3s").attr({
+  $("#w3s").prop({
     "href" : "http://www.w3school.com.cn/jquery",
     "title" : "W3School jQuery Tutorial"
   });
 });
 ~~~
 
-- attr设置的时候也有回调函数 用来获取旧的数据
+- prop设置的时候也有回调函数 用来获取旧的数据
 
 ~~~js
 $("button").click(function(){
-  $("#w3s").attr("href", function(i,origValue){
+  $("#w3s").prop("href", function(i,origValue){
     return origValue + "/jquery";
   });
 });
@@ -342,6 +429,8 @@ $("button").click(function(){
 3. after() - 在被选元素之后插入内容（外面）
 4. before() - 在被选元素之前插入内容（外面）
 
+一般父盒子参入子元素的情况用append，插入兄弟元素的时候用after
+
 **append**
 
 ~~~js
@@ -351,6 +440,7 @@ $("button").click(function(){
 ~~~
 
 - 有这个方法就不用html再获取老数据拼接了，直接在后面跟上
+- **如果数据存在，就是移动数据**
 
 添加元素（在元素内部）
 
@@ -540,6 +630,275 @@ $("button").click(function(){
 });
 ~~~
 
+#### 给元素包裹标签
+
+~~~js
+$("button").click(function(){
+    $("p").wrap("<div></div>");
+});
+~~~
+
+- 取消包裹的标签（父元素）用 unwrap()
+
+#### clone
+
+- 克隆所有的 <p> 元素，并插入到 <body> 元素的结尾
+
+~~~js
+  $("button").click(function () {
+        $("ul li").clone(true).appendTo("body");
+    });
+~~~
+
+- **不加参数默认false，不克隆事件。加true，代表克隆事件。**
+
+#### appendTo
+
+- appendTo() 方法在被选元素的结尾插入 HTML 元素。
+
+~~~js
+   $('button').click(function () {
+        $('ul li:last').appendTo('<li>3</li>');
+    })
+~~~
+
+- 注意当前标签可能会消失
+
+#### 更多属性和方法参考地址
+
+https://www.runoob.com/jquery/jquery-ref-html.html
+
+### JQuery遍历
+
+### JQuery Ajax
+
+#### load
+
+- load() 方法从服务器加载数据，并把返回的数据放入被选元素中。
+
+语法
+
+~~~js
+$(selector).load(URL,data,callback);
+~~~
+
+必需的 *URL* 参数规定您希望加载的 URL。
+
+可选的 *data* 参数规定与请求一同发送的查询字符串键/值对集合。
+
+可选的 *callback* 参数是 load() 方法完成后所执行的函数名称。
+
+~~~js
+   $('button').click(function () {
+        $('.box2').load('./data.txt'）
+    })
+~~~
+
+- 就会把请求到的结果给box2，内部调用的 text()
+
+**可选的 callback 参数规定当 load() 方法完成后所要允许的回调函数。回调函数可以设置不同的参数：**
+
+- *responseTxt* - 包含调用成功时的结果内容
+- *statusTXT* - 包含调用的状态
+- *xhr* - 包含 XMLHttpRequest 对象
+
+~~~js
+   $('button').click(function () {
+        $('.box2').load('./data.txt', 'name:zml', function (responseTxt, statusTXT, xhr) {
+            console.log(responseTxt, statusTXT, xhr);
+            if (statusTXT == 'screen') {
+                console.log('成功');
+            } else if (statusTXT == 'error') {
+                console.log('失败');
+            }
+        });
+    })
+~~~
+
+#### get/post
+
+- GET 基本上用于从服务器获得（取回）数据。注释：GET 方法可能返回缓存数据。
+- POST 也可用于从服务器获取数据。不过，POST 方法不会缓存数据，并且常用于连同请求一起发送数据。
+
+**$.get()**
+
+```js
+$.get(URL,callback);
+```
+
+必需的 *URL* 参数规定您希望请求的 URL。
+
+可选的 *callback* 参数是请求成功后所执行的函数名。参数 data,status 一个回调参数存有被请求页面的内容，第二个回调参数存有请求的状态。
+
+~~~js
+    $('button').click(function () {
+        $.get('./data.txt', function (data, status) {
+            console.log(data, status);// 我是data数据 success
+        })
+    })
+~~~
+
+**$.post()**
+
+```js
+$.post(URL,data,callback);
+```
+
+必需的 *URL* 参数规定您希望请求的 URL。
+
+可选的 *data* 参数规定连同请求发送的数据。
+
+可选的 *callback* 参数是请求成功后所执行的函数名。
+
+~~~js
+    $('button').click(function () {
+        $.post("/try/ajax/demo_test_post.php",
+            {
+                name: "菜鸟教程",
+                url: "http://www.runoob.com"
+            },
+            function (data, status) {
+                alert("数据: \n" + data + "\n状态: " + status);
+            });
+    })
+~~~
+
+
+
+### JQuery事件
+
+**大多数事件都与原生JS的大差不差，只不过不用写ｏｎ前缀了**
+
+#### **bind事件**
+
+- 绑定多个事件
+
+~~~js
+   $(document).bind("click keydown", function () {
+            console.log($(this));
+    })
+~~~
+
+- 事件用空格分开
+
+#### **delegate**
+
+- **delegate() 方法为指定的元素（属于被选元素的子元素）添加一个或多个事件处理程序，并规定当这些事件发生时运行的函数。**
+
+  **使用 delegate() 方法的事件处理程序适用于当前或未来的元素（比如由脚本创建的新元素）。**
+
+~~~js
+      $(document).delegate("button", "click", function () {
+            console.log('111');
+        })
+~~~
+
+- 是给被选元素的子元素添加事件，不是自身。可以针对未来元素添加
+
+#### **hover**
+
+- 当鼠标指针悬停在上面时，改变 <p> 元素的背景颜色：
+
+~~~js
+   $("p").hover(function () {
+            $("p").css("background-color", "yellow");
+        }, function () {
+            $("p").css("background-color", "pink");
+        });
+~~~
+
+hover() 方法规定当鼠标指针悬停在被选元素上时要运行的两个函数。
+
+方法触发 [mouseenter](https://www.runoob.com/jquery/event-mouseenter.html) 和 [mouseleave](https://www.runoob.com/jquery/event-mouseleave.html) 事件。
+
+**注意:** 如果只指定一个函数，则 mouseenter 和 mouseleave 都执行它。
+
+语法
+
+~~~js
+$(selector).hover(inFunction,outFunction)
+~~~
+
+- 如果只定义了一个方法
+
+- ~~~js
+  $(selector).hover(handlerInOut)
+  ~~~
+
+- 等同于
+
+- ~~~js
+  $( selector ).on( "mouseenter mouseleave", handlerInOut );
+  ~~~
+
+#### **on事件（重点）**
+
+- on() 方法在被选元素及子元素上添加一个或多个事件处理程序。
+
+- **注意：****使用 on() 方法添加的事件处理程序适用于当前及未来的元素（比如由脚本创建的新元素）。**
+
+  **提示：**如需移除事件处理程序，请使用 [off()](https://www.runoob.com/jquery/event-off.html) 方法。
+
+  **提示：**如需添加只运行一次的事件然后移除，请使用 [one()](https://www.runoob.com/jquery/event-one.html) 方法。
+
+- 给父元素绑定（此时就是正常的给父元素绑定事件）
+
+~~~js
+  $('ul').on('click', function () {
+        console.log('点击的ul');
+    });
+~~~
+
+- 给子元素绑定（事件代理的简单应用）
+
+~~~js
+ $('ul').on('click', 'li', function () {
+        console.log('点击的li');
+   });
+~~~
+
+**on事件和click事件的区别**
+
+- 二者在绑定静态控件时没有区别，但是如果面对动态产生的控件，只有 on() 能成功的绑定到动态控件中。
+
+~~~js
+   $('ul li').click(function () {
+        console.log('点击li');
+    })
+    $('ul').on('click', 'li', function () {
+        console.log('点击li');
+    });
+    // 未来元素
+    $('ul').append('<li>3</li>');
+~~~
+
+off() 方法通常用于移除通过 [on()](https://www.runoob.com/jquery/event-on.html) 方法添加的事件处理程序。
+
+当然也可以移出click添加的事件
+
+~~~js
+$("button").click(function(){
+    $("p").off("click");
+});
+~~~
+
+#### **one事件**
+
+- 当点击 <p> 元素时，增加该元素的文本大小（每个 <p> 元素只能触发一次事件）：
+
+~~~js
+$("p").one("click",function(){
+$(this).animate({fontSize:"+=6px"});
+});
+~~~
+
+#### 事件文档地址
+
+https://www.runoob.com/jquery/jquery-ref-events.html
+
+**这个文档地址全的很，下面列举几个特殊的事件**
+
+### JQuery 
 
 
 
@@ -583,20 +942,9 @@ $("button").click(function(){
 
 
 
+### 测试JQuery掌握程度地址
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+https://www.w3school.com.cn/quiz/quiz.asp?quiz=jquery
 
 ### 被卷去的头部
 
