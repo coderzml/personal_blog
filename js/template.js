@@ -38,7 +38,9 @@
                     <span class="title"></span>
                     <p class="time"></p>
                 </div>
-                <div class="md"></div>
+                <div class="md">
+                    <img src="/image/detail/loading.gif" alt="加载" class="loading">
+                </div>
             </div>
 
         </div>

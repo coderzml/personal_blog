@@ -664,11 +664,126 @@ $("button").click(function(){
 
 - 注意当前标签可能会消失
 
+#### data（向元素添加数据）
+
+语法（取得之后只要name）
+
+~~~js
+$(selector).data(name,value)
+~~~
+
+~~~js
+   $('ul li:first').data('current', 'currentIndex');
+            setTimeout(function () {
+                console.log($('ul li:first').data('current'));
+            }, 2000);
+~~~
+
+- 注意和attr和pop是有区别的，这个添加数据，attr是添加属性。这个添加数据（标签）不显示，attr显示。
+- 移除用：removeData
+
+#### 序列化对象
+
+- param() 方法创建**数组或对象**的序列化表示形式。
+
+  **序列化的值可在生成 AJAX 请求时用于 URL 查询字符串中。**
+
+  有了这个方法ajax传值的时候 就不用手动拼接了
+
+~~~js
+  		   let obj = {
+                name: "zml",
+                sex: 'man'
+            }
+            console.log($.param(obj)); //name=zml&sex=man
+~~~
+
+#### toArray
+
+- 把元素转换为数组
+
+~~~js
+console.log($('ul li:first').toArray());
+~~~
+
+
+
 #### 更多属性和方法参考地址
 
 https://www.runoob.com/jquery/jquery-ref-html.html
 
 ### JQuery遍历
+
+#### each
+
+- JQ中的循环
+
+- 语法
+
+~~~js
+$(selector).each(function(index,element))
+~~~
+
+~~~js
+   $('ul li').each(function (i, ele) {
+                console.log(i);
+                console.log(ele);
+            });
+~~~
+
+#### filter
+
+- 过滤器
+
+- filter() 方法返回符合一定条件的元素。
+
+  该方法让您规定一个条件。不符合条件的元素将从选择中移除，符合条件的元素将被返回。
+
+~~~js
+//让calss为current的li改变颜色
+$('ul li').filter('.current').css('background', 'red')
+// 让偶数的改变颜色
+$('ul li').filter(':even').css('background', 'red')
+//通过函数来筛选
+$('li').filter(function(index) {
+  return $('strong', this).length == 1;
+}).css('background-color', 'red');
+~~~
+
+#### slice
+
+- slice() 方法选取基于索引的元素的子集。
+
+~~~js
+$('ul li').slice(2, 3).css('background', 'red');
+~~~
+
+#### map
+
+- 映射每一个数组的内容 加4 并返回一个新数组
+
+~~~js
+ let arr = [1, 2, 3];
+            let map = $.map(arr, function (value,index) {
+                console.log(value);
+                return n + 4;
+            })
+            console.log(map);
+~~~
+
+- 如果映射的是对象，第二个参数是对象名
+
+- map也可以实现 内部条件判断，比如 去除比10小的值，和移除元素
+
+- 移除元素
+
+- ~~~js
+  return (a > 50 ? a : null);
+  ~~~
+
+- 
+
+
 
 ### JQuery Ajax
 
@@ -763,7 +878,44 @@ $.post(URL,data,callback);
     })
 ~~~
 
+#### $.ajax
 
+- 这个是用的最多的方法，综合了get和post
+- 基本语法如下
+
+~~~js
+$.ajax({
+                data: "shuju",
+                url: './data.txt',
+                type: 'get',
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            })
+~~~
+
+- async属性表示是否异步，默认是true，所以不用手动设置
+- 还有请求前执行的函数和请求完成后执行的函数 都在一下文档
+- 如需用到复杂的语法 文档地址：https://www.runoob.com/jquery/ajax-ajax.html
+- **data传值的时候 可用 $.param() 属性序列书数据**
+
+#### 更多ajax事件 尽在
+
+https://www.runoob.com/jquery/jquery-ref-ajax.html
+
+例如：ajax执行前和执行后
+
+~~~js
+$(document).ajaxStart(function(){
+    $("#wait").css("display","block");
+});
+$(document).ajaxComplete(function(){
+    $("#wait").css("display","none");
+});
+~~~
 
 ### JQuery事件
 
@@ -899,6 +1051,14 @@ https://www.runoob.com/jquery/jquery-ref-events.html
 **这个文档地址全的很，下面列举几个特殊的事件**
 
 ### JQuery 
+
+
+
+
+
+
+
+
 
 
 
