@@ -31,7 +31,7 @@ function search() {
   let search_button = document.querySelector('.search_right');
   let search_value = document.querySelector('.search_left');
   let search_left = document.querySelector('.search_left');
-
+  // JQuery-ui，搜索提示功能
   $('head').append('<link rel="stylesheet" href="/css/jquery-ui.min.css">');
   $('html').append('<script src="/js/jquery-ui.min.js"></script>');
   search_left.onfocus = function () {
@@ -42,6 +42,7 @@ function search() {
         arr.push(data[key][i].title);
       }
     }
+    // 核心函数
     $("#tags").autocomplete({
       source: arr
     });
@@ -115,6 +116,9 @@ function search() {
           break;
         case 'JS':
           ClassName = 'js_type'
+          break;
+        case 'JQuery':
+          ClassName = 'JQuery_type'
           break;
         case 'VUE':
           ClassName = 'vue_type'
@@ -312,6 +316,9 @@ function load() {
             break;
           case 'JS':
             ClassName = 'js_type'
+            break;
+          case 'JQuery':
+            ClassName = 'JQuery_type'
             break;
           case 'VUE':
             ClassName = 'vue_type'
@@ -586,6 +593,9 @@ function load() {
                   break;
                 case 'JS':
                   ClassName = 'js_type'
+                  break;
+                case 'JQuery':
+                  ClassName = 'JQuery_type'
                   break;
                 case 'VUE':
                   ClassName = 'vue_type'

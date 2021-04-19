@@ -83,6 +83,9 @@ body {
 .box_list_right .vue_type {
     background-color: #41b883;
 }
+.box_list_right .JQuery_type {
+    background-color: #333333;
+}
 /* 导肮页码 */
 /* .pages {
     position: fixed;

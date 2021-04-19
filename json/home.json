@@ -107,6 +107,15 @@
           "font_time": "2021/04/11 20点17分",
           "language_type": "CSS",
           "target_url": "/html/html_css_pages/boots.html"
+        },
+        {
+          "id": 6,
+          "title": "font_icon",
+          "img": "/image/html_css/font_icon.jpg",
+          "font": "字体图标简单的说，就是一种特殊的字体，通过这种字体，显示给用户的就像一个个图片一样。字体图标最大的好处，在于它不会变形和加载速度快。字体图标可以像文字一样，随意通过CSS来控制它的大小和颜色，对于建网站来说，特别方便。",
+          "font_time": "2021/04/19 16点37分",
+          "language_type": "CSS",
+          "target_url": "/html/html_css_pages/font_icon.html"
         }
       ],
       "JavaScript": [
@@ -178,11 +187,40 @@
       "JQuery": [
         {
           "id": 0,
-          "title": "未定义",
-          "img": "../image/home/font_img1.jpg",
-          "font": "Redis是一款开源免费，遵守BSD协议的，高性能的key-value数据库系统。它通过提供多种键值数据类型来满足不同场景下的存储需求，并借助许多高层级的接口使其可以胜任如缓存，队列系统等不同的角色，是大型网站技术架构中不可或缺的组件。",
-          "font_time": "发布于：2021/03/07 15点48分",
-          "language_type": "html"
+          "title": "jQuery基础语法",
+          "img": "/image/JQuery/JQuery.jpg",
+          "font": "JQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。",
+          "font_time": "2021/04/19 13点09分（顶置）",
+          "target_url": "/html/JQuery_pages/JQuery.html",
+          "language_type": "JQuery",
+          "isOverhead": "overhead"
+        },
+        {
+          "id": 1,
+          "title": "fullPage全屏滚动插件",
+          "img": "/image/JQuery/fullpage.gif",
+          "font": "全屏滚动效果，原生js也很好实现，主要是用 mousewheel  鼠标滚轮滚动事件， 来判断上滚动还是下滚动，之后设置每次滚动的高度为屏幕的高度即可。但是，虽然效果简单，但是兼容性很差，要做很多兼容处理就比较麻烦",
+          "font_time": "2021/04/19 15点25分",
+          "target_url": "/html/JQuery_pages/fullpage.html",
+          "language_type": "JQuery"
+        },
+        {
+          "id": 2,
+          "title": "360度3D旋转插件",
+          "img": "/image/project/circlr.png",
+          "font": "Circlr是一款可以对产品图片进行360度全方位旋转展示的jQuery插件。Circlr通过按一定角度规律拍摄的产品图片，制作出可以使用鼠标拖动、鼠标滚轮和移动触摸来进行图片逐帧旋转的效果。比先前的Rollerblade，动画顺畅了许多，也更易于控制，该插件非常适合于商品的展示。",
+          "font_time": "2021/04/19 15点28分",
+          "target_url": "/html/JQuery_pages/360deg.html",
+          "language_type": "JQuery"
+        },
+        {
+          "id": 3,
+          "title": "Easing动画插件、视差滚动插件",
+          "img": "/image/JQuery/ease.png",
+          "font": "easing是jquery的一个插件，使用它可以创建更加绚丽的动画效果。视差滚动（Parallax Scrolling）指网页滚动过程中，多层次的元素进行不同程度的移动，视觉上形成立体运动效果的网页展示技术",
+          "font_time": "2021/04/19 15点31分",
+          "target_url": "/html/JQuery_pages/animate.html",
+          "language_type": "JQuery"
         }
       ],
       "works_total": [

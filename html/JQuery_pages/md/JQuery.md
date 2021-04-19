@@ -1,7 +1,9 @@
- 	
+![](../../../image/JQuery/jQuery.jpg)
+
+[TOC]
 
 ~~~js
-jQuery是一个js库 ，极大地简化了 JavaScript 编程。但是里面的语法不同 不可以混合使用 如果要调用自己没有的方法 可以转换
+jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。
 ~~~
 
 ### JQuery教程
@@ -1108,62 +1110,6 @@ https://www.runoob.com/jquery/jquery-ref-events.html
 1. [jQuery.fx.interval](https://www.runoob.com/jquery/prop-jquery-fx-interval.html) 减少动画帧率
 2. [jQuery.fx.off](https://www.runoob.com/jquery/prop-jquery-fx-off.html)开启关闭全局动画
 
-### JQuery插件
-
-#### 表单插件（免写正则）
-
-- https://www.runoob.com/jquery/jquery-plugin-validate.html
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### 测试JQuery掌握程度地址
 
 https://www.w3school.com.cn/quiz/quiz.asp?quiz=jquery
@@ -1195,3 +1141,4 @@ https://www.w3school.com.cn/quiz/quiz.asp?quiz=jquery
 - fullpage可以用来做全屏滚动
 - circlr 用来做360度滚动
 - jquery.stellar.min 用来做时差滚动
+
