@@ -30,6 +30,24 @@ function _blank() {
 function search() {
   let search_button = document.querySelector('.search_right');
   let search_value = document.querySelector('.search_left');
+  let search_left = document.querySelector('.search_left');
+
+  $('head').append('<link rel="stylesheet" href="/css/jquery-ui.min.css">');
+  $('html').append('<script src="/js/jquery-ui.min.js"></script>');
+  search_left.onfocus = function () {
+    let data = request_data().content_font;
+    let arr = [];
+    for (let key in data) {
+      for (let i = 0; i < data[key].length; i++) {
+        arr.push(data[key][i].title);
+      }
+    }
+    $("#tags").autocomplete({
+      source: arr
+    });
+  }
+
+
   search_button.onclick = function () {
     // 判断搜索内容不是空
     let value = search_value.value;
@@ -57,7 +75,7 @@ function search() {
       document.querySelector('.tips').style.marginTop = '50px';
     }
     // 获取数据
-    let data = request_data();
+    let data = request_data()
     let search_datas = data.content_font;
     let arr = [];
     for (const key in search_datas) {

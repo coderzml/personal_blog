@@ -1,4 +1,4 @@
-
+ 	
 
 ~~~js
 jQuery是一个js库 ，极大地简化了 JavaScript 编程。但是里面的语法不同 不可以混合使用 如果要调用自己没有的方法 可以转换
@@ -714,7 +714,7 @@ https://www.runoob.com/jquery/jquery-ref-html.html
 
 ### JQuery遍历
 
-#### each
+#### each（遍历元素）
 
 - JQ中的循环
 
@@ -729,6 +729,15 @@ $(selector).each(function(index,element))
                 console.log(i);
                 console.log(ele);
             });
+~~~
+
+#### $.each(遍历对象)
+
+~~~js
+ let arr = [1, 2, 3];
+    $.each(arr, function (index, value) {
+        console.log(index, value);
+    })
 ~~~
 
 #### filter
@@ -781,7 +790,42 @@ $('ul li').slice(2, 3).css('background', 'red');
   return (a > 50 ? a : null);
   ~~~
 
-- 
+
+#### 合并对象
+
+~~~js
+  var object1 = {
+        apple: 0,
+        banana: { weight: 52, price: 100 },
+        cherry: 97
+    };
+    var object2 = {
+        banana: { price: 200 },
+        durian: 100
+    };
+    /* object2 合并到 object1 中 */
+    $.extend(object1, object2);
+    console.log(object1);
+~~~
+
+#### 根据数组返回下标
+
+- jQuery.inArray（） 第一个参数是数组元素，第二个参数是查找哪个数组
+- **找打就返回对应下标，找不到就返回-1**
+
+~~~js
+	let arr2 = ['name', 'age']
+    console.log(jQuery.inArray('age', arr2)); //1
+~~~
+
+#### 判断是不是数组类型
+
+~~~js
+    let arr2 = ['name', 'age']
+    console.log(jQuery.isArray(arr2)); //true
+~~~
+
+- 返回布尔值
 
 
 
@@ -1050,7 +1094,25 @@ https://www.runoob.com/jquery/jquery-ref-events.html
 
 **这个文档地址全的很，下面列举几个特殊的事件**
 
-### JQuery 
+### JQuery 杂项
+
+- https://www.runoob.com/jquery/jquery-ref-misc.html
+- 包括
+  - 杂项
+  - 使用方法（判断验证）
+  - 回调函数
+  - 延迟对象
+
+#### jQuery的属性
+
+1. [jQuery.fx.interval](https://www.runoob.com/jquery/prop-jquery-fx-interval.html) 减少动画帧率
+2. [jQuery.fx.off](https://www.runoob.com/jquery/prop-jquery-fx-off.html)开启关闭全局动画
+
+### JQuery插件
+
+#### 表单插件（免写正则）
+
+- https://www.runoob.com/jquery/jquery-plugin-validate.html
 
 
 

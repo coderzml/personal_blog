@@ -21,8 +21,8 @@
         <div class="nav">
             <div class="type_area">
                 <div class="nav_list"></div>
-                <div class="search">
-                    <input type="text" class="search_left" placeholder="搜索文章">
+                <div class="search ui-widget">
+                    <input type="text" class="search_left" placeholder="搜索文章"  id="tags">
                     <div class="search_right"></div>
                 </div>
             </div>

@@ -81,10 +81,14 @@ body {
     height: 30px;
     border-radius: 25px 0 0px 25px;
     background-color: #fbfcfe;
-    font-size: 13px;
+    font-size: 13px !important;
     /* 用字符的首行缩进来代替 padding */
     /* padding-left: 10px; */
     text-indent: 1em;
+}
+.ui-widget{
+    font-size: 13px !important;
+
 }
 .search_right {
     cursor: pointer;
