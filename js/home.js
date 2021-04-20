@@ -5,6 +5,7 @@ function _blank() {
   for (let y = 0; y < _blank_a.length; y++) {
     _blank_a[y].index = y;
     _blank_a[y].onclick = function (e) {
+      document.title = '加载中...';
       // console.log(this.href);
       // 先获取原来标签内的href 再添加新的href和参数
       // console.log(this.href);
@@ -284,6 +285,7 @@ function load() {
 
   // 渲染content 
   function content() {
+    // 隐藏loading
     $('.homeLoading').css('display', 'none');
     let data_info = data.content_font;
     // console.log(data_info); // 总的 font——content
@@ -519,14 +521,20 @@ function load() {
   function click_pages(pages_info_name = 'home') {
     // console.log(pages_info_name);
     let pages_li = document.querySelector('.pages_ul').querySelectorAll('li');
+    // 不写到下面的原因是下面加了判断，检测不到左右箭头
+    for (let i = 0; i < pages_li.length; i++) {
+      // 点击pages的时候 不要老跳
+      pages_li[i].addEventListener('click', function () {
+        window.scrollTo(0, 10000);
+      })
+    }
     for (let i = 0; i < pages_li.length - 2; i++) {
       pages_li[i].index = i;
       pages_li[i].onclick = function () {
         // $(document).ready(function () {
         //   console.log($('body').height());
         // })
-        // 点击pages的时候 不要老跳
-        window.scrollTo(0, 10000);
+
         // let str1 = '';
         // 这一步省略了 因为传过来之前已经做了判断
         // if (pages_info_name == 'home') {
