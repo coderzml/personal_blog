@@ -284,6 +284,7 @@ function load() {
 
   // 渲染content 
   function content() {
+    $('.homeLoading').css('display', 'none');
     let data_info = data.content_font;
     // console.log(data_info); // 总的 font——content
     for (let key in data_info) { // 执行6次
@@ -521,6 +522,11 @@ function load() {
     for (let i = 0; i < pages_li.length - 2; i++) {
       pages_li[i].index = i;
       pages_li[i].onclick = function () {
+        // $(document).ready(function () {
+        //   console.log($('body').height());
+        // })
+        // 点击pages的时候 不要老跳
+        window.scrollTo(0, 10000);
         // let str1 = '';
         // 这一步省略了 因为传过来之前已经做了判断
         // if (pages_info_name == 'home') {
@@ -758,6 +764,7 @@ if (location.search == '') {
       // document.querySelector('.nav_ul').querySelectorAll('li')[localStorage.getItem('nav_index')].click();
       // document.querySelector('.pages_ul').querySelectorAll('li')[localStorage.getItem('pages_index')].click();
       // 到此渲染结束 ， 删除值 防止下次打开的时候渲染
+      // 如果在微信中 直接点击X（或者在普通浏览器中直接大返），这里就不会自动删除了，间接达到记忆功能。如果不要记忆功能，检测关闭网页的事件  然后给值删除了。
       localStorage.removeItem('nav_index');
       localStorage.removeItem('pages_index');
       localStorage.removeItem('scroll');
@@ -794,5 +801,5 @@ window.onscroll = function (e) {
       document.body.removeChild(document.querySelector('.go_top'));
     }
   }
-
 }
+

@@ -27,6 +27,8 @@
         let header = document.querySelector('.header');
         let coderzml = document.querySelector('.coderzml');
         let blog_font_fill = document.querySelector('.blog_font_fill');
+        // 在请求完数据 给标签显示
+        $('.coderzml').css('display', 'inline-block');
         header.style.backgroundImage = 'url(' + data.blog_bg + ')';
         // src属性不属于css样式
         coderzml.src = data.blog_name;

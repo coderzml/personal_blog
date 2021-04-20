@@ -8,35 +8,9 @@
 
 HTML5 提供了定义页面不同部分的新语义元素：
 
-- <article>
+- ![](../../../image/home/ct_sem_elements.png)
 
-- <aside>
-
-- <details>
-
-- <figcaption>
-
-- <figure>
-
-- <footer>
-
-- <header>
-
-- <main>
-
-- <mark>
-
-- <nav>
-
-- <section>
-
-- <summary>
-
-- <time>
-
-![](../../../image/home/ct_sem_elements.png)
-
-- 学习地址：https://www.w3school.com.cn/html/html5_semantic_elements.asp
+- 详细学习地址：https://www.w3school.com.cn/html/html5_semantic_elements.asp
 
 #### 2.**文件命名规范**
 

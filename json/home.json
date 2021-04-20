@@ -51,6 +51,24 @@
           "font_time": "2021/03/29 10点53分",
           "language_type": "HTTP",
           "target_url": "/html/home_pages/handshake.html"
+        },
+        {
+          "id": 4,
+          "title": "web前端开发规范",
+          "img": "/image/home/guifan.jpg",
+          "font": "符合web标准（UTF-8，HTML5），语义化html（HTML5新增要求，减少div和span等无特定语义的标签使用），结构表现行为分离（HTML-CSS-JS代码分离，不同行为代码高内聚低耦合）",
+          "font_time": "2021/04/20 14点50分",
+          "language_type": "othe",
+          "target_url": "/html/home_pages/standard.html"
+        },
+        {
+          "id": 5,
+          "title": "踩过的坑及总结",
+          "img": "/image/home/keng.jpg",
+          "font": "包含了HTML,CSS,JS,JQ,Vue等语言的一些总结和我学习前端以来踩过的坑，不出意外的话 这篇文章应该会不断更新（苦笑）",
+          "font_time": "2021/04/20 14点56分",
+          "language_type": "pit",
+          "target_url": "/html/home_pages/pit.html"
         }
       ],
       "HTML_CSS": [
