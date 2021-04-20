@@ -9,7 +9,7 @@
                    <div class="bottom"></div>
            </div>
            <div class="type_area">
-              <img src="" alt="回到主页" class="coderzml">
+                 <img src="/image/home/coderzml.png" alt="回到主页" class="coderzml">
            </div>
            <div class="mobile_search"></div>
       </div>

@@ -5,7 +5,6 @@ function _blank() {
   for (let y = 0; y < _blank_a.length; y++) {
     _blank_a[y].index = y;
     _blank_a[y].onclick = function (e) {
-      document.title = '加载中...';
       // console.log(this.href);
       // 先获取原来标签内的href 再添加新的href和参数
       // console.log(this.href);
@@ -285,8 +284,7 @@ function load() {
 
   // 渲染content 
   function content() {
-    // 隐藏loading
-    $('.homeLoading').css('display', 'none');
+
     let data_info = data.content_font;
     // console.log(data_info); // 总的 font——content
     for (let key in data_info) { // 执行6次
@@ -360,6 +358,8 @@ function load() {
       // console.log(html);
       document.querySelector('.content').appendChild(content);
     }
+    // 等到渲染完毕 移除loading
+    document.querySelector('.loading').remove();
     // 渲染完后才能实现点击，引用的方式 不会出现没渲染完毕就绑定事件的报错行为。
     nav_click();
     // 同上
@@ -691,6 +691,8 @@ function click_nav_load() {
     }
   }
 }
+// 点击完文章 加载之前 title改为 加载中
+document.title = '加载中...';
 // 渲染所在位置
 function pages_location() {
   // search 重新绑定

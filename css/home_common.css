@@ -25,7 +25,7 @@ body {
 }
 .coderzml{
     cursor: pointer;
-   margin-top: 30px;
+    margin-top: 30px;
 }
 .blog_font {
     height: 30px;
@@ -139,10 +139,6 @@ body {
     margin: 0;
     color: #666;
     padding-right: 60px;
-}
-/* coder 开始是隐藏的 */
-.coderzml {
-    display: none;
 }
 /* 当文档宽度大于1400的时候 */
 @media screen and (min-width: 1400px) {
