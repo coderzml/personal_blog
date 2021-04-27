@@ -247,6 +247,7 @@ function load() {
       "HTML_CSS": [],
       "JavaScript": [],
       "JQuery": [],
+      "VUE": [],
       "works_total": [],
       "about_me": []
     };
@@ -444,9 +445,12 @@ function load() {
             pages('JQuery');
             break;
           case 4:
-            pages('works_total');
+            pages('VUE');
             break;
           case 5:
+            pages('works_total');
+            break;
+          case 6:
             pages('about_me');
             break;
           default:
@@ -466,6 +470,8 @@ function load() {
           click_pages('works_total');
         } else if (this.innerHTML == '关于我') {
           click_pages('about_me');
+        } else if (this.innerHTML == 'VUE') {
+          click_pages('VUE');
         }
       }
     }
@@ -586,9 +592,7 @@ function load() {
             num2 = data_info.length - 9;
             // console.log(num1);
             // console.log(num2);
-
           }
-
           // console.log(data_info);
           let html = '';
           for (let i = data_info.length - 1; i >= 0; i--) {
@@ -692,7 +696,7 @@ function click_nav_load() {
   }
 }
 // 点击完文章 加载之前 title改为 加载中
-document.title = '加载中...';
+// document.title = '加载中...';
 // 渲染所在位置
 function pages_location() {
   // search 重新绑定

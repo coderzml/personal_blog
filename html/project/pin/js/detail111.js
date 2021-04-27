@@ -65,8 +65,8 @@ box_img.addEventListener('mousemove', function (e) {
     show.style.display = 'block';
     max_box.style.display = 'block';
     //求鼠标在元素中的坐标
-    var x = e.pageX - this.offsetLeft - 70;
-    var y = e.pageY - this.offsetTop - 220;
+    var x = e.pageX - this.offsetWidth + 50;
+    var y = e.pageY - this.offsetHeight / 2 - 30;
 
     //     //求show的最大移动距离
     var bigyiX = box_img.offsetWidth - show.offsetWidth;

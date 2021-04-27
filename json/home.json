@@ -8,6 +8,7 @@
       "HTML+CSS",
       "JavaScript",
       "JQuery",
+      "VUE",
       "作品集",
       "关于我"
     ],
@@ -239,6 +240,26 @@
           "font_time": "2021/04/19 15点31分",
           "target_url": "/html/JQuery_pages/animate.html",
           "language_type": "JQuery"
+        }
+      ],
+      "VUE": [
+        {
+          "id": 0,
+          "title": "音乐播放器",
+          "img": "/image/vue/music.png",
+          "font": "一个在线的音乐播放器。用axios请求获取数据，内含5条API，分别请求：歌曲名，歌曲url地址，封面地址，评论内容，MV地址",
+          "font_time": "2021/04/27 10点18分",
+          "language_type": "VUE",
+          "target_url": "/html/vue_pages/music.html"
+        },
+        {
+          "id": 1,
+          "title": "super_mall",
+          "img": "/image/project/article02.png",
+          "font": "super_mall（超级商场）是用Vue开发的一个 商品网站，首页是对商品的介绍 点击商品可以进入到商品的详情页，还支持添加购物车功能",
+          "font_time": "2021/03/20 11点26分",
+          "language_type": "VUE",
+          "target_url": "/html/project_pages/super_mall.html"
         }
       ],
       "works_total": [

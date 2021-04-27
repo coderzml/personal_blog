@@ -1,5 +1,6 @@
 // 显示隐藏小选项
 function hidden() {
+    let
     var dd_bottom = document.querySelector('.dd_bottom');
     dd_bottom.style.height = '0';
     var list_item = document.querySelectorAll('.dd_item');
@@ -10,6 +11,8 @@ function hidden() {
     var dt_top = document.querySelector('.dt_top');
     if (flag == false) {
         dt_top.addEventListener('mouseover', function () {
+            console.log(111);
+
             dd_bottom.style.height = '465px';
             for (var i = 0; i < list_item.length; i++) {
                 list_item[i].style.display = 'block';
@@ -64,25 +67,22 @@ var min_img = document.querySelector('.min_img');  //大盒子图片
 
 //鼠标划上时元素显示
 box_img.addEventListener('mousemove', function (e) {
+    console.log(111);
+
     show.style.display = 'block';
     max_box.style.display = 'block';
     //求鼠标在元素中的坐标
     var x = e.pageX - this.offsetLeft;
+    console.log(x);
+
     var y = e.pageY - this.offsetTop;
-
-
-
     //求show的最大移动距离
     var bigyiX = box_img.offsetWidth - show.offsetWidth;
-
     var bigyiY = box_img.offsetHeight - show.offsetHeight;
     // console.log(bigyiX, bigyiY);
-
     // 让滑块居中
     var miny = y - show.offsetHeight / 2;
-
     var minx = x - show.offsetWidth / 2;
-
     if (minx <= 0) {   //限制遮罩层最小移动距离
         minx = 0;      //直接赋值为0 就是说限制死
     } else if (minx >= bigyiX) {  //限制遮罩层的移动距离 让他在自己的最大移动距离内 
@@ -93,7 +93,6 @@ box_img.addEventListener('mousemove', function (e) {
     } else if (miny >= bigyiY) {
         miny = bigyiY;
     }
-
     show.style.left = minx + 'px';
     show.style.top = miny + 'px';
 
@@ -140,10 +139,6 @@ left.addEventListener('click', function () {
     var src = preview_img[num].src;
     max_img.src = src;
     min_img.src = src;
-
-
 });
-
-
 
 
